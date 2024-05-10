@@ -1,0 +1,15 @@
+C:/Users/Xaio/Downloads/Verilog-Projects-and-Concepts/MMU.v {1 {vlog -work work -stats=none C:/Users/Xaio/Downloads/Verilog-Projects-and-Concepts/MMU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mmu
+
+Top level modules:
+	mmu
+
+} {} {}} C:/Users/Xaio/Downloads/Verilog-Projects-and-Concepts/MAC.v {1 {vlog -work work -stats=none C:/Users/Xaio/Downloads/Verilog-Projects-and-Concepts/MAC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MAC
+
+Top level modules:
+	MAC
+
+} {} {}}

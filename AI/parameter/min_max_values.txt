@@ -1,30 +1,30 @@
 +---------------------------------------------------------------+-----------+---------------+---------------+--------------------+
 | File                                                          | Type      | Minimum Value | Maximum Value | Max Weight * Scale |
 +---------------------------------------------------------------+-----------+---------------+---------------+--------------------+
-| \classifier_1_pk\quantization_scale.txt                       | Scale     |    0.00233354 |    0.00233354 |                  - |
-| \classifier_1_pk\quantized_bias.txt                           | Bias      |    0.05804596 |     0.1120506 |                  - |
-| \classifier_1_pk\quantized_weights.txt                        | Weight    |        -128.0 |         112.0 |           0.261356 |
-| \embedding_0_pk\quantization_scale.txt                        | Scale     |    0.00993039 |    0.00993039 |                  - |
-| \embedding_0_pk\quantized_bias.txt                            | Bias      |   -0.99623609 |    0.93710607 |                  - |
-| \embedding_0_pk\quantized_weights.txt                         | Weight    |        -128.0 |         126.0 |           1.251229 |
-| \embedding_cls_token\parameters.txt                           | Parameter |   -2.27609324 |    2.50277138 |                  - |
-| encoder_0_0_block_0_final_pk\quantization_scale.txt           | Scale     |     0.0029745 |     0.0029745 |                  - |
-| encoder_0_0_block_0_final_pk\quantized_bias.txt               | Bias      |   -0.11742528 |    0.16070758 |                  - |
-| encoder_0_0_block_0_final_pk\quantized_weights.txt            | Weight    |        -121.0 |         127.0 |           0.377762 |
-| encoder_0_0_block_0_keys_pk\quantization_scale.txt            | Scale     |     0.0028165 |     0.0028165 |                  - |
-| encoder_0_0_block_0_keys_pk\quantized_bias.txt                | Bias      |   -0.18648292 |    0.16569334 |                  - |
-| encoder_0_0_block_0_keys_pk\quantized_weights.txt             | Weight    |        -112.0 |         127.0 |           0.357695 |
-| encoder_0_0_block_0_queries_pk\quantization_scale.txt         | Scale     |    0.00275813 |    0.00275813 |                  - |
-| encoder_0_0_block_0_queries_pk\quantized_bias.txt             | Bias      |    -0.1221425 |      0.133846 |                  - |
-| encoder_0_0_block_0_queries_pk\quantized_weights.txt          | Weight    |        -108.0 |         127.0 |           0.350283 |
-| encoder_0_0_block_0_values_pk\quantization_scale.txt          | Scale     |    0.00412028 |    0.00412028 |                  - |
-| encoder_0_0_block_0_values_pk\quantized_bias.txt              | Bias      |   -0.11580569 |    0.12183636 |                  - |
-| encoder_0_0_block_0_values_pk\quantized_weights.txt           | Weight    |        -128.0 |         126.0 |           0.519155 |
-| encoder_0_1_block_0_0_pk\quantization_scale.txt               | Scale     |    0.00336775 |    0.00336775 |                  - |
-| encoder_0_1_block_0_0_pk\quantized_bias.txt                   | Bias      |   -0.18774113 |    0.15236326 |                  - |
-| encoder_0_1_block_0_0_pk\quantized_weights.txt                | Weight    |        -128.0 |          73.0 |           0.245846 |
-| encoder_0_1_block_0_2_pk\quantization_scale.txt               | Scale     |     0.0015017 |     0.0015017 |                  - |
-| encoder_0_1_block_0_2_pk\quantized_bias.txt                   | Bias      |   -0.13292247 |    0.12008531 |                  - |
-| encoder_0_1_block_0_2_pk\quantized_weights.txt                | Weight    |        -125.0 |         127.0 |           0.190716 |
-| positional_encoding_params\positional_encoding\parameters.txt | Parameter |   -3.48093176 |    3.64265108 |                  - |
+| \classifier_1_pk\quantization_scale.txt                       | Scale     |     0.0193492 |     0.0193492 |                  - |
+| \classifier_1_pk\quantized_bias.txt                           | Bias      |   -0.40776509 |    0.24206038 |                  - |
+| \classifier_1_pk\quantized_weights.txt                        | Weight    |        -128.0 |          72.0 |           1.393142 |
+| \embedding_0_pk\quantization_scale.txt                        | Scale     |    0.01596224 |    0.01596224 |                  - |
+| \embedding_0_pk\quantized_bias.txt                            | Bias      |   -0.95612943 |    1.06528211 |                  - |
+| \embedding_0_pk\quantized_weights.txt                         | Weight    |        -128.0 |         107.0 |           1.707960 |
+| \embedding_cls_token\parameters.txt                           | Parameter |   -1.44126141 |    1.27948773 |                  - |
+| encoder_0_0_block_0_final_pk\quantization_scale.txt           | Scale     |    0.01125477 |    0.01125477 |                  - |
+| encoder_0_0_block_0_final_pk\quantized_bias.txt               | Bias      |   -0.28122807 |    0.35515419 |                  - |
+| encoder_0_0_block_0_final_pk\quantized_weights.txt            | Weight    |        -100.0 |         127.0 |           1.429356 |
+| encoder_0_0_block_0_keys_pk\quantization_scale.txt            | Scale     |    0.00673402 |    0.00673402 |                  - |
+| encoder_0_0_block_0_keys_pk\quantized_bias.txt                | Bias      |   -0.78161651 |    0.54286116 |                  - |
+| encoder_0_0_block_0_keys_pk\quantized_weights.txt             | Weight    |        -128.0 |         125.0 |           0.841753 |
+| encoder_0_0_block_0_queries_pk\quantization_scale.txt         | Scale     |    0.00547185 |    0.00547185 |                  - |
+| encoder_0_0_block_0_queries_pk\quantized_bias.txt             | Bias      |    -0.3338612 |    0.42343992 |                  - |
+| encoder_0_0_block_0_queries_pk\quantized_weights.txt          | Weight    |        -115.0 |         127.0 |           0.694925 |
+| encoder_0_0_block_0_values_pk\quantization_scale.txt          | Scale     |    0.00799483 |    0.00799483 |                  - |
+| encoder_0_0_block_0_values_pk\quantized_bias.txt              | Bias      |   -0.24469441 |    0.22693723 |                  - |
+| encoder_0_0_block_0_values_pk\quantized_weights.txt           | Weight    |        -119.0 |         127.0 |           1.015343 |
+| encoder_0_1_block_0_0_pk\quantization_scale.txt               | Scale     |    0.00897995 |    0.00897995 |                  - |
+| encoder_0_1_block_0_0_pk\quantized_bias.txt                   | Bias      |   -0.36806193 |    0.42852864 |                  - |
+| encoder_0_1_block_0_0_pk\quantized_weights.txt                | Weight    |        -127.0 |         108.0 |           0.969835 |
+| encoder_0_1_block_0_2_pk\quantization_scale.txt               | Scale     |    0.00709934 |    0.00709934 |                  - |
+| encoder_0_1_block_0_2_pk\quantized_bias.txt                   | Bias      |   -0.37542346 |    0.18190736 |                  - |
+| encoder_0_1_block_0_2_pk\quantized_weights.txt                | Weight    |        -128.0 |         115.0 |           0.816424 |
+| positional_encoding_params\positional_encoding\parameters.txt | Parameter |   -2.58485389 |    3.22525859 |                  - |
 +---------------------------------------------------------------+-----------+---------------+---------------+--------------------+

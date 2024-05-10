@@ -13,3 +13,16 @@
 
 ![image-20240510001601903](https://raw.githubusercontent.com/frankxaio/markdwon-image/main/data/image-20240510001601903.png)
 
+> [!NOTE]
+>
+> [How to multiply fixed point numbers of different format](https://electronics.stackexchange.com/questions/270849/how-to-multiply-fixed-point-numbers-of-different-format)
+>
+> - 不同的 fixed-point 做相乘，fixed-point 直接做相加。
+>
+> - `Q[integer part][fraction part]`
+>
+> $$
+> Q3.13 \times Q10.6 = Q13.19
+> $$
+>
+> 
