@@ -1,0 +1,136 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA/20.1
+vmac_unit
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1715508407
+!i10b 1
+!s100 <L3a1l]SamW>`h8CXAKYR2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I7zc<hC_M3AgGPIHOli9oB1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/3by3-with-controller
+w1715443230
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/mac_unit.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/mac_unit.sv
+!i122 121
+L0 1 25
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1715508407.000000
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/mac_unit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/mac_unit.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vmatrix_multiply
+R0
+R1
+!i10b 1
+!s100 7IlR3oB5fTOQD7XDNTc1;0
+R2
+I0e[DBY>?HmNNo7nCZS>2Q0
+R3
+S1
+R4
+w1715505847
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv
+!i122 122
+L0 1 106
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv|
+!i113 1
+R7
+R8
+vmatrix_multiply_controller
+R0
+R1
+!i10b 1
+!s100 S_@MemF?9WMUZPZMc8Wg;1
+R2
+IlSc6m=Cn0Blozom0CoB^Q3
+R3
+S1
+R4
+w1715508401
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv
+!i122 123
+L0 1 240
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv|
+!i113 1
+R7
+R8
+vmatrix_multiply_controller_tb
+R0
+R1
+!i10b 1
+!s100 3D[`n_L8OLXF1@VZLf^]n2
+R2
+I2E62X]2=O9PC6No26@G`O3
+R3
+S1
+R4
+w1715506300
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv
+!i122 124
+L0 3 101
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv|
+!i113 1
+R7
+R8
+vtb_matrix_multiply
+R0
+R1
+!i10b 1
+!s100 QT:m=HIUCEjV_`6WS]>;D3
+R2
+Id?[eLdhOI_dg]LKCfD@SQ1
+R3
+S1
+R4
+w1715448342
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/tb_matrix_multiply.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/tb_matrix_multiply.sv
+!i122 125
+L0 14 38
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/tb_matrix_multiply.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/Systolic-Array-Matrix-Multiplication/16by16-with-controller/tb_matrix_multiply.sv|
+!i113 1
+R7
+R8
