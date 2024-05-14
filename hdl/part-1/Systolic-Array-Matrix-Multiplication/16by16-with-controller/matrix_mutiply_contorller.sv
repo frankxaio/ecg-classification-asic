@@ -16,7 +16,7 @@ module matrix_multiply_controller #(
     logic [DATA_SIZE-1:0] in_b[MATRIX_SIZE-1:0];
     logic [DATA_SIZE-1:0] in_a_reg[MATRIX_SIZE-1:0];
     logic [DATA_SIZE-1:0] in_b_reg[MATRIX_SIZE-1:0];
-    logic [8:0] input_count;
+    logic [6:0] input_count;
     logic computation_done;
     logic [DATA_SIZE-1:0] out_matrix_reversed[MATRIX_SIZE*MATRIX_SIZE-1:0];
 
@@ -231,7 +231,12 @@ module matrix_multiply_controller #(
                     input_count <= input_count + 1;
                 end
                 DONE: begin
+                    input_count <= 0;
                     done <= 1;
+                end
+                default: begin
+                    done <= 0;
+                    input_count <= input_count;
                 end
             endcase
         end

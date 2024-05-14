@@ -2473,6 +2473,7 @@ module lut_module #(
         end
     end
 
+
     // done logic 
     always_comb begin
         done = 1'b0;

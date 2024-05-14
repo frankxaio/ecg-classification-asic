@@ -1,6 +1,7 @@
 module matrix_multiply #(
-    parameter MATRIX_SIZE = 3,
-    DATA_SIZE = 8
+    parameter MATRIX_SIZE = 16,
+    DATA_SIZE = 8,
+    AVOID = 20
 ) (
     input logic [DATA_SIZE-1:0] in_a[MATRIX_SIZE-1:0],
     input logic [DATA_SIZE-1:0] in_b[MATRIX_SIZE-1:0],
@@ -10,8 +11,8 @@ module matrix_multiply #(
     output logic done
 );
 
-    logic [DATA_SIZE-1:0] row_wire[MATRIX_SIZE*MATRIX_SIZE-1:0];
-    logic [DATA_SIZE-1:0] col_wire[MATRIX_SIZE*MATRIX_SIZE-1:0];
+    logic [DATA_SIZE-1:0] row_wire[MATRIX_SIZE*MATRIX_SIZE-1+AVOID:0];
+    logic [DATA_SIZE-1:0] col_wire[MATRIX_SIZE*MATRIX_SIZE-1+AVOID:0];
     logic [$clog2(MATRIX_SIZE*MATRIX_SIZE):0] count;
     logic [5:0] prev_out_matrix_bits;  // Store the last 6 bits of prev_out_matrix
 
@@ -22,19 +23,20 @@ module matrix_multiply #(
         for (i = 1; i < MATRIX_SIZE; i++) begin
             //iterate over columns
             for (j = 1; j < MATRIX_SIZE; j++) begin
+                // MATRIX_SIZE = 3, in_wire_count = 2*2+2 = 6, out_wire_count = 2*3+2 = 8
                 localparam in_wire_count = MATRIX_SIZE * i + j;
                 localparam out_wire_count = MATRIX_SIZE * (i + 1) + j;
-                mac_unit #(
-                    .data_size(DATA_SIZE)
-                ) mu (
-                    .in_a(row_wire[in_wire_count]),
-                    .in_b(col_wire[in_wire_count]),
-                    .out_a(row_wire[in_wire_count+1]),
-                    .out_b(col_wire[out_wire_count]),
-                    .out_sum(out_matrix[in_wire_count]),
-                    .reset(reset),
-                    .clk(clk)
-                );
+                    mac_unit #(
+                        .DATA_SIZE(DATA_SIZE)
+                    ) mu (
+                        .in_a(row_wire[in_wire_count]),
+                        .in_b(col_wire[in_wire_count]),
+                        .out_a(row_wire[in_wire_count+1]),
+                        .out_b(col_wire[out_wire_count]),
+                        .out_sum(out_matrix[in_wire_count]),
+                        .reset(reset),
+                        .clk(clk)
+                    );
             end
         end
 
@@ -43,7 +45,7 @@ module matrix_multiply #(
             localparam in_wire_count = MATRIX_SIZE * i;
             localparam out_wire_count = MATRIX_SIZE * (i + 1);
             mac_unit #(
-                .data_size(DATA_SIZE)
+                .DATA_SIZE(DATA_SIZE)
             ) mu_row (
                 .in_a(row_wire[i]),
                 .in_b(in_b[i]),
@@ -59,7 +61,7 @@ module matrix_multiply #(
         for (j = 1; j < MATRIX_SIZE; j++) begin
             localparam in_wire_count = MATRIX_SIZE * j;
             mac_unit #(
-                .data_size(DATA_SIZE)
+                .DATA_SIZE(DATA_SIZE)
             ) mu_col (
                 .in_a(in_a[j]),
                 .in_b(col_wire[in_wire_count]),
@@ -73,7 +75,7 @@ module matrix_multiply #(
 
         // now add the top left block
         mac_unit #(
-            .data_size(DATA_SIZE)
+            .DATA_SIZE(DATA_SIZE)
         ) mu_top (
             .in_a(in_a[0]),
             .in_b(in_b[0]),

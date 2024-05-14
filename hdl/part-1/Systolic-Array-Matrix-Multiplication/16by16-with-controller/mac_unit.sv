@@ -1,13 +1,13 @@
 module mac_unit #(
-    parameter data_size = 8
+    parameter DATA_SIZE = 8
 ) (
-    input logic [data_size-1:0] in_a,
-    input logic [data_size-1:0] in_b,
+    input logic [DATA_SIZE-1:0] in_a,
+    input logic [DATA_SIZE-1:0] in_b,
     input logic clk,
     reset,
-    output reg [data_size-1:0] out_a,
-    output reg [data_size-1:0] out_b,
-    output reg [data_size-1:0] out_sum
+    output reg [DATA_SIZE-1:0] out_a,
+    output reg [DATA_SIZE-1:0] out_b,
+    output reg [DATA_SIZE-1:0] out_sum
 );  // appropriate sizing ensured in the top module
 
     always_ff @(posedge clk) begin
