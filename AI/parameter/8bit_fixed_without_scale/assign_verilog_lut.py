@@ -1,5 +1,5 @@
 def process_data(data):
-    lines = data.strip().split('\\n')
+    lines = data.strip().split('\n')
     result = []
     current_variable = None
 
@@ -13,11 +13,14 @@ def process_data(data):
             continue
         else:
             if ',' not in line:
-                result.append(line)  # 不添加 };
+                result.append(line + "};")
             else:
                 result.append(line)
 
-    return '\\n'.join(result)
+    # Remove the extra }; from the last line
+    # result[-1] = result[-1].rstrip('};')
+
+    return '\n'.join(result)
 
 # Read the content from the output.txt file
 with open('output.txt', 'r') as file:

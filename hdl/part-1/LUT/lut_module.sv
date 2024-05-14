@@ -6,7 +6,7 @@ module lut_module #(
     input                         rst,
     input                         start,
     input        [ADDR_WIDTH-1:0] addr,
-    output logic [DATA_WIDTH-1:0] data,
+    output logic [DATA_WIDTH-1:0] data_o,
     output logic                  done
 );
 
@@ -51,6 +51,7 @@ module lut_module #(
 
     // Array index register
     logic [$clog2(256):0] array_index, array_index_ns;
+    logic [DATA_WIDTH-1:0] data;
 
 
     //LUT DATA
@@ -2160,122 +2161,162 @@ module lut_module #(
 
     // Next state logic
     always_comb begin
-        next_state = state;
         case (state)
             IDLE: begin
                 if (start) begin
                     case (addr)
                         32'h0000_0001: next_state = READ_CLASSIFIER_BS;
                         32'h0000_0002: next_state = READ_CLASSIFIER_WT;
-                        32'h0001_0000: next_state = READ_EMBEDDING_BS;
-                        32'h0001_0001: next_state = READ_EMBEDDING_WT;
-                        32'h0001_0002: next_state = READ_CLS_TOKEN_WT;
-                        32'h0002_0000: next_state = READ_FINAL_BS;
-                        32'h0002_0001: next_state = READ_FINAL_WT;
-                        32'h0002_0002: next_state = READ_KEYS_BS;
-                        32'h0002_0003: next_state = READ_KEYS_WT;
-                        32'h0002_0004: next_state = READ_QUERIES_BS;
-                        32'h0002_0005: next_state = READ_QUERIES_WT;
-                        32'h0002_0006: next_state = READ_VALUES_BS;
-                        32'h0002_0007: next_state = READ_VALUES_WT;
-                        32'h0002_0008: next_state = READ_MLP0_BS;
-                        32'h0002_0009: next_state = READ_MLP0_WT;
-                        32'h0002_000A: next_state = READ_MLP1_BS;
-                        32'h0002_000B: next_state = READ_MLP1_WT;
-                        32'h0003_0000: next_state = READ_PS_WT;
+                        32'h0000_0003: next_state = READ_EMBEDDING_BS;
+                        32'h0000_0004: next_state = READ_EMBEDDING_WT;
+                        32'h0000_0005: next_state = READ_CLS_TOKEN_WT;
+                        32'h0000_0006: next_state = READ_FINAL_BS;
+                        32'h0000_0007: next_state = READ_FINAL_WT;
+                        32'h0000_0008: next_state = READ_KEYS_BS;
+                        32'h0000_0009: next_state = READ_KEYS_WT;
+                        32'h0000_000A: next_state = READ_QUERIES_BS;
+                        32'h0000_000B: next_state = READ_QUERIES_WT;
+                        32'h0000_000C: next_state = READ_VALUES_BS;
+                        32'h0000_000D: next_state = READ_VALUES_WT;
+                        32'h0000_000E: next_state = READ_MLP0_BS;
+                        32'h0000_000F: next_state = READ_MLP0_WT;
+                        32'h0000_0010: next_state = READ_MLP1_BS;
+                        32'h0000_0011: next_state = READ_MLP1_WT;
+                        32'h0000_0012: next_state = READ_PS_WT;
                         default:       next_state = IDLE;
                     endcase
+                end else begin
+                    next_state = state;
                 end
             end
             READ_CLASSIFIER_BS: begin
                 if (array_index == CLASSIFIER_BS_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_CLASSIFIER_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(96)] == 96 - 1) begin
+                if (array_index == CLASSIFIER_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_EMBEDDING_BS: begin
-                if (addr[ADDR_WIDTH-1:$clog2(16)] == 16 - 1) begin
+                if (array_index == EMBEDDING_BS_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_EMBEDDING_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(16)] == 16 - 1) begin
+                if (array_index == EMBEDDING_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_CLS_TOKEN_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(16)] == 16 - 1) begin
+                if (array_index == CLS_TOKEN_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_FINAL_BS: begin
-                if (addr[ADDR_WIDTH-1:$clog2(16)] == 16 - 1) begin
+                if (array_index == FINAL_BS_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_FINAL_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(256)] == 256 - 1) begin
+                if (array_index == FINAL_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_KEYS_BS: begin
-                if (addr[ADDR_WIDTH-1:$clog2(16)] == 16 - 1) begin
+                if (array_index == KEYS_BS_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_KEYS_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(256)] == 256 - 1) begin
+                if (array_index == KEYS_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_QUERIES_BS: begin
-                if (addr[ADDR_WIDTH-1:$clog2(16)] == 16 - 1) begin
+                if (array_index == QUERIES_BS_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_QUERIES_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(256)] == 256 - 1) begin
+                if (array_index == QUERIES_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_VALUES_BS: begin
-                if (addr[ADDR_WIDTH-1:$clog2(16)] == 16 - 1) begin
+                if (array_index == VALUES_BS_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_VALUES_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(256)] == 256 - 1) begin
+                if (array_index == VALUES_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_MLP0_BS: begin
-                if (addr[ADDR_WIDTH-1:$clog2(16)] == 16 - 1) begin
+                if (array_index == MLP0_BS_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_MLP0_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(256)] == 256 - 1) begin
+                if (array_index == MLP0_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_MLP1_BS: begin
-                if (addr[ADDR_WIDTH-1:$clog2(16)] == 16 - 1) begin
+                if (array_index == MLP1_BS_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_MLP1_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(256)] == 256 - 1) begin
+                if (array_index == MLP1_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
             end
             READ_PS_WT: begin
-                if (addr[ADDR_WIDTH-1:$clog2(256)] == 256 - 1) begin
+                if (array_index == PS_WT_CNT) begin
                     next_state = IDLE;
+                end else begin
+                    next_state = state;
                 end
+            end
+            default: begin
+                next_state = state;
             end
         endcase
     end
@@ -2290,6 +2331,7 @@ module lut_module #(
         end
     end
 
+    // array index 
     always_comb begin
         if (rst) begin
             array_index_ns = '0;
@@ -2438,109 +2480,109 @@ module lut_module #(
         case (state)
             READ_CLASSIFIER_BS: begin
                 data = classifier_bs[array_index];
-                if (array_index == 6 - 1) begin
+                if (array_index == 6) begin
                     done = 1'b1;
                 end
             end
             READ_CLASSIFIER_WT: begin
                 data = classifier_wt[array_index];
-                if (array_index == 96 - 1) begin
+                if (array_index == 96) begin
                     done = 1'b1;
                 end
             end
             READ_EMBEDDING_BS: begin
                 data = embedding_bs[array_index];
-                if (array_index == 16 - 1) begin
+                if (array_index == 16) begin
                     done = 1'b1;
                 end
             end
             READ_EMBEDDING_WT: begin
                 data = embedding_wt[array_index];
-                if (array_index == 16 - 1) begin
+                if (array_index == 16) begin
                     done = 1'b1;
                 end
             end
             READ_CLS_TOKEN_WT: begin
                 data = cls_token_wt[array_index];
-                if (array_index == 16 - 1) begin
+                if (array_index == 16) begin
                     done = 1'b1;
                 end
             end
             READ_FINAL_BS: begin
                 data = final_bs[array_index];
-                if (array_index == 16 - 1) begin
+                if (array_index == 16) begin
                     done = 1'b1;
                 end
             end
             READ_FINAL_WT: begin
                 data = final_wt[array_index];
-                if (array_index == 256 - 1) begin
+                if (array_index == 256) begin
                     done = 1'b1;
                 end
             end
             READ_KEYS_BS: begin
                 data = keys_bs[array_index];
-                if (array_index == 16 - 1) begin
+                if (array_index == 16) begin
                     done = 1'b1;
                 end
             end
             READ_KEYS_WT: begin
                 data = keys_wt[array_index];
-                if (array_index == 256 - 1) begin
+                if (array_index == 256) begin
                     done = 1'b1;
                 end
             end
             READ_QUERIES_BS: begin
                 data = queries_bs[array_index];
-                if (array_index == 16 - 1) begin
+                if (array_index == 16) begin
                     done = 1'b1;
                 end
             end
             READ_QUERIES_WT: begin
                 data = queries_wt[array_index];
-                if (array_index == 256 - 1) begin
+                if (array_index == 256) begin
                     done = 1'b1;
                 end
             end
             READ_VALUES_BS: begin
                 data = values_bs[array_index];
-                if (array_index == 16 - 1) begin
+                if (array_index == 16) begin
                     done = 1'b1;
                 end
             end
             READ_VALUES_WT: begin
                 data = values_wt[array_index];
-                if (array_index == 256 - 1) begin
+                if (array_index == 256) begin
                     done = 1'b1;
                 end
             end
             READ_MLP0_BS: begin
                 data = mlp0_bs[array_index];
-                if (array_index == 16 - 1) begin
+                if (array_index == 16) begin
                     done = 1'b1;
                 end
             end
             READ_MLP0_WT: begin
                 data = mlp0_wt[array_index];
-                if (array_index == 256 - 1) begin
+                if (array_index == 256) begin
                     done = 1'b1;
                 end
             end
             READ_MLP1_BS: begin
                 data = mlp1_bs[array_index];
-                if (array_index == 16 - 1) begin
+                if (array_index == 16) begin
                     done = 1'b1;
                 end
             end
             READ_MLP1_WT: begin
                 data = mlp1_wt[array_index];
-                if (array_index == 256 - 1) begin
+                if (array_index == 256) begin
                     done = 1'b1;
                 end
             end
             READ_PS_WT: begin
                 data = ps_wt[array_index];
-                if (array_index == 256 - 1) begin
+                if (array_index == 256) begin
                     done = 1'b1;
                 end
             end
@@ -2550,5 +2592,10 @@ module lut_module #(
         endcase
     end
 
+    always_ff @(posedge clk, posedge rst) begin
+        if (rst) data_o <= 0;
+        else if (next_state == IDLE) data_o <= data_o;
+        else data_o <= data;
+    end
 
 endmodule
