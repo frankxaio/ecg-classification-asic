@@ -1,0 +1,413 @@
+vsim work.rom_tb
+# vsim work.rom_tb 
+# Start time: 20:15:49 on May 13,2024
+# Loading sv_std.std
+# Loading work.rom_tb
+# Loading work.rom
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:D:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 0 descending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 descending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 descending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 descending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
+add wave -position insertpoint  \
+sim:/rom_tb/ROM_FILE \
+sim:/rom_tb/DATA_WIDTH \
+sim:/rom_tb/DATA_DEPTH \
+sim:/rom_tb/data \
+sim:/rom_tb/ADDR_WIDTH \
+sim:/rom_tb/addr
+run
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.mem". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_tb/rom_inst
+# Address: 0, Data: x
+# Address: 1, Data: x
+# Address: 2, Data: x
+# Address: 3, Data: x
+# Address: 4, Data: x
+# Address: 5, Data: x
+# Address: 6, Data: x
+# Address: 7, Data: x
+# Address: 8, Data: x
+# Address: 9, Data: x
+# Address: 10, Data: x
+# Address: 11, Data: x
+# Address: 12, Data: x
+# Address: 13, Data: x
+# Address: 14, Data: x
+# Address: 15, Data: x
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv(36)
+#    Time: 170 ps  Iteration: 0  Instance: /rom_tb
+# 1
+# Break in Module rom_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv line 36
+add wave -position insertpoint  \
+sim:/rom_tb/rom_inst/memory
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.mem". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_tb/rom_inst
+# Address: 0, Data: x
+# Address: 1, Data: x
+# Address: 2, Data: x
+# Address: 3, Data: x
+# Address: 4, Data: x
+# Address: 5, Data: x
+# Address: 6, Data: x
+# Address: 7, Data: x
+# Address: 8, Data: x
+# Address: 9, Data: x
+# Address: 10, Data: x
+# Address: 11, Data: x
+# Address: 12, Data: x
+# Address: 13, Data: x
+# Address: 14, Data: x
+# Address: 15, Data: x
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv(36)
+#    Time: 170 ps  Iteration: 0  Instance: /rom_tb
+# 1
+# Break in Module rom_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv line 36
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.mem". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_tb/rom_inst
+# Address: 0, Data: x
+# Address: 1, Data: x
+# Address: 2, Data: x
+# Address: 3, Data: x
+# Address: 4, Data: x
+# Address: 5, Data: x
+# Address: 6, Data: x
+# Address: 7, Data: x
+# Address: 8, Data: x
+# Address: 9, Data: x
+# Address: 10, Data: x
+# Address: 11, Data: x
+# Address: 12, Data: x
+# Address: 13, Data: x
+# Address: 14, Data: x
+# Address: 15, Data: x
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.mem". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_tb/rom_inst
+# Address: 0, Data: x
+# Address: 1, Data: x
+# Address: 2, Data: x
+# Address: 3, Data: x
+# Address: 4, Data: x
+# Address: 5, Data: x
+# Address: 6, Data: x
+# Address: 7, Data: x
+# Address: 8, Data: x
+# Address: 9, Data: x
+# Address: 10, Data: x
+# Address: 11, Data: x
+# Address: 12, Data: x
+# Address: 13, Data: x
+# Address: 14, Data: x
+# Address: 15, Data: x
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Address: 0, Data: 1efc
+# Address: 1, Data: f66d
+# Address: 2, Data: 2d1
+# Address: 3, Data: cbce
+# Address: 4, Data: fdf2
+# Address: 5, Data: d2ca
+# Address: 6, Data: x
+# Address: 7, Data: x
+# Address: 8, Data: x
+# Address: 9, Data: x
+# Address: 10, Data: x
+# Address: 11, Data: x
+# Address: 12, Data: x
+# Address: 13, Data: x
+# Address: 14, Data: x
+# Address: 15, Data: x
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.rom_controller_tb
+# End time: 20:31:55 on May 13,2024, Elapsed time: 0:16:06
+# Errors: 0, Warnings: 2
+# vsim work.rom_controller_tb 
+# Start time: 20:31:55 on May 13,2024
+# Loading sv_std.std
+# Loading work.rom_controller_tb
+# Loading work.rom_controller
+# Loading work.rom
+# ** Error (suppressible): (vsim-3584) C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv(32): Module parameter 'ADDR_WIDTH' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/controller_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv
+# Error loading design
+# End time: 20:31:56 on May 13,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.rom_controller_tb
+# vsim work.rom_controller_tb 
+# Start time: 20:32:35 on May 13,2024
+# Loading sv_std.std
+# Loading work.rom_controller_tb
+# Loading work.rom_controller
+# Loading work.rom
+# ** Error (suppressible): (vsim-3584) C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv(32): Module parameter 'ADDR_WIDTH' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv
+# Error loading design
+# End time: 20:32:36 on May 13,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.rom_controller_tb
+# vsim work.rom_controller_tb 
+# Start time: 20:33:05 on May 13,2024
+# Loading sv_std.std
+# Loading work.rom_controller_tb
+# Loading work.rom_controller
+# Loading work.rom
+# ** Error (suppressible): (vsim-3584) C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv(32): Module parameter 'ADDR_WIDTH' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv
+# Error loading design
+# End time: 20:33:06 on May 13,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.rom_controller_tb
+# vsim work.rom_controller_tb 
+# Start time: 20:34:25 on May 13,2024
+# Loading sv_std.std
+# Loading work.rom_controller_tb
+# Loading work.rom_controller
+# Loading work.rom
+add wave -position insertpoint  \
+sim:/rom_controller_tb/start \
+sim:/rom_controller_tb/rst \
+sim:/rom_controller_tb/ROM_FILE \
+sim:/rom_controller_tb/done \
+sim:/rom_controller_tb/DATA_WIDTH \
+sim:/rom_controller_tb/DATA_DEPTH \
+sim:/rom_controller_tb/data \
+sim:/rom_controller_tb/clk \
+sim:/rom_controller_tb/ADDR_WIDTH
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "rom_data.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/dut/rom_inst
+# 開始 ROM 讀取操作...
+# ROM 讀取操作完成。
+# 開始另一次 ROM 讀取操作...
+# ROM 資料輸出:
+# data[0] = x
+# data[1] = x
+# data[2] = x
+# data[3] = x
+# data[4] = x
+# data[5] = x
+# data[6] = x
+# data[7] = x
+# data[8] = x
+# data[9] = x
+# data[10] = x
+# data[11] = x
+# data[12] = x
+# data[13] = x
+# data[14] = x
+# data[15] = x
+# 第二次 ROM 讀取操作完成。
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv(68)
+#    Time: 185 ps  Iteration: 0  Instance: /rom_controller_tb
+# 1
+# Break in Module rom_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv line 68
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_controller_tb
+# Loading work.rom_controller
+# Loading work.rom
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "rom_data.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/dut/rom_inst
+# 開始 ROM 讀取操作...
+# ROM 讀取操作完成。
+# 開始另一次 ROM 讀取操作...
+# ROM 資料輸出:
+# data[0] = x
+# data[1] = x
+# data[2] = x
+# data[3] = x
+# data[4] = x
+# data[5] = x
+# data[6] = x
+# data[7] = x
+# data[8] = x
+# data[9] = x
+# data[10] = x
+# data[11] = x
+# data[12] = x
+# data[13] = x
+# data[14] = x
+# data[15] = x
+# 第二次 ROM 讀取操作完成。
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv(68)
+#    Time: 185 ps  Iteration: 0  Instance: /rom_controller_tb
+# 1
+# Break in Module rom_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv line 68
+add wave -position insertpoint  \
+sim:/rom_controller_tb/dut/rom_inst/memory
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "rom_data.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/dut/rom_inst
+# 開始 ROM 讀取操作...
+# ROM 讀取操作完成。
+# 開始另一次 ROM 讀取操作...
+# ROM 資料輸出:
+# data[0] = x
+# data[1] = x
+# data[2] = x
+# data[3] = x
+# data[4] = x
+# data[5] = x
+# data[6] = x
+# data[7] = x
+# data[8] = x
+# data[9] = x
+# data[10] = x
+# data[11] = x
+# data[12] = x
+# data[13] = x
+# data[14] = x
+# data[15] = x
+# 第二次 ROM 讀取操作完成。
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv(68)
+#    Time: 185 ps  Iteration: 0  Instance: /rom_controller_tb
+# 1
+# Break in Module rom_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv line 68
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_controller_tb
+# Loading work.rom_controller
+# Loading work.rom
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# 開始 ROM 讀取操作...
+# ROM 讀取操作完成。
+# 開始另一次 ROM 讀取操作...
+# ROM 資料輸出:
+# data[0] = 1efc
+# data[1] = f66d
+# data[2] = 2d1
+# data[3] = cbce
+# data[4] = fdf2
+# data[5] = d2ca
+# data[6] = x
+# data[7] = x
+# data[8] = x
+# data[9] = x
+# data[10] = x
+# data[11] = x
+# data[12] = x
+# data[13] = x
+# data[14] = x
+# data[15] = x
+# 第二次 ROM 讀取操作完成。
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv(68)
+#    Time: 185 ps  Iteration: 0  Instance: /rom_controller_tb
+# 1
+# Break in Module rom_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv line 68
+restart
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_controller_tb
+# Loading work.rom_controller
+# Loading work.rom
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# 開始 ROM 讀取操作...
+# ROM 讀取操作完成。
+# 開始另一次 ROM 讀取操作...
+# ROM 資料輸出:
+# data[0] = 1efc
+# data[1] = f66d
+# data[2] = 2d1
+# data[3] = cbce
+# data[4] = fdf2
+# data[5] = d2ca
+# 第二次 ROM 讀取操作完成。
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv(68)
+#    Time: 85 ps  Iteration: 0  Instance: /rom_controller_tb
+# 1
+# Break in Module rom_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv line 68
+# End time: 20:50:16 on May 13,2024, Elapsed time: 0:15:51
+# Errors: 0, Warnings: 1

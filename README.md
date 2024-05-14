@@ -79,13 +79,19 @@ ECGformer                                          [1, 15, 1]                [1,
 
 ### Fixed Point 
 
-| Layer/Parameter       | Bit Width | Integer Part | Fraction Part |
-| --------------------- | --------- | ------------ | ------------- |
-| `Linear: Scale`       | 16-bit    | 1-bit        | 15-bit        |
-| `Linear: Bias`        | 16-bit    | 1-bit        | 15-bit        |
-| `Linear: Weight`      | 8-bit     | 8-bit        | 0-bit         |
-| `cls_token`           | 16-bit    | 4-bit        | 12-bit        |
-| `positional_encoding` | 16-bit    | 4-bit        | 12-bit        |
+為了計算方便全部統一成 Q4.4, 4-bit integer + 4-bit fraction
+
+> ~~每一層 layer 之間的 fixed-point 4-bit integer + 4-bit fraction~~ 
+>
+> | ~~Layer/Parameter~~       | ~~Bit Width~~ | ~~Integer Part~~ | ~~Fraction Part~~ |
+> | ------------------------- | ------------- | ---------------- | ----------------- |
+> | ~~`Linear: Scale`~~       | ~~16-bit~~    | ~~1-bit~~        | ~~15-bit~~        |
+> | ~~`Linear: Bias`~~        | ~~16-bit~~    | ~~1-bit~~        | ~~15-bit~~        |
+> | ~~`Linear: Weight`~~      | ~~8-bit~~     | ~~8-bit~~        | ~~0-bit~~         |
+> | ~~`cls_token`~~           | ~~16-bit~~    | ~~4-bit~~        | ~~12-bit~~        |
+> | ~~`positional_encoding`~~ | ~~16-bit~~    | ~~4-bit~~        | ~~12-bit~~        |
+
+
 
 ## Hardware
 
@@ -115,7 +121,7 @@ ECGformer                                          [1, 15, 1]                [1,
 
 ### Linear Embedding
 
-- MMU: $\text{size}(15,1)\times \text{size}(16,1)^T + bias=\text{size}(15,16)$ 
+- `linear_embedding.sv`  
 
 - Concatenation: $\{\text{size}(15,16), \text{size}(1, 16)\}=\text{size}(16,16)$ 
   $$

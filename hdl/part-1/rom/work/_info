@@ -1,0 +1,136 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce
+vrom
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1715603810
+!i10b 1
+!s100 5^Yc89b6oCTo<aP5;@TLT2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I0XClFzE<bfN3`dSRlcd=J3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom
+w1715602351
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv
+!i122 66
+L0 1 20
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1715603810.000000
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vrom_controller
+R0
+R1
+!i10b 1
+!s100 1BQ8Ij5^082AE?nf0zKO]3
+R2
+Il==;iYIdc2:`ZPM7T=nKF3
+R3
+S1
+R4
+w1715603683
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv
+!i122 67
+L0 1 63
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv|
+!i113 1
+R7
+R8
+vrom_controller_tb
+R0
+R1
+!i10b 1
+!s100 fTa4I0bKmC1cV;DM5T6OA0
+R2
+I62WK088h42o4:no=^0^E[0
+R3
+S1
+R4
+w1715603801
+Z9 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv
+Z10 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv
+!i122 68
+L0 1 81
+R5
+r1
+!s85 0
+31
+R6
+Z11 !s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv|
+Z12 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv|
+!i113 1
+R7
+R8
+vrom_tb
+R0
+R1
+!i10b 1
+!s100 lO2W40DL7[8;[igEdImjO0
+R2
+Iz9mb3kg:1BO7CjHRC0IQN3
+R3
+S1
+R4
+w1715602906
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv
+!i122 69
+L0 1 39
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv|
+!i113 1
+R7
+R8
+vtb
+R0
+!s110 1715590362
+!i10b 1
+!s100 J5kFCEQh`NnaR275bzL6e0
+R2
+IkOL6]F`KBgV_]Vb^<j2zl1
+R3
+S1
+R4
+w1715590355
+R9
+R10
+!i122 5
+L0 1 57
+R5
+r1
+!s85 0
+31
+!s108 1715590362.000000
+R11
+R12
+!i113 1
+R7
+R8

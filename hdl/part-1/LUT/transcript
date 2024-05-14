@@ -1,0 +1,139 @@
+# Compile of lut_module.sv failed with 1 errors.
+# Compile of lut_module_tb.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# Compile of lut_module.sv failed with 1 errors.
+# Compile of lut_module_tb.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+clear
+# invalid command name "clear"
+clc
+# invalid command name "clc"
+clean
+# Compile of lut_module.sv failed with 1 errors.
+# Compile of lut_module.sv was successful.
+# Compile of lut_module_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.lut_module_tb
+# vsim work.lut_module_tb 
+# Start time: 15:41:31 on May 14,2024
+# Loading sv_std.std
+# Loading work.lut_module_tb
+# Loading work.lut_module
+vsim work.lut_module_tb
+# End time: 15:41:43 on May 14,2024, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 8
+# vsim work.lut_module_tb 
+# Start time: 15:41:43 on May 14,2024
+# Loading sv_std.std
+# Loading work.lut_module_tb
+# Loading work.lut_module
+add wave -position insertpoint  \
+sim:/lut_module_tb/start \
+sim:/lut_module_tb/rst \
+sim:/lut_module_tb/done \
+sim:/lut_module_tb/DATA_WIDTH \
+sim:/lut_module_tb/data \
+sim:/lut_module_tb/clk \
+sim:/lut_module_tb/ADDR_WIDTH \
+sim:/lut_module_tb/addr
+run
+# time=0, addr=00000000, data=xx, done=0
+run
+run
+run
+# time=35000, addr=00000000, data=04, done=1
+run
+# time=40000, addr=0000000a, data=04, done=1
+# time=45000, addr=0000000a, data=04, done=0
+run
+# time=55000, addr=0000000a, data=00, done=1
+run
+# time=60000, addr=00010005, data=00, done=1
+# time=65000, addr=00010005, data=00, done=0
+run
+# time=75000, addr=00010005, data=00, done=1
+run
+# time=80000, addr=00020064, data=00, done=1
+# time=85000, addr=00020064, data=00, done=0
+run
+# time=95000, addr=00020064, data=00, done=1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/LUT/lut_module_tb.sv(67)
+#    Time: 190 ns  Iteration: 0  Instance: /lut_module_tb
+# 1
+# Break in Module lut_module_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/LUT/lut_module_tb.sv line 67
+run
+# Compile of lut_module.sv failed with 19 errors.
+# Compile of lut_module_tb.sv was successful.
+# 2 compiles, 1 failed with 19 errors.
+# Compile of lut_module.sv was successful.
+# Compile of lut_module_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.lut_module_tb
+# End time: 16:08:40 on May 14,2024, Elapsed time: 0:26:57
+# Errors: 0, Warnings: 3
+# vsim work.lut_module_tb 
+# Start time: 16:08:40 on May 14,2024
+# Loading sv_std.std
+# Loading work.lut_module_tb
+# Loading work.lut_module
+# Compile of lut_module.sv was successful.
+# Compile of lut_module_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.lut_module_tb
+# End time: 16:11:19 on May 14,2024, Elapsed time: 0:02:39
+# Errors: 0, Warnings: 2
+# vsim work.lut_module_tb 
+# Start time: 16:11:19 on May 14,2024
+# Loading sv_std.std
+# Loading work.lut_module_tb
+# Loading work.lut_module
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+add wave -position insertpoint  \
+sim:/lut_module_tb/start \
+sim:/lut_module_tb/rst \
+sim:/lut_module_tb/done \
+sim:/lut_module_tb/DATA_WIDTH \
+sim:/lut_module_tb/data \
+sim:/lut_module_tb/clk \
+sim:/lut_module_tb/ADDR_WIDTH \
+sim:/lut_module_tb/addr
+run
+run -all
+add wave -position insertpoint  \
+sim:/lut_module_tb/uut/state
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

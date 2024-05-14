@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/dot-prodcut
+vrelu
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1715584178
+!i10b 1
+!s100 Be]3mYZiicb_OP2cb>jl33
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEkD@3o9;@=2Z2HaloQgB^3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/ReLU
+w1715584025
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/ReLU/relu.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/ReLU/relu.sv
+!i122 0
+L0 1 16
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1715584178.000000
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/ReLU/relu.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/ReLU/relu.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vrelu_tb
+R0
+R1
+!i10b 1
+!s100 Q5Fb3hDbelF[HkZkV;0C<0
+R2
+I8CUL[H;fZ48omhSj6eZoW1
+R3
+S1
+R4
+w1715584152
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/ReLU/relu_tb.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/ReLU/relu_tb.sv
+!i122 1
+L0 1 40
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/ReLU/relu_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/ReLU/relu_tb.sv|
+!i113 1
+R7
+R8

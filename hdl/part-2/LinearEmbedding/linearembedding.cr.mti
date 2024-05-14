@@ -1,0 +1,31 @@
+C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/dot_product_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/dot_product_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dot_product_tb
+
+Top level modules:
+	dot_product_tb
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv {2 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module relu
+** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv(11): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv(12): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	relu
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module linear_embedding_tb
+
+Top level modules:
+	linear_embedding_tb
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/dot_product.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/dot_product.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dot_product
+
+Top level modules:
+	dot_product
+
+} {} {}}

@@ -1,0 +1,1010 @@
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.reduce_tb
+# vsim work.reduce_tb 
+# Start time: 15:25:37 on May 13,2024
+# Loading sv_std.std
+# Loading work.reduce_tb
+# Loading work.reduce
+add wave -position insertpoint  \
+sim:/reduce_tb/rst \
+sim:/reduce_tb/matrix_out \
+sim:/reduce_tb/matrix_in \
+sim:/reduce_tb/done \
+sim:/reduce_tb/clk
+run
+# Test Case 1:
+run
+run
+run
+run
+run
+run
+run -all
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+run
+run -all
+add wave -position insertpoint  \
+sim:/reduce_tb/dut/col_cnt
+add wave -position insertpoint  \
+sim:/reduce_tb/dut/row_cnt
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/reduce_tb/dut/sum
+add wave -position insertpoint  \
+sim:/reduce_tb/dut/avg
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+add wave -position insertpoint  \
+sim:/reduce_tb/dut/state
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   0   7  16  25  36  47  60  73  88 103 120 137 156 175 196 217 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   0   7  16  25  36  47  60  73  88 103 120 137 156 175 196 217 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(57)
+#    Time: 2765 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 57
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   7  16  25  36  47  60  73  88 103 120 137 156 175 196 217   0 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   7  16  25  36  47  60  73  88 103 120 137 156 175 196 217   0 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(57)
+#    Time: 2765 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 57
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   0   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   0   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(57)
+#    Time: 2765 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 57
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21   0 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21   0 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(57)
+#    Time: 2765 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 57
+# Compile of reduce_tb.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+run
+run
+run
+run
+run
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+run
+run
+run
+run
+run
+run
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   0   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   0   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(57)
+#    Time: 2765 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 57
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22   0 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22   0 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(57)
+#    Time: 2765 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 57
+add wave -position insertpoint  \
+sim:/reduce_tb/dut/next_state
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21   0 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21   0 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(57)
+#    Time: 2765 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 57
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(57)
+#    Time: 2765 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 57
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(57)
+#    Time: 2765 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 57
+# Compile of reduce.sv was successful with warnings.
+# Compile of reduce_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reduce_tb
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(64)
+#    Time: 2775 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 64
+add wave -position insertpoint  \
+sim:/reduce_tb/enable
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Case 1:
+# Input Matrix:
+# Row  0:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 
+# Row  1:   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+# Row  2:   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17 
+# Row  3:   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18 
+# Row  4:   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19 
+# Row  5:   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
+# Row  6:   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21 
+# Row  7:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Row  8:   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23 
+# Row  9:   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24 
+# Row 10:  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 
+# Row 11:  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26 
+# Row 12:  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27 
+# Row 13:  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28 
+# Row 14:  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29 
+# Row 15:  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# Test Case 2:
+# Input Matrix:
+# Row  0:  36 129   9  99  13 141 101  18   1  13 118  61 237 140 249 198 
+# Row  1: 197 170 229 119  18 143 242 206 232 197  92 189  45 101  99  10 
+# Row  2: 128  32 170 157 150  19  13  83 107 213   2 174  29 207  35  10 
+# Row  3: 202  60 242 138  65 216 120 137 235 182 198 174 188  42  11 113 
+# Row  4: 133  79  59  58 126  21 241 217  98  76 159 143 248 183 159  92 
+# Row  5:  91 137  73 208 215  81 150  12 194 200 119  61  18 126 109  57 
+# Row  6:  31 211 133 120  91  73  63  42  88 134 142 156 250  38 115 163 
+# Row  7:  47 179  95  68 247 203 230  90  41 237 218 101 181 223 121  68 
+# Row  8: 208  42 171  14 220 154 253 195  86  78 103  10 182  56 121 184 
+# Row  9: 148 147   4  89 219  77 217 109 118 202 182 149  70   4 247 105 
+# Row 10: 180 136  40  45 199  46   8  28 253  41  28 134 218  61 102 112 
+# Row 11: 115 186  94 250 213  26 185  55 150 192  38 182 125 220 134 120 
+# Row 12: 126 219 207 121 250  97  23 161 134  80 245  53  41 193 197 152 
+# Row 13:  75 115 236 138  78 168 169 161  14 230 159  42  42 141 158  56 
+# Row 14: 121 200 202  19 107 199 182 186 196 185 146 180 127 134 250 242 
+# Row 15:  50 189 132 228 202 169 161 142 251  11 239 201  54 117 143 107 
+# Output Matrix:
+# Output:   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22 
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv(64)
+#    Time: 2775 ps  Iteration: 0  Instance: /reduce_tb
+# 1
+# Break in Module reduce_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/reduce/reduce_tb.sv line 64
+quit -sim
+# End time: 16:51:54 on May 13,2024, Elapsed time: 1:26:17
+# Errors: 0, Warnings: 1
+# reading D:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project rom
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.rom_controller
+# vsim work.rom_controller 
+# Start time: 16:52:46 on May 13,2024
+# Loading sv_std.std
+# Loading work.rom_controller
+# Loading work.rom
+run
+# ** Warning: (vsim-7) Failed to open readmem file "" in read mode.
+# Invalid argument. (errno = EINVAL)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(14)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller/rom_inst
+run -all
+run -all
+run -all
+# Break key hit
+add wave -position insertpoint  \
+sim:/rom_controller/state \
+sim:/rom_controller/start \
+sim:/rom_controller/rst \
+sim:/rom_controller/rom_file \
+sim:/rom_controller/rom_data \
+sim:/rom_controller/next_state \
+sim:/rom_controller/done \
+sim:/rom_controller/DATA_WIDTH \
+sim:/rom_controller/DATA_DEPTH \
+sim:/rom_controller/data \
+sim:/rom_controller/clk \
+sim:/rom_controller/ADDR_WIDTH \
+sim:/rom_controller/addr_cnt
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Warning: (vsim-7) Failed to open readmem file "" in read mode.
+# Invalid argument. (errno = EINVAL)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(14)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller/rom_inst
+run -all
+# Break key hit
+run -all
+# Break key hit
+run
+run
+run
+run
+run
+run
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.rom_controller_tb
+# End time: 17:01:40 on May 13,2024, Elapsed time: 0:08:54
+# Errors: 0, Warnings: 3
+# vsim work.rom_controller_tb 
+# Start time: 17:01:40 on May 13,2024
+# Loading sv_std.std
+# Loading work.rom_controller_tb
+# Loading work.rom_controller
+# Loading work.rom
+add wave -position insertpoint  \
+sim:/rom_controller_tb/start \
+sim:/rom_controller_tb/rst \
+sim:/rom_controller_tb/ROM_FILE \
+sim:/rom_controller_tb/done \
+sim:/rom_controller_tb/DATA_WIDTH \
+sim:/rom_controller_tb/DATA_DEPTH \
+sim:/rom_controller_tb/data \
+sim:/rom_controller_tb/clk \
+sim:/rom_controller_tb/ADDR_WIDTH
+run
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.txt". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(14)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/controller_inst/rom_inst
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv(55)
+#    Time: 195 ps  Iteration: 0  Instance: /rom_controller_tb
+# 1
+# Break in Module rom_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv line 55
+add wave -position insertpoint  \
+sim:/rom_controller_tb/controller_inst/addr_cnt
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.txt". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(14)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/controller_inst/rom_inst
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv(55)
+#    Time: 195 ps  Iteration: 0  Instance: /rom_controller_tb
+# 1
+# Break in Module rom_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv line 55
+add wave -position insertpoint  \
+sim:/rom_controller_tb/controller_inst/rom_data
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.txt". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(14)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/controller_inst/rom_inst
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv(55)
+#    Time: 195 ps  Iteration: 0  Instance: /rom_controller_tb
+# 1
+# Break in Module rom_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv line 55
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_controller_tb
+# Loading work.rom_controller
+# Loading work.rom
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.txt". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(14)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_controller_tb/controller_inst/rom_inst
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv(55)
+#    Time: 195 ps  Iteration: 0  Instance: /rom_controller_tb
+# 1
+# Break in Module rom_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller_tb.sv line 55
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.rom_tb
+# End time: 20:13:03 on May 13,2024, Elapsed time: 3:11:23
+# Errors: 0, Warnings: 4
+# vsim work.rom_tb 
+# Start time: 20:13:03 on May 13,2024
+# Loading sv_std.std
+# Loading work.rom_tb
+# Loading work.rom
+# ** Error (suppressible): (vsim-3584) C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv(15): Module parameter 'ADDR_WIDTH' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /rom_tb File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv
+# Error loading design
+# End time: 20:13:03 on May 13,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 20:13:44 on May 13,2024
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.rom_controller
+# Loading work.rom
+# ** Error (suppressible): (vsim-3584) C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv(32): Module parameter 'ADDR_WIDTH' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/controller_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv
+# Error loading design
+# End time: 20:13:44 on May 13,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 20:14:20 on May 13,2024
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.rom_controller
+# Loading work.rom
+# ** Error (suppressible): (vsim-3584) C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv(32): Module parameter 'ADDR_WIDTH' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/controller_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_controller.sv
+# Error loading design
+# End time: 20:14:21 on May 13,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+vsim work.rom_tb
+# vsim work.rom_tb 
+# Start time: 20:14:21 on May 13,2024
+# Loading sv_std.std
+# Loading work.rom_tb
+# Loading work.rom
+add wave -position insertpoint sim:/rom_tb/*
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.txt". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_tb/rom_inst
+# Address: 0, Data: x
+# Address: 1, Data: x
+# Address: 2, Data: x
+# Address: 3, Data: x
+# Address: 4, Data: x
+# Address: 5, Data: x
+# Address: 6, Data: x
+# Address: 7, Data: x
+# Address: 8, Data: x
+# Address: 9, Data: x
+# Address: 10, Data: x
+# Address: 11, Data: x
+# Address: 12, Data: x
+# Address: 13, Data: x
+# Address: 14, Data: x
+# Address: 15, Data: x
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv(36)
+#    Time: 170 ps  Iteration: 0  Instance: /rom_tb
+# 1
+# Break in Module rom_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv line 36
+# Compile of rom.sv was successful.
+# Compile of rom_controller.sv was successful.
+# Compile of rom_controller_tb.sv was successful.
+# Compile of rom_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rom_tb
+# Loading work.rom
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-PLI-3406) Too many digits (16) in data on line 1 of file "quantized_bias.mem". (Max is 8.)    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /rom_tb/rom_inst
+# Address: 0, Data: x
+# Address: 1, Data: x
+# Address: 2, Data: x
+# Address: 3, Data: x
+# Address: 4, Data: x
+# Address: 5, Data: x
+# Address: 6, Data: x
+# Address: 7, Data: x
+# Address: 8, Data: x
+# Address: 9, Data: x
+# Address: 10, Data: x
+# Address: 11, Data: x
+# Address: 12, Data: x
+# Address: 13, Data: x
+# Address: 14, Data: x
+# Address: 15, Data: x
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/tool/rom/rom_tb.sv(36)
+#    Time: 170 ps  Iteration: 0  Instance: /rom_tb
+# End time: 20:15:29 on May 13,2024, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 1
