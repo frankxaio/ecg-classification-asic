@@ -1,0 +1,136 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller
+vlinear
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1715745187
+!i10b 1
+!s100 [oK5lziEac<TD]MC;LLJO0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ILfC?dfz0_>jIE@9Y9KV_I1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear
+w1715744986
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/linear.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/linear.sv
+!i122 55
+L0 1 35
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1715745187.000000
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/linear.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/linear.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vlinear_tb
+R0
+R1
+!i10b 1
+!s100 4]OYZJY?IfPPf07YAC`G[3
+R2
+IL8b7EC:ONF]G=nzSWN@6^0
+R3
+S1
+R4
+w1715742537
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/linear_tb.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/linear_tb.sv
+!i122 56
+L0 1 106
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/linear_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/linear_tb.sv|
+!i113 1
+R7
+R8
+vmac_unit
+R0
+R1
+!i10b 1
+!s100 7VO2>Bi=aC4`m0eP6NmWk0
+R2
+IIInoTS^[c_bJgd7S6cS:92
+R3
+S1
+R4
+w1715691785
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/mac_unit.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/mac_unit.sv
+!i122 57
+L0 1 24
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/mac_unit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/mac_unit.sv|
+!i113 1
+R7
+R8
+vmatrix_multiply
+R0
+R1
+!i10b 1
+!s100 L8:Ylz7kfb4gC@RFOH@;]0
+R2
+Ioc86Hd`7hY6_?m5:W_Jn@0
+R3
+S1
+R4
+w1715745143
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/matrix_multiply.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/matrix_multiply.sv
+!i122 58
+L0 1 108
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/matrix_multiply.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/matrix_multiply.sv|
+!i113 1
+R7
+R8
+vmatrix_multiply_controller
+R0
+R1
+!i10b 1
+!s100 VB?C^:4nIKJ[_RG:5il:a3
+R2
+I;kM=bAl[=;HU`l:nozV0:2
+R3
+S1
+R4
+w1715745179
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/matrix_mutiply_contorller.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/matrix_mutiply_contorller.sv
+!i122 59
+L0 1 245
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/matrix_mutiply_contorller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear/matrix_mutiply_contorller.sv|
+!i113 1
+R7
+R8

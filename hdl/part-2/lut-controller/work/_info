@@ -1,0 +1,86 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding
+vlut_controller
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1715741269
+!i10b 1
+!s100 41UTgYa:Re96TCD^T`m110
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IKSi5D0<:0DY43;S;X@_9K2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller
+w1715741266
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller.sv
+!i122 70
+L0 1 338
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1715741269.000000
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vlut_controller_tb
+R0
+R1
+!i10b 1
+!s100 COQ`z^c^Ub@92FP_`ic>E0
+R2
+IX`a=Rn`iID]l67oc3IORP3
+R3
+S1
+R4
+w1715738917
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller_tb.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller_tb.sv
+!i122 71
+L0 3 97
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller_tb.sv|
+!i113 1
+R7
+R8
+vlut_module
+R0
+R1
+!i10b 1
+!s100 ;<;f6>F`A_m6Ih]_f9i<>0
+R2
+IOl9a4FnUdP^>7D6He<=541
+R3
+S1
+R4
+w1715736637
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_module.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_module.sv
+!i122 72
+L0 1 2601
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_module.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_module.sv|
+!i113 1
+R7
+R8

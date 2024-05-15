@@ -1,0 +1,22 @@
+C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module lut_controller
+
+Top level modules:
+	lut_controller
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_controller_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module lut_controller_tb
+
+Top level modules:
+	lut_controller_tb
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_module.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/lut-controller/lut_module.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module lut_module
+
+Top level modules:
+	lut_module
+
+} {} {}}

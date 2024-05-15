@@ -1,1027 +1,475 @@
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-vsim work.matrix_multiply_controller_tb
-# vsim work.matrix_multiply_controller_tb 
-# Start time: 21:20:56 on May 14,2024
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:33:29 on May 15,2024
 # Loading sv_std.std
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-# ** Error (suppressible): (vsim-3584) C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(80): Module parameter 'data_size' not found for override.
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu
+# ** Error (suppressible): (vsim-3584) C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv(46): Module parameter 'DATA_DEPTH' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv
+# ** Error (suppressible): (vsim-3584) C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv(46): Module parameter 'DATA_WIDTH' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv
 # Error loading design
-# End time: 21:20:57 on May 14,2024, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 6
-vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/mac_unit.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:21:59 on May 14,2024
-# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/mac_unit.sv 
-# -- Compiling module mac_unit
-# 
-# Top level modules:
-# 	mac_unit
-# End time: 21:21:59 on May 14,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:21:59 on May 14,2024
-# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv 
-# -- Compiling module matrix_multiply
-# ** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(5): (vlog-13314) Defaulting port 'in_a' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(6): (vlog-13314) Defaulting port 'in_b' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# 
-# Top level modules:
-# 	matrix_multiply
-# End time: 21:21:59 on May 14,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:22:00 on May 14,2024
-# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv 
-# -- Compiling module matrix_multiply_controller
-# ** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv(9): (vlog-13314) Defaulting port 'in_store_a' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv(10): (vlog-13314) Defaulting port 'in_store_b' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# 
-# Top level modules:
-# 	matrix_multiply_controller
-# End time: 21:22:00 on May 14,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:22:00 on May 14,2024
-# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv 
-# -- Compiling module matrix_multiply_controller_tb
-# 
-# Top level modules:
-# 	matrix_multiply_controller_tb
-# End time: 21:22:00 on May 14,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.matrix_multiply_controller_tb
-# vsim work.matrix_multiply_controller_tb 
-# Start time: 21:22:33 on May 14,2024
+# End time: 01:33:29 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 5
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# 4 compiles, 1 failed with no errors.
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:35:48 on May 15,2024
 # Loading sv_std.std
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
+# ** Error (suppressible): (vsim-12027) Array connection type 'wire' is incompatible with 'wire signed[7:0]$[0:14]' for  port (mat_a):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut/dot_product_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv Line: 33
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'reg signed[7:0]$[0:15][0:14]' for  port (result):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut/dot_product_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv Line: 33
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'wire signed[7:0]$[0:15][0:14]' for  port (data_in):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut/relu_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv Line: 46
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'reg signed[7:0]$[0:15][0:14]' for  port (data_out):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut/relu_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv Line: 46
+# Error loading design
+# End time: 01:35:49 on May 15,2024, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 5
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:37:19 on May 15,2024
+# Loading sv_std.std
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'reg signed[7:0]$[0:15][0:14]' for  port (result):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut/dot_product_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv Line: 33
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'wire signed[7:0]$[0:15][0:14]' for  port (data_in):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut/relu_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv Line: 46
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'reg signed[7:0]$[0:15][0:14]' for  port (data_out):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut/relu_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv Line: 46
+# Error loading design
+# End time: 01:37:19 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 2
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:39:44 on May 15,2024
+# Loading sv_std.std
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'reg signed[7:0]$[0:15][0:14]' for  port (data_out):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut/relu_inst File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv Line: 46
+# Error loading design
+# End time: 01:39:45 on May 15,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:40:02 on May 15,2024
+# Loading sv_std.std
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'reg signed[7:0]$[0:15][0:14]' for  port (result):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv Line: 12
+# Error loading design
+# End time: 01:40:02 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# Load canceled
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:43:26 on May 15,2024
+# Loading sv_std.std
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'reg signed[7:0]$[0:15][0:14]' for  port (result):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv Line: 12
+# Error loading design
+# End time: 01:43:26 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/dot_product.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:43 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/dot_product.sv 
+# -- Compiling module dot_product
+# 
+# Top level modules:
+# 	dot_product
+# End time: 01:43:43 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:43 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv 
+# -- Compiling module linear_embedding
+# 
+# Top level modules:
+# 	linear_embedding
+# End time: 01:43:43 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:43 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv 
+# -- Compiling module linear_embedding_tb
+# 
+# Top level modules:
+# 	linear_embedding_tb
+# End time: 01:43:43 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/lut_module.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:44 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/lut_module.sv 
+# -- Compiling module lut_module
+# 
+# Top level modules:
+# 	lut_module
+# End time: 01:43:44 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:45 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv 
+# ** Error: (vlog-7) Failed to open design unit file "C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 01:43:45 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu_embed.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:45 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu_embed.sv 
+# -- Compiling module relu_embed
+# ** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu_embed.sv(14): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu_embed.sv(15): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# 
+# Top level modules:
+# 	relu_embed
+# End time: 01:43:45 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/dot_product.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:51 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/dot_product.sv 
+# -- Compiling module dot_product
+# 
+# Top level modules:
+# 	dot_product
+# End time: 01:43:51 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:51 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding.sv 
+# -- Compiling module linear_embedding
+# 
+# Top level modules:
+# 	linear_embedding
+# End time: 01:43:51 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:52 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv 
+# -- Compiling module linear_embedding_tb
+# 
+# Top level modules:
+# 	linear_embedding_tb
+# End time: 01:43:52 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/lut_module.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:52 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/lut_module.sv 
+# -- Compiling module lut_module
+# 
+# Top level modules:
+# 	lut_module
+# End time: 01:43:52 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:52 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv 
+# ** Error: (vlog-7) Failed to open design unit file "C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 01:43:52 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu_embed.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:53 on May 15,2024
+# vlog -reportprogress 300 -work work -sv C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu_embed.sv 
+# -- Compiling module relu_embed
+# ** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu_embed.sv(14): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/relu_embed.sv(15): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# 
+# Top level modules:
+# 	relu_embed
+# End time: 01:43:53 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:43:54 on May 15,2024
+# Loading sv_std.std
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'reg signed[7:0]$[0:15][0:14]' for  port (result):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv Line: 12
+# Error loading design
+# End time: 01:43:54 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:47:04 on May 15,2024
+# Loading sv_std.std
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'reg signed[7:0]$[0:15][0:14]' for  port (result):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv Line: 12
+# Error loading design
+# End time: 01:47:05 on May 15,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:47:34 on May 15,2024
+# Loading sv_std.std
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'wire signed[7:0]$[0:15][0:14]' for  port (result):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv Line: 12
+# Error loading design
+# End time: 01:47:34 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# Load canceled
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful with warnings.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+# Compile of lut_module.sv was successful with warnings.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+# Compile of dot_product.sv was successful with warnings.
+# Compile of linear_embedding.sv was successful.
+# Compile of linear_embedding_tb.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+# Compile of relu_embed.sv was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# 4 compiles, 0 failed with no errors.
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of linear_embedding_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:48:53 on May 15,2024
+# Loading sv_std.std
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
+# ** Error: (vsim-3906) Connection type 'reg signed[7:0]$[0:15]' is incompatible with 'wire signed[7:0]$[0:15][0:14]' for  port (result):  Array ranges [0:14] & [0:15] have different lengths.
+#    Time: 0 ps  Iteration: 0  Instance: /linear_embedding_tb/dut File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/LinearEmbedding/linear_embedding_tb.sv Line: 12
+# Error loading design
+# End time: 01:48:54 on May 15,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 13
+# Compile of dot_product.sv was successful.
+# Compile of linear_embedding.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of linear_embedding_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.linear_embedding_tb
+# vsim work.linear_embedding_tb 
+# Start time: 01:49:31 on May 15,2024
+# Loading sv_std.std
+# Loading work.linear_embedding_tb
+# Loading work.linear_embedding
+# Loading work.lut_module
+# Loading work.dot_product
+# Loading work.relu_embed
 add wave -position insertpoint  \
-sim:/matrix_multiply_controller_tb/MATRIX_SIZE \
-sim:/matrix_multiply_controller_tb/DATA_SIZE \
-sim:/matrix_multiply_controller_tb/clk \
-sim:/matrix_multiply_controller_tb/reset \
-sim:/matrix_multiply_controller_tb/start \
-sim:/matrix_multiply_controller_tb/done \
-sim:/matrix_multiply_controller_tb/in_store_a \
-sim:/matrix_multiply_controller_tb/in_store_b \
-sim:/matrix_multiply_controller_tb/out_matrix
+sim:/linear_embedding_tb/CLK_PERIOD \
+sim:/linear_embedding_tb/NUM_TESTS \
+sim:/linear_embedding_tb/clk \
+sim:/linear_embedding_tb/rst \
+sim:/linear_embedding_tb/ecg_input \
+sim:/linear_embedding_tb/result \
+sim:/linear_embedding_tb/done \
+sim:/linear_embedding_tb/input_data \
+sim:/linear_embedding_tb/expected_result
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Xaio  Hostname: DESKTOP-XAIO  ProcessID: 13416
+#           Attempting to use alternate WLF file "./wlftdec6e4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdec6e4
 run
-# Break key hit
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
+add wave -position insertpoint  \
+sim:/linear_embedding_tb/dut/bias
+add wave -position insertpoint  \
+sim:/linear_embedding_tb/dut/embed_wt
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[2]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[3]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[4]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[5]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[6]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[7]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[8]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[9]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[10]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[11]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[12]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[13]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[14]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[15]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-vsim work.matrix_multiply_controller_tb
-# vsim work.matrix_multiply_controller_tb 
-# Start time: 21:22:33 on May 14,2024
-# Loading sv_std.std
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[2]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[3]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[4]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[5]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[6]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[7]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[8]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[9]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[10]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[11]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[12]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[13]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[14]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/row_wire[0]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(43).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk1[15]/genblk1[15]/genblk1/mu File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 43
-# Error loading design
-# End time: 21:29:49 on May 14,2024, Elapsed time: 0:07:16
-# Errors: 28, Warnings: 2
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-vsim work.matrix_multiply_controller_tb
-# vsim work.matrix_multiply_controller_tb 
-# Start time: 21:30:04 on May 14,2024
-# Loading sv_std.std
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-run
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
 run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# Matrix A:
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-# Matrix B:
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   1   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-# Output Matrix:
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv(100)
-#    Time: 545 ns  Iteration: 0  Instance: /matrix_multiply_controller_tb
-# 1
-# Break in Module matrix_multiply_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv line 100
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/linear_embedding_tb/dut/state
 restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
 run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# Matrix A:
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-# Matrix B:
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   1   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-# Output Matrix:
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv(100)
-#    Time: 545 ns  Iteration: 0  Instance: /matrix_multiply_controller_tb
-# 1
-# Break in Module matrix_multiply_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv line 100
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/linear_embedding_tb/dut/start
+run
 restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
 run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
+run
+run
+add wave -position insertpoint  \
+sim:/linear_embedding_tb/dut/addr
 restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
 run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[1]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[1]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[2]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[2]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[3]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[3]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[4]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[4]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[5]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[5]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[6]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[6]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[7]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[7]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[8]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[8]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[9]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[9]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[10]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[10]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[11]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[11]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[12]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[12]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[13]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[13]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[14]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[14]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[15]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(42).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[15]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 133
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-# Break key hit
-# Break key hit
-# Break key hit
-vsim work.matrix_multiply_controller_tb
-# vsim work.matrix_multiply_controller_tb 
-# Start time: 21:30:04 on May 14,2024
-# Loading sv_std.std
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[1]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[1]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[2]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[2]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[3]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[3]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[4]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[4]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[5]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[5]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[6]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[6]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[7]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[7]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[8]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[8]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[9]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[9]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[10]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[10]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[11]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[11]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[12]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[12]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[13]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[13]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[14]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(30).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[14]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 121
-# ** Error (suppressible): (vsim-3839) Variable '/matrix_multiply_controller_tb/dut/mm/out_matrix[15]', driven via a port connection, is multiply driven. See C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(42).
-#    Time: 0 ps  Iteration: 0  Instance: /matrix_multiply_controller_tb/dut/mm/genblk3[15]/genblk1/mu_col File: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv Line: 133
-# Error loading design
-# End time: 21:55:32 on May 14,2024, Elapsed time: 0:25:28
-# Errors: 30, Warnings: 2
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-# Break key hit
-vsim work.matrix_multiply_controller_tb
-# vsim work.matrix_multiply_controller_tb 
-# Start time: 22:02:50 on May 14,2024
-# Loading sv_std.std
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# Matrix A:
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-# Matrix B:
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   1   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-# Output Matrix:
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv(100)
-#    Time: 545 ns  Iteration: 0  Instance: /matrix_multiply_controller_tb
-# 1
-# Break in Module matrix_multiply_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv line 100
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-# Break key hit
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Matrix A:
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-# Matrix B:
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   1   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-# Output Matrix:
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv(100)
-#    Time: 545 ns  Iteration: 0  Instance: /matrix_multiply_controller_tb
-# 1
-# Break in Module matrix_multiply_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv line 100
-# Compile of matrix_multiply.sv failed with 1 errors.
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv failed with 1 errors.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 1 failed with 1 error.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Matrix A:
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-# Matrix B:
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   1   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-# Output Matrix:
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv(100)
-#    Time: 545 ns  Iteration: 0  Instance: /matrix_multiply_controller_tb
-# 1
-# Break in Module matrix_multiply_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv line 100
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv failed with 1 errors.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 1 failed with 1 error.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Matrix A:
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-# Matrix B:
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   1   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-# Output Matrix:
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv(100)
-#    Time: 545 ns  Iteration: 0  Instance: /matrix_multiply_controller_tb
-# 1
-# Break in Module matrix_multiply_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv line 100
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Matrix A:
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-# Matrix B:
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   1   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-# Output Matrix:
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv(100)
-#    Time: 545 ns  Iteration: 0  Instance: /matrix_multiply_controller_tb
-# 1
-# Break in Module matrix_multiply_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv line 100
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Matrix A:
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-# Matrix B:
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   1   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-# Output Matrix:
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv(100)
-#    Time: 545 ns  Iteration: 0  Instance: /matrix_multiply_controller_tb
-# 1
-# Break in Module matrix_multiply_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv line 100
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-# Compile of mac_unit.sv was successful.
-# Compile of matrix_multiply.sv was successful with warnings.
-# Compile of matrix_mutiply_contorller.sv was successful with warnings.
-# Compile of matrix_mutiply_controller_tb.sv was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.matrix_multiply_controller_tb
-# Loading work.matrix_multiply_controller
-# Loading work.matrix_multiply
-# Loading work.mac_unit
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Matrix A:
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-# Matrix B:
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   1   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1   3  
-#   1   3   2   1   3   2   1   3   2   1   3   2   1   3   2   1  
-#   2   3   1   2   3   1   2   3   1   2   3   1   2   3   1   2  
-# Output Matrix:
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-#  54  57  61  61  74  57  61  74  67  57  61  61  57  74  54  74  
-#  71  58  79  79  61  58  79  61  53  58  79  79  58  61  71  61  
-#  67  71  58  58  57  71  58  57  66  71  58  58  71  57  67  57  
-# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv(100)
-#    Time: 545 ns  Iteration: 0  Instance: /matrix_multiply_controller_tb
-# 1
-# Break in Module matrix_multiply_controller_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv line 100
 run

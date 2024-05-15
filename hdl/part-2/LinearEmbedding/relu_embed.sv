@@ -1,6 +1,9 @@
-module relu (
-    input signed [7:0] data_in[0:14][0:15],
-    output logic signed [7:0] data_out[0:14][0:15]
+module relu_embed #(
+    parameter DATA_WIDTH = 8,
+    parameter DATA_DEPTH = 16
+)(
+    input signed [DATA_WIDTH-1:0] data_in[0:14][0:15],
+    output logic signed [DATA_WIDTH-1:0] data_out[0:14][0:15]
 );
 
     genvar i, j;

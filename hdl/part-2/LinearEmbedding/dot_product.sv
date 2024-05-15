@@ -1,11 +1,12 @@
 module dot_product (
-    input clk,
-    input rst,
-    input signed [7:0] mat_a[0:14],  //! Q4.4 format
-    input signed [7:0] mat_b[0:15],  //! Q4.4 format 
-    input signed [7:0] bias[0:15],  //! Q4.4 format
-    output logic signed [7:0] result[0:14][0:15],  //! Q4.4 format
-    output logic done
+    input                     clk,
+    input                     rst,
+    input  signed       [7:0] ecg_input[0:14],        //! Q4.4 format
+    input  signed       [7:0] wt       [0:15],        //! Q4.4 format
+    input  signed       [7:0] bias     [0:15],        //! Q4.4 format
+    input  signed       [7:0] cls_token[0:15],        //! Q4.4 format
+    output logic signed [7:0] result   [0:15][0:15],  //! Q4.4 format
+    output logic              done
 );
 
     // State enum
@@ -16,7 +17,6 @@ module dot_product (
     } state_t;
 
     state_t state, next_state;
-
     logic [4:0] i, j, i_next, j_next;
     logic signed [15:0] mul_result;
     logic signed [ 7:0] temp_result;
@@ -71,9 +71,15 @@ module dot_product (
                 j_next = 4'b0;
             end
             CALC: begin
-                mul_result   = $signed(mat_a[i]) * $signed(mat_b[j]);  // Q8.8 format
-                temp_result  = mul_result[11:4] + $signed(bias[j]);
-                result[i][j] = temp_result;  // Take the middle 8 bits for Q4.4 format
+                mul_result  = $signed(ecg_input[i]) * $signed(wt[j]);  // Q8.8 format
+                temp_result = mul_result[11:4] + $signed(bias[j]);
+
+                if (i == 14) begin
+                    result[i][j] = cls_token[j];  // Concatenate cls_token to the last row
+                end else begin
+                    result[i][j] = temp_result;  // Take the middle 8 bits for Q4.4 format
+                end
+
                 if (j < 15) begin
                     i_next = i;
                     j_next = j + 1;

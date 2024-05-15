@@ -1,4 +1,20 @@
-C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv {2 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv
+C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv {2 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module matrix_multiply_controller
+** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv(9): (vlog-13314) Defaulting port 'in_store_a' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_contorller.sv(10): (vlog-13314) Defaulting port 'in_store_b' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	matrix_multiply_controller
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_mutiply_controller_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module matrix_multiply_controller_tb
+
+Top level modules:
+	matrix_multiply_controller_tb
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv {2 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module matrix_multiply
 ** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-1/Systolic-Array-Matrix-Multiplication/16by16-with-controller/matrix_multiply.sv(6): (vlog-13314) Defaulting port 'in_a' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
