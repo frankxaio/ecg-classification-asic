@@ -1,23 +1,45 @@
-C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top.sv
+C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/reduce.sv {2 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/reduce.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module reduce
+** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/reduce.sv(5): (vlog-13314) Defaulting port 'matrix_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	reduce
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mac_unit.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mac_unit.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mac_unit
+
+Top level modules:
+	mac_unit
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mlp.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mlp.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mlp
+
+Top level modules:
+	mlp
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/lut_module.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/lut_module.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module lut_module
+
+Top level modules:
+	lut_module
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module top
 
 Top level modules:
 	top
 
-} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention_tb.sv {1 {vlog -work work -sv -stats=none {C:\Users\Xaio\Documents\GitHub\ecg-classification-asic\hdl\part-2\Top\attention_tb.sv}
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module attention_tb
 
 Top level modules:
 	attention_tb
-
-} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/linear.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/linear.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module linear
-
-Top level modules:
-	linear
 
 } {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_mutiply_contorller.sv {2 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_mutiply_contorller.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -28,6 +50,20 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	matrix_multiply_controller
 
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_16by6.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_16by6.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dot_product_16by6
+
+Top level modules:
+	dot_product_16by6
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module attention
+
+Top level modules:
+	attention
+
 } {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module dot_product
@@ -35,12 +71,28 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	dot_product
 
-} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu.sv {2 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module top_tb
+-- Compiling module relu
+** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu.sv(14): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu.sv(15): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
 
 Top level modules:
-	top_tb
+	relu
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/linear.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/linear.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module linear
+
+Top level modules:
+	linear
+
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dot_product_tb
+
+Top level modules:
+	dot_product_tb
 
 } {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_multiply.sv {2 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_multiply.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -51,25 +103,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	matrix_multiply
 
-} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mac_unit.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mac_unit.sv
+} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu_embed.sv {2 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu_embed.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module mac_unit
+-- Compiling module relu_embed
+** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu_embed.sv(15): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu_embed.sv(16): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
 
 Top level modules:
-	mac_unit
-
-} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module dot_product_tb
-
-Top level modules:
-	dot_product_tb
-
-} {} {}} C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/lut_module.sv {1 {vlog -work work -sv -stats=none C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/lut_module.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module lut_module
-
-Top level modules:
-	lut_module
+	relu_embed
 
 } {} {}}

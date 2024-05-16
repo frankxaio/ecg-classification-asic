@@ -1,0 +1,2417 @@
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# Compile of dot_product_tb.sv was successful.
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+# Compile of mac_unit.sv was successful.
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of dot_product_16by6.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# Compile of mlp.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# 16 compiles, 0 failed with no errors.
+vsim work.top_tb
+# vsim work.top_tb 
+# Start time: 17:57:43 on May 16,2024
+# Loading sv_std.std
+# Loading work.top_tb
+# Loading work.top
+# Loading work.dot_product
+# Loading work.relu_embed
+# Loading work.attention
+# Loading work.linear
+# Loading work.matrix_multiply_controller
+# Loading work.matrix_multiply
+# Loading work.mac_unit
+# Loading work.mlp
+# Loading work.relu
+# Loading work.dot_product_16by6
+# Loading work.reduce
+# Loading work.lut_module
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:D:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 0 descending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 descending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 descending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 descending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
+add wave -position insertpoint  \
+sim:/top_tb/clk \
+sim:/top_tb/rst \
+sim:/top_tb/start \
+sim:/top_tb/ecg_input \
+sim:/top_tb/classifier
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Xaio  Hostname: DESKTOP-XAIO  ProcessID: 25464
+#           Attempting to use alternate WLF file "./wlft8m1qwt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8m1qwt
+add wave -position insertpoint  \
+sim:/top_tb/dut/ecg_input
+add wave -position insertpoint  \
+sim:/top_tb/dut/done
+add wave -position insertpoint  \
+sim:/top_tb/dut/state
+run
+# Time: 0, State: IDLE, Classifier: xxxx
+# Time: 10000, State: IDLE, Classifier: xxxx
+# Time: 20000, State: IDLE, Classifier: xxxx
+# Time: 30000, State: IDLE, Classifier: xxxx
+# Time: 40000, State: IDLE, Classifier: xxxx
+# Time: 50000, State: IDLE, Classifier: xxxx
+# Time: 60000, State: IDLE, Classifier: xxxx
+# Time: 70000, State: IDLE, Classifier: xxxx
+# Time: 80000, State: IDLE, Classifier: xxxx
+# Time: 90000, State: IDLE, Classifier: xxxx
+# Time: 100000, State: IDLE, Classifier: xxxx
+# Time: 110000, State: IDLE, Classifier: xxxx
+# Time: 120000, State: IDLE, Classifier: xxxx
+# Time: 130000, State: IDLE, Classifier: xxxx
+# Time: 140000, State: IDLE, Classifier: xxxx
+# Time: 150000, State: IDLE, Classifier: xxxx
+# Time: 160000, State: IDLE, Classifier: xxxx
+# Time: 170000, State: START, Classifier: xxxx
+# Time: 180000, State: START, Classifier: xxxx
+# Time: 190000, State: START, Classifier: xxxx
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv(60)
+#    Time: 200 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv line 60
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# Compile of dot_product_tb.sv was successful.
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+# Compile of mac_unit.sv was successful.
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of dot_product_16by6.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# Compile of mlp.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.dot_product
+# Loading work.relu_embed
+# Loading work.attention
+# Loading work.linear
+# Loading work.matrix_multiply_controller
+# Loading work.matrix_multiply
+# Loading work.mac_unit
+# Loading work.mlp
+# Loading work.relu
+# Loading work.dot_product_16by6
+# Loading work.reduce
+# Loading work.lut_module
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Time: 0, State: IDLE, Classifier: xxxx
+# Time: 10000, State: IDLE, Classifier: xxxx
+# Time: 20000, State: IDLE, Classifier: xxxx
+# Time: 30000, State: START, Classifier: xxxx
+# Time: 40000, State: START, Classifier: xxxx
+# Time: 50000, State: START, Classifier: xxxx
+# Time: 60000, State: START, Classifier: xxxx
+# Time: 70000, State: START, Classifier: xxxx
+# Time: 80000, State: START, Classifier: xxxx
+# Time: 90000, State: START, Classifier: xxxx
+# Time: 100000, State: START, Classifier: xxxx
+# Time: 110000, State: START, Classifier: xxxx
+# Time: 120000, State: START, Classifier: xxxx
+# Time: 130000, State: START, Classifier: xxxx
+# Time: 140000, State: START, Classifier: xxxx
+# Time: 150000, State: START, Classifier: xxxx
+# Time: 160000, State: START, Classifier: xxxx
+# Time: 170000, State: START, Classifier: xxxx
+# Time: 180000, State: START, Classifier: xxxx
+# Time: 190000, State: START, Classifier: xxxx
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv(60)
+#    Time: 200 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv line 60
+run
+# Time: 200000, State: START, Classifier: xxxx
+# Time: 210000, State: START, Classifier: xxxx
+# Time: 220000, State: START, Classifier: xxxx
+# Time: 230000, State: START, Classifier: xxxx
+# Time: 240000, State: START, Classifier: xxxx
+# Time: 250000, State: START, Classifier: xxxx
+# Time: 260000, State: START, Classifier: xxxx
+# Time: 270000, State: START, Classifier: xxxx
+# Time: 280000, State: START, Classifier: xxxx
+# Time: 290000, State: START, Classifier: xxxx
+# Time: 300000, State: START, Classifier: xxxx
+# Time: 310000, State: START, Classifier: xxxx
+# Time: 320000, State: START, Classifier: xxxx
+# Time: 330000, State: START, Classifier: xxxx
+# Time: 340000, State: START, Classifier: xxxx
+# Time: 350000, State: START, Classifier: xxxx
+# Time: 360000, State: START, Classifier: xxxx
+# Time: 370000, State: START, Classifier: xxxx
+# Time: 380000, State: START, Classifier: xxxx
+# Time: 390000, State: START, Classifier: xxxx
+# Time: 400000, State: START, Classifier: xxxx
+# Time: 410000, State: START, Classifier: xxxx
+# Time: 420000, State: START, Classifier: xxxx
+# Time: 430000, State: START, Classifier: xxxx
+# Time: 440000, State: START, Classifier: xxxx
+# Time: 450000, State: START, Classifier: xxxx
+# Time: 460000, State: START, Classifier: xxxx
+# Time: 470000, State: START, Classifier: xxxx
+# Time: 480000, State: START, Classifier: xxxx
+# Time: 490000, State: START, Classifier: xxxx
+# Time: 500000, State: START, Classifier: xxxx
+# Time: 510000, State: START, Classifier: xxxx
+# Time: 520000, State: START, Classifier: xxxx
+# Time: 530000, State: START, Classifier: xxxx
+# Time: 540000, State: START, Classifier: xxxx
+# Time: 550000, State: START, Classifier: xxxx
+# Time: 560000, State: START, Classifier: xxxx
+# Time: 570000, State: START, Classifier: xxxx
+# Time: 580000, State: START, Classifier: xxxx
+# Time: 590000, State: START, Classifier: xxxx
+# Time: 600000, State: START, Classifier: xxxx
+# Time: 610000, State: START, Classifier: xxxx
+# Time: 620000, State: START, Classifier: xxxx
+# Time: 630000, State: START, Classifier: xxxx
+# Time: 640000, State: START, Classifier: xxxx
+# Time: 650000, State: START, Classifier: xxxx
+# Time: 660000, State: START, Classifier: xxxx
+# Time: 670000, State: START, Classifier: xxxx
+# Time: 680000, State: START, Classifier: xxxx
+# Time: 690000, State: START, Classifier: xxxx
+# Time: 700000, State: START, Classifier: xxxx
+# Time: 710000, State: START, Classifier: xxxx
+# Time: 720000, State: START, Classifier: xxxx
+# Time: 730000, State: START, Classifier: xxxx
+# Time: 740000, State: START, Classifier: xxxx
+# Time: 750000, State: START, Classifier: xxxx
+# Time: 760000, State: START, Classifier: xxxx
+# Time: 770000, State: START, Classifier: xxxx
+# Time: 780000, State: START, Classifier: xxxx
+# Time: 790000, State: START, Classifier: xxxx
+# Time: 800000, State: START, Classifier: xxxx
+# Time: 810000, State: START, Classifier: xxxx
+# Time: 820000, State: START, Classifier: xxxx
+# Time: 830000, State: START, Classifier: xxxx
+# Time: 840000, State: START, Classifier: xxxx
+# Time: 850000, State: START, Classifier: xxxx
+# Time: 860000, State: START, Classifier: xxxx
+# Time: 870000, State: START, Classifier: xxxx
+# Time: 880000, State: START, Classifier: xxxx
+# Time: 890000, State: START, Classifier: xxxx
+# Time: 900000, State: START, Classifier: xxxx
+# Time: 910000, State: START, Classifier: xxxx
+# Time: 920000, State: START, Classifier: xxxx
+# Time: 930000, State: START, Classifier: xxxx
+# Time: 940000, State: START, Classifier: xxxx
+# Time: 950000, State: START, Classifier: xxxx
+# Time: 960000, State: START, Classifier: xxxx
+# Time: 970000, State: START, Classifier: xxxx
+# Time: 980000, State: START, Classifier: xxxx
+# Time: 990000, State: START, Classifier: xxxx
+# Time: 1000000, State: START, Classifier: xxxx
+# Time: 1010000, State: START, Classifier: xxxx
+# Time: 1020000, State: START, Classifier: xxxx
+# Time: 1030000, State: START, Classifier: xxxx
+# Time: 1040000, State: START, Classifier: xxxx
+# Time: 1050000, State: START, Classifier: xxxx
+# Time: 1060000, State: START, Classifier: xxxx
+# Time: 1070000, State: START, Classifier: xxxx
+# Time: 1080000, State: START, Classifier: xxxx
+# Time: 1090000, State: START, Classifier: xxxx
+# Time: 1100000, State: START, Classifier: xxxx
+# Time: 1110000, State: START, Classifier: xxxx
+# Time: 1120000, State: START, Classifier: xxxx
+# Time: 1130000, State: START, Classifier: xxxx
+# Time: 1140000, State: START, Classifier: xxxx
+# Time: 1150000, State: START, Classifier: xxxx
+# Time: 1160000, State: START, Classifier: xxxx
+# Time: 1170000, State: START, Classifier: xxxx
+# Time: 1180000, State: START, Classifier: xxxx
+# Time: 1190000, State: START, Classifier: xxxx
+# Time: 1200000, State: START, Classifier: xxxx
+# Time: 1210000, State: START, Classifier: xxxx
+# Time: 1220000, State: START, Classifier: xxxx
+# Time: 1230000, State: START, Classifier: xxxx
+# Time: 1240000, State: START, Classifier: xxxx
+# Time: 1250000, State: START, Classifier: xxxx
+# Time: 1260000, State: START, Classifier: xxxx
+# Time: 1270000, State: START, Classifier: xxxx
+# Time: 1280000, State: START, Classifier: xxxx
+# Time: 1290000, State: START, Classifier: xxxx
+# Time: 1300000, State: START, Classifier: xxxx
+# Time: 1310000, State: START, Classifier: xxxx
+# Time: 1320000, State: START, Classifier: xxxx
+# Time: 1330000, State: START, Classifier: xxxx
+# Time: 1340000, State: START, Classifier: xxxx
+# Time: 1350000, State: START, Classifier: xxxx
+# Time: 1360000, State: START, Classifier: xxxx
+# Time: 1370000, State: START, Classifier: xxxx
+# Time: 1380000, State: START, Classifier: xxxx
+# Time: 1390000, State: START, Classifier: xxxx
+# Time: 1400000, State: START, Classifier: xxxx
+# Time: 1410000, State: START, Classifier: xxxx
+# Time: 1420000, State: START, Classifier: xxxx
+# Time: 1430000, State: START, Classifier: xxxx
+# Time: 1440000, State: START, Classifier: xxxx
+# Time: 1450000, State: START, Classifier: xxxx
+# Time: 1460000, State: START, Classifier: xxxx
+# Time: 1470000, State: START, Classifier: xxxx
+# Time: 1480000, State: START, Classifier: xxxx
+# Time: 1490000, State: START, Classifier: xxxx
+# Time: 1500000, State: START, Classifier: xxxx
+# Time: 1510000, State: START, Classifier: xxxx
+# Time: 1520000, State: START, Classifier: xxxx
+# Time: 1530000, State: START, Classifier: xxxx
+# Time: 1540000, State: START, Classifier: xxxx
+# Time: 1550000, State: START, Classifier: xxxx
+# Time: 1560000, State: START, Classifier: xxxx
+# Time: 1570000, State: START, Classifier: xxxx
+# Time: 1580000, State: START, Classifier: xxxx
+# Time: 1590000, State: START, Classifier: xxxx
+# Time: 1600000, State: START, Classifier: xxxx
+# Time: 1610000, State: START, Classifier: xxxx
+# Time: 1620000, State: START, Classifier: xxxx
+# Time: 1630000, State: START, Classifier: xxxx
+# Time: 1640000, State: START, Classifier: xxxx
+# Time: 1650000, State: START, Classifier: xxxx
+# Time: 1660000, State: START, Classifier: xxxx
+# Time: 1670000, State: START, Classifier: xxxx
+# Time: 1680000, State: START, Classifier: xxxx
+# Time: 1690000, State: START, Classifier: xxxx
+# Time: 1700000, State: START, Classifier: xxxx
+# Time: 1710000, State: START, Classifier: xxxx
+# Time: 1720000, State: START, Classifier: xxxx
+# Time: 1730000, State: START, Classifier: xxxx
+# Time: 1740000, State: START, Classifier: xxxx
+# Time: 1750000, State: START, Classifier: xxxx
+# Time: 1760000, State: START, Classifier: xxxx
+# Time: 1770000, State: START, Classifier: xxxx
+# Time: 1780000, State: START, Classifier: xxxx
+# Time: 1790000, State: START, Classifier: xxxx
+# Time: 1800000, State: START, Classifier: xxxx
+# Time: 1810000, State: START, Classifier: xxxx
+# Time: 1820000, State: START, Classifier: xxxx
+# Time: 1830000, State: START, Classifier: xxxx
+# Time: 1840000, State: START, Classifier: xxxx
+# Time: 1850000, State: START, Classifier: xxxx
+# Time: 1860000, State: START, Classifier: xxxx
+# Time: 1870000, State: START, Classifier: xxxx
+# Time: 1880000, State: START, Classifier: xxxx
+# Time: 1890000, State: START, Classifier: xxxx
+# Time: 1900000, State: START, Classifier: xxxx
+# Time: 1910000, State: START, Classifier: xxxx
+# Time: 1920000, State: START, Classifier: xxxx
+# Time: 1930000, State: START, Classifier: xxxx
+# Time: 1940000, State: START, Classifier: xxxx
+# Time: 1950000, State: START, Classifier: xxxx
+# Time: 1960000, State: START, Classifier: xxxx
+# Time: 1970000, State: START, Classifier: xxxx
+# Time: 1980000, State: START, Classifier: xxxx
+# Time: 1990000, State: START, Classifier: xxxx
+# Time: 2000000, State: START, Classifier: xxxx
+# Time: 2010000, State: START, Classifier: xxxx
+# Time: 2020000, State: START, Classifier: xxxx
+# Time: 2030000, State: START, Classifier: xxxx
+# Time: 2040000, State: START, Classifier: xxxx
+# Time: 2050000, State: START, Classifier: xxxx
+# Time: 2060000, State: START, Classifier: xxxx
+# Time: 2070000, State: START, Classifier: xxxx
+# Time: 2080000, State: START, Classifier: xxxx
+# Time: 2090000, State: START, Classifier: xxxx
+# Time: 2100000, State: START, Classifier: xxxx
+# Time: 2110000, State: START, Classifier: xxxx
+# Time: 2120000, State: START, Classifier: xxxx
+# Time: 2130000, State: START, Classifier: xxxx
+# Time: 2140000, State: START, Classifier: xxxx
+# Time: 2150000, State: START, Classifier: xxxx
+# Time: 2160000, State: START, Classifier: xxxx
+# Time: 2170000, State: START, Classifier: xxxx
+# Time: 2180000, State: START, Classifier: xxxx
+# Time: 2190000, State: START, Classifier: xxxx
+# Time: 2200000, State: START, Classifier: xxxx
+# Time: 2210000, State: START, Classifier: xxxx
+# Time: 2220000, State: START, Classifier: xxxx
+# Time: 2230000, State: START, Classifier: xxxx
+# Time: 2240000, State: START, Classifier: xxxx
+# Time: 2250000, State: START, Classifier: xxxx
+# Time: 2260000, State: START, Classifier: xxxx
+# Time: 2270000, State: START, Classifier: xxxx
+# Time: 2280000, State: START, Classifier: xxxx
+# Time: 2290000, State: START, Classifier: xxxx
+# Time: 2300000, State: START, Classifier: xxxx
+# Time: 2310000, State: START, Classifier: xxxx
+# Time: 2320000, State: START, Classifier: xxxx
+# Time: 2330000, State: START, Classifier: xxxx
+# Time: 2340000, State: START, Classifier: xxxx
+# Time: 2350000, State: START, Classifier: xxxx
+# Time: 2360000, State: START, Classifier: xxxx
+# Time: 2370000, State: START, Classifier: xxxx
+# Time: 2380000, State: START, Classifier: xxxx
+# Time: 2390000, State: START, Classifier: xxxx
+# Time: 2400000, State: START, Classifier: xxxx
+# Time: 2410000, State: START, Classifier: xxxx
+# Time: 2420000, State: START, Classifier: xxxx
+# Time: 2430000, State: START, Classifier: xxxx
+# Time: 2440000, State: START, Classifier: xxxx
+# Time: 2450000, State: START, Classifier: xxxx
+# Time: 2460000, State: START, Classifier: xxxx
+# Time: 2470000, State: START, Classifier: xxxx
+# Time: 2480000, State: START, Classifier: xxxx
+# Time: 2490000, State: START, Classifier: xxxx
+# Time: 2500000, State: START, Classifier: xxxx
+# Time: 2510000, State: START, Classifier: xxxx
+# Time: 2520000, State: START, Classifier: xxxx
+# Time: 2530000, State: START, Classifier: xxxx
+# Time: 2540000, State: START, Classifier: xxxx
+# Time: 2550000, State: START, Classifier: xxxx
+# Time: 2560000, State: START, Classifier: xxxx
+# Time: 2570000, State: START, Classifier: xxxx
+# Time: 2580000, State: START, Classifier: xxxx
+# Time: 2590000, State: START, Classifier: xxxx
+# Time: 2600000, State: START, Classifier: xxxx
+# Time: 2610000, State: START, Classifier: xxxx
+# Time: 2620000, State: START, Classifier: xxxx
+# Time: 2630000, State: START, Classifier: xxxx
+# Time: 2640000, State: START, Classifier: xxxx
+# Time: 2650000, State: START, Classifier: xxxx
+# Time: 2660000, State: START, Classifier: xxxx
+# Time: 2670000, State: START, Classifier: xxxx
+# Time: 2680000, State: START, Classifier: xxxx
+# Time: 2690000, State: START, Classifier: xxxx
+# Time: 2700000, State: START, Classifier: xxxx
+# Time: 2710000, State: START, Classifier: xxxx
+# Time: 2720000, State: START, Classifier: xxxx
+# Time: 2730000, State: START, Classifier: xxxx
+# Time: 2740000, State: START, Classifier: xxxx
+# Time: 2750000, State: START, Classifier: xxxx
+# Time: 2760000, State: START, Classifier: xxxx
+# Time: 2770000, State: START, Classifier: xxxx
+# Time: 2780000, State: START, Classifier: xxxx
+# Time: 2790000, State: START, Classifier: xxxx
+# Time: 2800000, State: START, Classifier: xxxx
+# Time: 2810000, State: START, Classifier: xxxx
+# Time: 2820000, State: START, Classifier: xxxx
+# Time: 2830000, State: START, Classifier: xxxx
+# Time: 2840000, State: START, Classifier: xxxx
+# Time: 2850000, State: START, Classifier: xxxx
+# Time: 2860000, State: START, Classifier: xxxx
+# Time: 2870000, State: START, Classifier: xxxx
+# Time: 2880000, State: START, Classifier: xxxx
+# Time: 2890000, State: START, Classifier: xxxx
+# Time: 2900000, State: START, Classifier: xxxx
+# Time: 2910000, State: START, Classifier: xxxx
+# Time: 2920000, State: START, Classifier: xxxx
+# Time: 2930000, State: START, Classifier: xxxx
+# Time: 2940000, State: START, Classifier: xxxx
+# Time: 2950000, State: START, Classifier: xxxx
+# Time: 2960000, State: START, Classifier: xxxx
+# Time: 2970000, State: START, Classifier: xxxx
+# Time: 2980000, State: START, Classifier: xxxx
+# Time: 2990000, State: START, Classifier: xxxx
+# Time: 3000000, State: START, Classifier: xxxx
+# Time: 3010000, State: START, Classifier: xxxx
+# Time: 3020000, State: START, Classifier: xxxx
+# Time: 3030000, State: START, Classifier: xxxx
+# Time: 3040000, State: START, Classifier: xxxx
+# Time: 3050000, State: START, Classifier: xxxx
+# Time: 3060000, State: START, Classifier: xxxx
+# Time: 3070000, State: START, Classifier: xxxx
+# Time: 3080000, State: START, Classifier: xxxx
+# Time: 3090000, State: START, Classifier: xxxx
+# Time: 3100000, State: START, Classifier: xxxx
+# Time: 3110000, State: START, Classifier: xxxx
+# Time: 3120000, State: START, Classifier: xxxx
+# Time: 3130000, State: START, Classifier: xxxx
+# Time: 3140000, State: START, Classifier: xxxx
+# Time: 3150000, State: START, Classifier: xxxx
+# Time: 3160000, State: START, Classifier: xxxx
+# Time: 3170000, State: START, Classifier: xxxx
+# Time: 3180000, State: START, Classifier: xxxx
+# Time: 3190000, State: START, Classifier: xxxx
+# Time: 3200000, State: START, Classifier: xxxx
+# Time: 3210000, State: START, Classifier: xxxx
+# Time: 3220000, State: START, Classifier: xxxx
+# Time: 3230000, State: START, Classifier: xxxx
+# Time: 3240000, State: START, Classifier: xxxx
+# Time: 3250000, State: START, Classifier: xxxx
+# Time: 3260000, State: START, Classifier: xxxx
+# Time: 3270000, State: START, Classifier: xxxx
+# Time: 3280000, State: START, Classifier: xxxx
+# Time: 3290000, State: START, Classifier: xxxx
+# Time: 3300000, State: START, Classifier: xxxx
+run
+# Time: 3310000, State: START, Classifier: xxxx
+# Time: 3320000, State: START, Classifier: xxxx
+# Time: 3330000, State: START, Classifier: xxxx
+# Time: 3340000, State: START, Classifier: xxxx
+# Time: 3350000, State: START, Classifier: xxxx
+# Time: 3360000, State: START, Classifier: xxxx
+# Time: 3370000, State: START, Classifier: xxxx
+# Time: 3380000, State: START, Classifier: xxxx
+# Time: 3390000, State: START, Classifier: xxxx
+# Time: 3400000, State: START, Classifier: xxxx
+# Time: 3410000, State: START, Classifier: xxxx
+# Time: 3420000, State: START, Classifier: xxxx
+# Time: 3430000, State: START, Classifier: xxxx
+# Time: 3440000, State: START, Classifier: xxxx
+# Time: 3450000, State: START, Classifier: xxxx
+# Time: 3460000, State: START, Classifier: xxxx
+# Time: 3470000, State: START, Classifier: xxxx
+# Time: 3480000, State: START, Classifier: xxxx
+# Time: 3490000, State: START, Classifier: xxxx
+# Time: 3500000, State: START, Classifier: xxxx
+# Time: 3510000, State: START, Classifier: xxxx
+# Time: 3520000, State: START, Classifier: xxxx
+# Time: 3530000, State: START, Classifier: xxxx
+# Time: 3540000, State: START, Classifier: xxxx
+# Time: 3550000, State: START, Classifier: xxxx
+# Time: 3560000, State: START, Classifier: xxxx
+# Time: 3570000, State: START, Classifier: xxxx
+# Time: 3580000, State: START, Classifier: xxxx
+# Time: 3590000, State: START, Classifier: xxxx
+# Time: 3600000, State: START, Classifier: xxxx
+# Time: 3610000, State: START, Classifier: xxxx
+# Time: 3620000, State: START, Classifier: xxxx
+# Time: 3630000, State: START, Classifier: xxxx
+# Time: 3640000, State: START, Classifier: xxxx
+# Time: 3650000, State: START, Classifier: xxxx
+# Time: 3660000, State: START, Classifier: xxxx
+# Time: 3670000, State: START, Classifier: xxxx
+# Time: 3680000, State: START, Classifier: xxxx
+# Time: 3690000, State: START, Classifier: xxxx
+# Time: 3700000, State: START, Classifier: xxxx
+# Time: 3710000, State: START, Classifier: xxxx
+# Time: 3720000, State: START, Classifier: xxxx
+# Time: 3730000, State: START, Classifier: xxxx
+# Time: 3740000, State: START, Classifier: xxxx
+# Time: 3750000, State: START, Classifier: xxxx
+# Time: 3760000, State: START, Classifier: xxxx
+# Time: 3770000, State: START, Classifier: xxxx
+# Time: 3780000, State: START, Classifier: xxxx
+# Time: 3790000, State: START, Classifier: xxxx
+# Time: 3800000, State: START, Classifier: xxxx
+# Time: 3810000, State: START, Classifier: xxxx
+# Time: 3820000, State: START, Classifier: xxxx
+# Time: 3830000, State: START, Classifier: xxxx
+# Time: 3840000, State: START, Classifier: xxxx
+# Time: 3850000, State: START, Classifier: xxxx
+# Time: 3860000, State: START, Classifier: xxxx
+# Time: 3870000, State: START, Classifier: xxxx
+# Time: 3880000, State: START, Classifier: xxxx
+# Time: 3890000, State: START, Classifier: xxxx
+# Time: 3900000, State: START, Classifier: xxxx
+# Time: 3910000, State: START, Classifier: xxxx
+# Time: 3920000, State: START, Classifier: xxxx
+# Time: 3930000, State: START, Classifier: xxxx
+# Time: 3940000, State: START, Classifier: xxxx
+# Time: 3950000, State: START, Classifier: xxxx
+# Time: 3960000, State: START, Classifier: xxxx
+# Time: 3970000, State: START, Classifier: xxxx
+# Time: 3980000, State: START, Classifier: xxxx
+# Time: 3990000, State: START, Classifier: xxxx
+# Time: 4000000, State: START, Classifier: xxxx
+# Time: 4010000, State: START, Classifier: xxxx
+# Time: 4020000, State: START, Classifier: xxxx
+# Time: 4030000, State: START, Classifier: xxxx
+# Time: 4040000, State: START, Classifier: xxxx
+# Time: 4050000, State: START, Classifier: xxxx
+# Time: 4060000, State: START, Classifier: xxxx
+# Time: 4070000, State: START, Classifier: xxxx
+# Time: 4080000, State: START, Classifier: xxxx
+# Time: 4090000, State: START, Classifier: xxxx
+# Time: 4100000, State: START, Classifier: xxxx
+# Time: 4110000, State: START, Classifier: xxxx
+# Time: 4120000, State: START, Classifier: xxxx
+# Time: 4130000, State: START, Classifier: xxxx
+# Time: 4140000, State: START, Classifier: xxxx
+# Time: 4150000, State: START, Classifier: xxxx
+# Time: 4160000, State: START, Classifier: xxxx
+# Time: 4170000, State: START, Classifier: xxxx
+# Time: 4180000, State: START, Classifier: xxxx
+# Time: 4190000, State: START, Classifier: xxxx
+# Time: 4200000, State: START, Classifier: xxxx
+# Time: 4210000, State: START, Classifier: xxxx
+# Time: 4220000, State: START, Classifier: xxxx
+# Time: 4230000, State: START, Classifier: xxxx
+# Time: 4240000, State: START, Classifier: xxxx
+# Time: 4250000, State: START, Classifier: xxxx
+# Time: 4260000, State: START, Classifier: xxxx
+# Time: 4270000, State: START, Classifier: xxxx
+# Time: 4280000, State: START, Classifier: xxxx
+# Time: 4290000, State: START, Classifier: xxxx
+# Time: 4300000, State: START, Classifier: xxxx
+# Time: 4310000, State: START, Classifier: xxxx
+# Time: 4320000, State: START, Classifier: xxxx
+# Time: 4330000, State: START, Classifier: xxxx
+# Time: 4340000, State: START, Classifier: xxxx
+# Time: 4350000, State: START, Classifier: xxxx
+# Time: 4360000, State: START, Classifier: xxxx
+# Time: 4370000, State: START, Classifier: xxxx
+# Time: 4380000, State: START, Classifier: xxxx
+# Time: 4390000, State: START, Classifier: xxxx
+# Time: 4400000, State: START, Classifier: xxxx
+# Time: 4410000, State: START, Classifier: xxxx
+# Time: 4420000, State: START, Classifier: xxxx
+# Time: 4430000, State: START, Classifier: xxxx
+# Time: 4440000, State: START, Classifier: xxxx
+# Time: 4450000, State: START, Classifier: xxxx
+# Time: 4460000, State: START, Classifier: xxxx
+# Time: 4470000, State: START, Classifier: xxxx
+# Time: 4480000, State: START, Classifier: xxxx
+# Time: 4490000, State: START, Classifier: xxxx
+# Time: 4500000, State: START, Classifier: xxxx
+# Time: 4510000, State: START, Classifier: xxxx
+# Time: 4520000, State: START, Classifier: xxxx
+# Time: 4530000, State: START, Classifier: xxxx
+# Time: 4540000, State: START, Classifier: xxxx
+# Time: 4550000, State: START, Classifier: xxxx
+# Time: 4560000, State: START, Classifier: xxxx
+# Time: 4570000, State: START, Classifier: xxxx
+# Time: 4580000, State: START, Classifier: xxxx
+# Time: 4590000, State: START, Classifier: xxxx
+# Time: 4600000, State: START, Classifier: xxxx
+# Time: 4610000, State: START, Classifier: xxxx
+# Time: 4620000, State: START, Classifier: xxxx
+# Time: 4630000, State: START, Classifier: xxxx
+# Time: 4640000, State: START, Classifier: xxxx
+# Time: 4650000, State: START, Classifier: xxxx
+# Time: 4660000, State: START, Classifier: xxxx
+# Time: 4670000, State: START, Classifier: xxxx
+# Time: 4680000, State: START, Classifier: xxxx
+# Time: 4690000, State: START, Classifier: xxxx
+# Time: 4700000, State: START, Classifier: xxxx
+# Time: 4710000, State: START, Classifier: xxxx
+# Time: 4720000, State: START, Classifier: xxxx
+# Time: 4730000, State: START, Classifier: xxxx
+# Time: 4740000, State: START, Classifier: xxxx
+# Time: 4750000, State: START, Classifier: xxxx
+# Time: 4760000, State: START, Classifier: xxxx
+# Time: 4770000, State: START, Classifier: xxxx
+# Time: 4780000, State: START, Classifier: xxxx
+# Time: 4790000, State: START, Classifier: xxxx
+# Time: 4800000, State: START, Classifier: xxxx
+# Time: 4810000, State: START, Classifier: xxxx
+# Time: 4820000, State: START, Classifier: xxxx
+# Time: 4830000, State: START, Classifier: xxxx
+# Time: 4840000, State: START, Classifier: xxxx
+# Time: 4850000, State: START, Classifier: xxxx
+# Time: 4860000, State: START, Classifier: xxxx
+# Time: 4870000, State: START, Classifier: xxxx
+# Time: 4880000, State: START, Classifier: xxxx
+# Time: 4890000, State: START, Classifier: xxxx
+# Time: 4900000, State: START, Classifier: xxxx
+# Time: 4910000, State: START, Classifier: xxxx
+# Time: 4920000, State: START, Classifier: xxxx
+# Time: 4930000, State: START, Classifier: xxxx
+# Time: 4940000, State: START, Classifier: xxxx
+# Time: 4950000, State: START, Classifier: xxxx
+# Time: 4960000, State: START, Classifier: xxxx
+# Time: 4970000, State: START, Classifier: xxxx
+# Time: 4980000, State: START, Classifier: xxxx
+# Time: 4990000, State: START, Classifier: xxxx
+# Time: 5000000, State: START, Classifier: xxxx
+# Time: 5010000, State: START, Classifier: xxxx
+# Time: 5020000, State: START, Classifier: xxxx
+# Time: 5030000, State: START, Classifier: xxxx
+# Time: 5040000, State: START, Classifier: xxxx
+# Time: 5050000, State: START, Classifier: xxxx
+# Time: 5060000, State: START, Classifier: xxxx
+# Time: 5070000, State: START, Classifier: xxxx
+# Time: 5080000, State: START, Classifier: xxxx
+# Time: 5090000, State: START, Classifier: xxxx
+# Time: 5100000, State: START, Classifier: xxxx
+# Time: 5110000, State: START, Classifier: xxxx
+# Time: 5120000, State: START, Classifier: xxxx
+# Time: 5130000, State: START, Classifier: xxxx
+# Time: 5140000, State: START, Classifier: xxxx
+# Time: 5150000, State: START, Classifier: xxxx
+# Time: 5160000, State: START, Classifier: xxxx
+# Time: 5170000, State: START, Classifier: xxxx
+# Time: 5180000, State: START, Classifier: xxxx
+# Time: 5190000, State: START, Classifier: xxxx
+# Time: 5200000, State: START, Classifier: xxxx
+# Time: 5210000, State: START, Classifier: xxxx
+# Time: 5220000, State: START, Classifier: xxxx
+# Time: 5230000, State: START, Classifier: xxxx
+# Time: 5240000, State: START, Classifier: xxxx
+# Time: 5250000, State: START, Classifier: xxxx
+# Time: 5260000, State: START, Classifier: xxxx
+# Time: 5270000, State: START, Classifier: xxxx
+# Time: 5280000, State: START, Classifier: xxxx
+# Time: 5290000, State: START, Classifier: xxxx
+# Time: 5300000, State: START, Classifier: xxxx
+# Time: 5310000, State: START, Classifier: xxxx
+# Time: 5320000, State: START, Classifier: xxxx
+# Time: 5330000, State: START, Classifier: xxxx
+# Time: 5340000, State: START, Classifier: xxxx
+# Time: 5350000, State: START, Classifier: xxxx
+# Time: 5360000, State: START, Classifier: xxxx
+# Time: 5370000, State: START, Classifier: xxxx
+# Time: 5380000, State: START, Classifier: xxxx
+# Time: 5390000, State: START, Classifier: xxxx
+# Time: 5400000, State: START, Classifier: xxxx
+# Time: 5410000, State: START, Classifier: xxxx
+# Time: 5420000, State: START, Classifier: xxxx
+# Time: 5430000, State: START, Classifier: xxxx
+# Time: 5440000, State: START, Classifier: xxxx
+# Time: 5450000, State: START, Classifier: xxxx
+# Time: 5460000, State: START, Classifier: xxxx
+# Time: 5470000, State: START, Classifier: xxxx
+# Time: 5480000, State: START, Classifier: xxxx
+# Time: 5490000, State: START, Classifier: xxxx
+# Time: 5500000, State: START, Classifier: xxxx
+# Time: 5510000, State: START, Classifier: xxxx
+# Time: 5520000, State: START, Classifier: xxxx
+# Time: 5530000, State: START, Classifier: xxxx
+# Time: 5540000, State: START, Classifier: xxxx
+# Time: 5550000, State: START, Classifier: xxxx
+# Time: 5560000, State: START, Classifier: xxxx
+# Time: 5570000, State: START, Classifier: xxxx
+# Time: 5580000, State: START, Classifier: xxxx
+# Time: 5590000, State: START, Classifier: xxxx
+# Time: 5600000, State: START, Classifier: xxxx
+# Time: 5610000, State: START, Classifier: xxxx
+# Time: 5620000, State: START, Classifier: xxxx
+# Time: 5630000, State: START, Classifier: xxxx
+# Time: 5640000, State: START, Classifier: xxxx
+# Time: 5650000, State: START, Classifier: xxxx
+# Time: 5660000, State: START, Classifier: xxxx
+# Time: 5670000, State: START, Classifier: xxxx
+# Time: 5680000, State: START, Classifier: xxxx
+# Time: 5690000, State: START, Classifier: xxxx
+# Time: 5700000, State: START, Classifier: xxxx
+# Time: 5710000, State: START, Classifier: xxxx
+# Time: 5720000, State: START, Classifier: xxxx
+# Time: 5730000, State: START, Classifier: xxxx
+# Time: 5740000, State: START, Classifier: xxxx
+# Time: 5750000, State: START, Classifier: xxxx
+# Time: 5760000, State: START, Classifier: xxxx
+# Time: 5770000, State: START, Classifier: xxxx
+# Time: 5780000, State: START, Classifier: xxxx
+# Time: 5790000, State: START, Classifier: xxxx
+# Time: 5800000, State: START, Classifier: xxxx
+# Time: 5810000, State: START, Classifier: xxxx
+# Time: 5820000, State: START, Classifier: xxxx
+# Time: 5830000, State: START, Classifier: xxxx
+# Time: 5840000, State: START, Classifier: xxxx
+# Time: 5850000, State: START, Classifier: xxxx
+# Time: 5860000, State: START, Classifier: xxxx
+# Time: 5870000, State: START, Classifier: xxxx
+# Time: 5880000, State: START, Classifier: xxxx
+# Time: 5890000, State: START, Classifier: xxxx
+# Time: 5900000, State: START, Classifier: xxxx
+# Time: 5910000, State: START, Classifier: xxxx
+# Time: 5920000, State: START, Classifier: xxxx
+# Time: 5930000, State: START, Classifier: xxxx
+# Time: 5940000, State: START, Classifier: xxxx
+# Time: 5950000, State: START, Classifier: xxxx
+# Time: 5960000, State: START, Classifier: xxxx
+# Time: 5970000, State: START, Classifier: xxxx
+# Time: 5980000, State: START, Classifier: xxxx
+# Time: 5990000, State: START, Classifier: xxxx
+# Time: 6000000, State: START, Classifier: xxxx
+# Time: 6010000, State: START, Classifier: xxxx
+# Time: 6020000, State: START, Classifier: xxxx
+# Time: 6030000, State: START, Classifier: xxxx
+# Time: 6040000, State: START, Classifier: xxxx
+# Time: 6050000, State: START, Classifier: xxxx
+# Time: 6060000, State: START, Classifier: xxxx
+# Time: 6070000, State: START, Classifier: xxxx
+# Time: 6080000, State: START, Classifier: xxxx
+# Time: 6090000, State: START, Classifier: xxxx
+# Time: 6100000, State: START, Classifier: xxxx
+# Time: 6110000, State: START, Classifier: xxxx
+# Time: 6120000, State: START, Classifier: xxxx
+# Time: 6130000, State: START, Classifier: xxxx
+# Time: 6140000, State: START, Classifier: xxxx
+# Time: 6150000, State: START, Classifier: xxxx
+# Time: 6160000, State: START, Classifier: xxxx
+# Time: 6170000, State: START, Classifier: xxxx
+# Time: 6180000, State: START, Classifier: xxxx
+# Time: 6190000, State: START, Classifier: xxxx
+# Time: 6200000, State: START, Classifier: xxxx
+# Time: 6210000, State: START, Classifier: xxxx
+# Time: 6220000, State: START, Classifier: xxxx
+# Time: 6230000, State: START, Classifier: xxxx
+# Time: 6240000, State: START, Classifier: xxxx
+# Time: 6250000, State: START, Classifier: xxxx
+# Time: 6260000, State: START, Classifier: xxxx
+# Time: 6270000, State: START, Classifier: xxxx
+# Time: 6280000, State: START, Classifier: xxxx
+# Time: 6290000, State: START, Classifier: xxxx
+# Time: 6300000, State: START, Classifier: xxxx
+# Time: 6310000, State: START, Classifier: xxxx
+# Time: 6320000, State: START, Classifier: xxxx
+# Time: 6330000, State: START, Classifier: xxxx
+# Time: 6340000, State: START, Classifier: xxxx
+# Time: 6350000, State: START, Classifier: xxxx
+# Time: 6360000, State: START, Classifier: xxxx
+# Time: 6370000, State: START, Classifier: xxxx
+# Time: 6380000, State: START, Classifier: xxxx
+# Time: 6390000, State: START, Classifier: xxxx
+# Time: 6400000, State: START, Classifier: xxxx
+run
+# Time: 6410000, State: START, Classifier: xxxx
+# Time: 6420000, State: START, Classifier: xxxx
+# Time: 6430000, State: START, Classifier: xxxx
+# Time: 6440000, State: START, Classifier: xxxx
+# Time: 6450000, State: START, Classifier: xxxx
+# Time: 6460000, State: START, Classifier: xxxx
+# Time: 6470000, State: START, Classifier: xxxx
+# Time: 6480000, State: START, Classifier: xxxx
+# Time: 6490000, State: START, Classifier: xxxx
+# Time: 6500000, State: START, Classifier: xxxx
+# Time: 6510000, State: START, Classifier: xxxx
+# Time: 6520000, State: START, Classifier: xxxx
+# Time: 6530000, State: START, Classifier: xxxx
+# Time: 6540000, State: START, Classifier: xxxx
+# Time: 6550000, State: START, Classifier: xxxx
+# Time: 6560000, State: START, Classifier: xxxx
+# Time: 6570000, State: START, Classifier: xxxx
+# Time: 6580000, State: START, Classifier: xxxx
+# Time: 6590000, State: START, Classifier: xxxx
+# Time: 6600000, State: START, Classifier: xxxx
+# Time: 6610000, State: START, Classifier: xxxx
+# Time: 6620000, State: START, Classifier: xxxx
+# Time: 6630000, State: START, Classifier: xxxx
+# Time: 6640000, State: START, Classifier: xxxx
+# Time: 6650000, State: START, Classifier: xxxx
+# Time: 6660000, State: START, Classifier: xxxx
+# Time: 6670000, State: START, Classifier: xxxx
+# Time: 6680000, State: START, Classifier: xxxx
+# Time: 6690000, State: START, Classifier: xxxx
+# Time: 6700000, State: START, Classifier: xxxx
+# Time: 6710000, State: START, Classifier: xxxx
+# Time: 6720000, State: START, Classifier: xxxx
+# Time: 6730000, State: START, Classifier: xxxx
+# Time: 6740000, State: START, Classifier: xxxx
+# Time: 6750000, State: START, Classifier: xxxx
+# Time: 6760000, State: START, Classifier: xxxx
+# Time: 6770000, State: START, Classifier: xxxx
+# Time: 6780000, State: START, Classifier: xxxx
+# Time: 6790000, State: START, Classifier: xxxx
+# Time: 6800000, State: START, Classifier: xxxx
+# Time: 6810000, State: START, Classifier: xxxx
+# Time: 6820000, State: START, Classifier: xxxx
+# Time: 6830000, State: START, Classifier: xxxx
+# Time: 6840000, State: START, Classifier: xxxx
+# Time: 6850000, State: START, Classifier: xxxx
+# Time: 6860000, State: START, Classifier: xxxx
+# Time: 6870000, State: START, Classifier: xxxx
+# Time: 6880000, State: START, Classifier: xxxx
+# Time: 6890000, State: START, Classifier: xxxx
+# Time: 6900000, State: START, Classifier: xxxx
+# Time: 6910000, State: START, Classifier: xxxx
+# Time: 6920000, State: START, Classifier: xxxx
+# Time: 6930000, State: START, Classifier: xxxx
+# Time: 6940000, State: START, Classifier: xxxx
+# Time: 6950000, State: START, Classifier: xxxx
+# Time: 6960000, State: START, Classifier: xxxx
+# Time: 6970000, State: START, Classifier: xxxx
+# Time: 6980000, State: START, Classifier: xxxx
+# Time: 6990000, State: START, Classifier: xxxx
+# Time: 7000000, State: START, Classifier: xxxx
+# Time: 7010000, State: START, Classifier: xxxx
+# Time: 7020000, State: START, Classifier: xxxx
+# Time: 7030000, State: START, Classifier: xxxx
+# Time: 7040000, State: START, Classifier: xxxx
+# Time: 7050000, State: START, Classifier: xxxx
+# Time: 7060000, State: START, Classifier: xxxx
+# Time: 7070000, State: START, Classifier: xxxx
+# Time: 7080000, State: START, Classifier: xxxx
+# Time: 7090000, State: START, Classifier: xxxx
+# Time: 7100000, State: START, Classifier: xxxx
+# Time: 7110000, State: START, Classifier: xxxx
+# Time: 7120000, State: START, Classifier: xxxx
+# Time: 7130000, State: START, Classifier: xxxx
+# Time: 7140000, State: START, Classifier: xxxx
+# Time: 7150000, State: START, Classifier: xxxx
+# Time: 7160000, State: START, Classifier: xxxx
+# Time: 7170000, State: START, Classifier: xxxx
+# Time: 7180000, State: START, Classifier: xxxx
+# Time: 7190000, State: START, Classifier: xxxx
+# Time: 7200000, State: START, Classifier: xxxx
+# Time: 7210000, State: START, Classifier: xxxx
+# Time: 7220000, State: START, Classifier: xxxx
+# Time: 7230000, State: START, Classifier: xxxx
+# Time: 7240000, State: START, Classifier: xxxx
+# Time: 7250000, State: START, Classifier: xxxx
+# Time: 7260000, State: START, Classifier: xxxx
+# Time: 7270000, State: START, Classifier: xxxx
+# Time: 7280000, State: START, Classifier: xxxx
+# Time: 7290000, State: START, Classifier: xxxx
+# Time: 7300000, State: START, Classifier: xxxx
+# Time: 7310000, State: START, Classifier: xxxx
+# Time: 7320000, State: START, Classifier: xxxx
+# Time: 7330000, State: START, Classifier: xxxx
+# Time: 7340000, State: START, Classifier: xxxx
+# Time: 7350000, State: START, Classifier: xxxx
+# Time: 7360000, State: START, Classifier: xxxx
+# Time: 7370000, State: START, Classifier: xxxx
+# Time: 7380000, State: START, Classifier: xxxx
+# Time: 7390000, State: START, Classifier: xxxx
+# Time: 7400000, State: START, Classifier: xxxx
+# Time: 7410000, State: START, Classifier: xxxx
+# Time: 7420000, State: START, Classifier: xxxx
+# Time: 7430000, State: START, Classifier: xxxx
+# Time: 7440000, State: START, Classifier: xxxx
+# Time: 7450000, State: START, Classifier: xxxx
+# Time: 7460000, State: START, Classifier: xxxx
+# Time: 7470000, State: START, Classifier: xxxx
+# Time: 7480000, State: START, Classifier: xxxx
+# Time: 7490000, State: START, Classifier: xxxx
+# Time: 7500000, State: START, Classifier: xxxx
+# Time: 7510000, State: START, Classifier: xxxx
+# Time: 7520000, State: START, Classifier: xxxx
+# Time: 7530000, State: START, Classifier: xxxx
+# Time: 7540000, State: START, Classifier: xxxx
+# Time: 7550000, State: START, Classifier: xxxx
+# Time: 7560000, State: START, Classifier: xxxx
+# Time: 7570000, State: START, Classifier: xxxx
+# Time: 7580000, State: START, Classifier: xxxx
+# Time: 7590000, State: START, Classifier: xxxx
+# Time: 7600000, State: START, Classifier: xxxx
+# Time: 7610000, State: START, Classifier: xxxx
+# Time: 7620000, State: START, Classifier: xxxx
+# Time: 7630000, State: START, Classifier: xxxx
+# Time: 7640000, State: START, Classifier: xxxx
+# Time: 7650000, State: START, Classifier: xxxx
+# Time: 7660000, State: START, Classifier: xxxx
+# Time: 7670000, State: START, Classifier: xxxx
+# Time: 7680000, State: START, Classifier: xxxx
+# Time: 7690000, State: START, Classifier: xxxx
+# Time: 7700000, State: START, Classifier: xxxx
+# Time: 7710000, State: START, Classifier: xxxx
+# Time: 7720000, State: START, Classifier: xxxx
+# Time: 7730000, State: START, Classifier: xxxx
+# Time: 7740000, State: START, Classifier: xxxx
+# Time: 7750000, State: START, Classifier: xxxx
+# Time: 7760000, State: START, Classifier: xxxx
+# Time: 7770000, State: START, Classifier: xxxx
+# Time: 7780000, State: START, Classifier: xxxx
+# Time: 7790000, State: START, Classifier: xxxx
+# Time: 7800000, State: START, Classifier: xxxx
+# Time: 7810000, State: START, Classifier: xxxx
+# Time: 7820000, State: START, Classifier: xxxx
+# Time: 7830000, State: START, Classifier: xxxx
+# Time: 7840000, State: START, Classifier: xxxx
+# Time: 7850000, State: START, Classifier: xxxx
+# Time: 7860000, State: START, Classifier: xxxx
+# Time: 7870000, State: START, Classifier: xxxx
+# Time: 7880000, State: START, Classifier: xxxx
+# Time: 7890000, State: START, Classifier: xxxx
+# Time: 7900000, State: START, Classifier: xxxx
+# Time: 7910000, State: START, Classifier: xxxx
+# Time: 7920000, State: START, Classifier: xxxx
+# Time: 7930000, State: START, Classifier: xxxx
+# Time: 7940000, State: START, Classifier: xxxx
+# Time: 7950000, State: START, Classifier: xxxx
+# Time: 7960000, State: START, Classifier: xxxx
+# Time: 7970000, State: START, Classifier: xxxx
+# Time: 7980000, State: START, Classifier: xxxx
+# Time: 7990000, State: START, Classifier: xxxx
+# Time: 8000000, State: START, Classifier: xxxx
+# Time: 8010000, State: START, Classifier: xxxx
+# Time: 8020000, State: START, Classifier: xxxx
+# Time: 8030000, State: START, Classifier: xxxx
+# Time: 8040000, State: START, Classifier: xxxx
+# Time: 8050000, State: START, Classifier: xxxx
+# Time: 8060000, State: START, Classifier: xxxx
+# Time: 8070000, State: START, Classifier: xxxx
+# Time: 8080000, State: START, Classifier: xxxx
+# Time: 8090000, State: START, Classifier: xxxx
+# Time: 8100000, State: START, Classifier: xxxx
+# Time: 8110000, State: START, Classifier: xxxx
+# Time: 8120000, State: START, Classifier: xxxx
+# Time: 8130000, State: START, Classifier: xxxx
+# Time: 8140000, State: START, Classifier: xxxx
+# Time: 8150000, State: START, Classifier: xxxx
+# Time: 8160000, State: START, Classifier: xxxx
+# Time: 8170000, State: START, Classifier: xxxx
+# Time: 8180000, State: START, Classifier: xxxx
+# Time: 8190000, State: START, Classifier: xxxx
+# Time: 8200000, State: START, Classifier: xxxx
+# Time: 8210000, State: START, Classifier: xxxx
+# Time: 8220000, State: START, Classifier: xxxx
+# Time: 8230000, State: START, Classifier: xxxx
+# Time: 8240000, State: START, Classifier: xxxx
+# Time: 8250000, State: START, Classifier: xxxx
+# Time: 8260000, State: START, Classifier: xxxx
+# Time: 8270000, State: START, Classifier: xxxx
+# Time: 8280000, State: START, Classifier: xxxx
+# Time: 8290000, State: START, Classifier: xxxx
+# Time: 8300000, State: START, Classifier: xxxx
+# Time: 8310000, State: START, Classifier: xxxx
+# Time: 8320000, State: START, Classifier: xxxx
+# Time: 8330000, State: START, Classifier: xxxx
+# Time: 8340000, State: START, Classifier: xxxx
+# Time: 8350000, State: START, Classifier: xxxx
+# Time: 8360000, State: START, Classifier: xxxx
+# Time: 8370000, State: START, Classifier: xxxx
+# Time: 8380000, State: START, Classifier: xxxx
+# Time: 8390000, State: START, Classifier: xxxx
+# Time: 8400000, State: START, Classifier: xxxx
+# Time: 8410000, State: START, Classifier: xxxx
+# Time: 8420000, State: START, Classifier: xxxx
+# Time: 8430000, State: START, Classifier: xxxx
+# Time: 8440000, State: START, Classifier: xxxx
+# Time: 8450000, State: START, Classifier: xxxx
+# Time: 8460000, State: START, Classifier: xxxx
+# Time: 8470000, State: START, Classifier: xxxx
+# Time: 8480000, State: START, Classifier: xxxx
+# Time: 8490000, State: START, Classifier: xxxx
+# Time: 8500000, State: START, Classifier: xxxx
+# Time: 8510000, State: START, Classifier: xxxx
+# Time: 8520000, State: START, Classifier: xxxx
+# Time: 8530000, State: START, Classifier: xxxx
+# Time: 8540000, State: START, Classifier: xxxx
+# Time: 8550000, State: START, Classifier: xxxx
+# Time: 8560000, State: START, Classifier: xxxx
+# Time: 8570000, State: START, Classifier: xxxx
+# Time: 8580000, State: START, Classifier: xxxx
+# Time: 8590000, State: START, Classifier: xxxx
+# Time: 8600000, State: START, Classifier: xxxx
+# Time: 8610000, State: START, Classifier: xxxx
+# Time: 8620000, State: START, Classifier: xxxx
+# Time: 8630000, State: START, Classifier: xxxx
+# Time: 8640000, State: START, Classifier: xxxx
+# Time: 8650000, State: START, Classifier: xxxx
+# Time: 8660000, State: START, Classifier: xxxx
+# Time: 8670000, State: START, Classifier: xxxx
+# Time: 8680000, State: START, Classifier: xxxx
+# Time: 8690000, State: START, Classifier: xxxx
+# Time: 8700000, State: START, Classifier: xxxx
+# Time: 8710000, State: START, Classifier: xxxx
+# Time: 8720000, State: START, Classifier: xxxx
+# Time: 8730000, State: START, Classifier: xxxx
+# Time: 8740000, State: START, Classifier: xxxx
+# Time: 8750000, State: START, Classifier: xxxx
+# Time: 8760000, State: START, Classifier: xxxx
+# Time: 8770000, State: START, Classifier: xxxx
+# Time: 8780000, State: START, Classifier: xxxx
+# Time: 8790000, State: START, Classifier: xxxx
+# Time: 8800000, State: START, Classifier: xxxx
+# Time: 8810000, State: START, Classifier: xxxx
+# Time: 8820000, State: START, Classifier: xxxx
+# Time: 8830000, State: START, Classifier: xxxx
+# Time: 8840000, State: START, Classifier: xxxx
+# Time: 8850000, State: START, Classifier: xxxx
+# Time: 8860000, State: START, Classifier: xxxx
+# Time: 8870000, State: START, Classifier: xxxx
+# Time: 8880000, State: START, Classifier: xxxx
+# Time: 8890000, State: START, Classifier: xxxx
+# Time: 8900000, State: START, Classifier: xxxx
+# Time: 8910000, State: START, Classifier: xxxx
+# Time: 8920000, State: START, Classifier: xxxx
+# Time: 8930000, State: START, Classifier: xxxx
+# Time: 8940000, State: START, Classifier: xxxx
+# Time: 8950000, State: START, Classifier: xxxx
+# Time: 8960000, State: START, Classifier: xxxx
+# Time: 8970000, State: START, Classifier: xxxx
+# Time: 8980000, State: START, Classifier: xxxx
+# Time: 8990000, State: START, Classifier: xxxx
+# Time: 9000000, State: START, Classifier: xxxx
+# Time: 9010000, State: START, Classifier: xxxx
+# Time: 9020000, State: START, Classifier: xxxx
+# Time: 9030000, State: START, Classifier: xxxx
+# Time: 9040000, State: START, Classifier: xxxx
+# Time: 9050000, State: START, Classifier: xxxx
+# Time: 9060000, State: START, Classifier: xxxx
+# Time: 9070000, State: START, Classifier: xxxx
+# Time: 9080000, State: START, Classifier: xxxx
+# Time: 9090000, State: START, Classifier: xxxx
+# Time: 9100000, State: START, Classifier: xxxx
+# Time: 9110000, State: START, Classifier: xxxx
+# Time: 9120000, State: START, Classifier: xxxx
+# Time: 9130000, State: START, Classifier: xxxx
+# Time: 9140000, State: START, Classifier: xxxx
+# Time: 9150000, State: START, Classifier: xxxx
+# Time: 9160000, State: START, Classifier: xxxx
+# Time: 9170000, State: START, Classifier: xxxx
+# Time: 9180000, State: START, Classifier: xxxx
+# Time: 9190000, State: START, Classifier: xxxx
+# Time: 9200000, State: START, Classifier: xxxx
+# Time: 9210000, State: START, Classifier: xxxx
+# Time: 9220000, State: START, Classifier: xxxx
+# Time: 9230000, State: START, Classifier: xxxx
+# Time: 9240000, State: START, Classifier: xxxx
+# Time: 9250000, State: START, Classifier: xxxx
+# Time: 9260000, State: START, Classifier: xxxx
+# Time: 9270000, State: START, Classifier: xxxx
+# Time: 9280000, State: START, Classifier: xxxx
+# Time: 9290000, State: START, Classifier: xxxx
+# Time: 9300000, State: START, Classifier: xxxx
+# Time: 9310000, State: START, Classifier: xxxx
+# Time: 9320000, State: START, Classifier: xxxx
+# Time: 9330000, State: START, Classifier: xxxx
+# Time: 9340000, State: START, Classifier: xxxx
+# Time: 9350000, State: START, Classifier: xxxx
+# Time: 9360000, State: START, Classifier: xxxx
+# Time: 9370000, State: START, Classifier: xxxx
+# Time: 9380000, State: START, Classifier: xxxx
+# Time: 9390000, State: START, Classifier: xxxx
+# Time: 9400000, State: START, Classifier: xxxx
+# Time: 9410000, State: START, Classifier: xxxx
+# Time: 9420000, State: START, Classifier: xxxx
+# Time: 9430000, State: START, Classifier: xxxx
+# Time: 9440000, State: START, Classifier: xxxx
+# Time: 9450000, State: START, Classifier: xxxx
+# Time: 9460000, State: START, Classifier: xxxx
+# Time: 9470000, State: START, Classifier: xxxx
+# Time: 9480000, State: START, Classifier: xxxx
+# Time: 9490000, State: START, Classifier: xxxx
+# Time: 9500000, State: START, Classifier: xxxx
+add wave -position insertpoint  \
+sim:/top_tb/dut/ecg_mem
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# Compile of dot_product_tb.sv was successful.
+restart
+# Loading work.top_tb
+# Loading work.top
+# Loading work.dot_product
+# Loading work.attention
+# Loading work.lut_module
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Time: 0, State: IDLE, Classifier: xxxx
+# Time: 10000, State: IDLE, Classifier: xxxx
+# Time: 20000, State: IDLE, Classifier: xxxx
+# Time: 30000, State: START, Classifier: xxxx
+# Time: 40000, State: START, Classifier: xxxx
+# Time: 50000, State: START, Classifier: xxxx
+# Time: 60000, State: START, Classifier: xxxx
+# Time: 70000, State: START, Classifier: xxxx
+# Time: 80000, State: START, Classifier: xxxx
+# Time: 90000, State: START, Classifier: xxxx
+# Time: 100000, State: START, Classifier: xxxx
+# Time: 110000, State: START, Classifier: xxxx
+# Time: 120000, State: START, Classifier: xxxx
+# Time: 130000, State: START, Classifier: xxxx
+# Time: 140000, State: START, Classifier: xxxx
+# Time: 150000, State: START, Classifier: xxxx
+# Time: 160000, State: START, Classifier: xxxx
+# Time: 170000, State: START, Classifier: xxxx
+# Time: 180000, State: START, Classifier: xxxx
+# Time: 190000, State: START, Classifier: xxxx
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv(60)
+#    Time: 200 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv line 60
+# Compile of mac_unit.sv was successful.
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of dot_product_16by6.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# Compile of mlp.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# 16 compiles, 0 failed with no errors.
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.dot_product
+# Loading work.relu_embed
+# Loading work.linear
+# Loading work.matrix_multiply_controller
+# Loading work.matrix_multiply
+# Loading work.mac_unit
+# Loading work.mlp
+# Loading work.relu
+# Loading work.dot_product_16by6
+# Loading work.reduce
+# Loading work.lut_module
+# Compile of dot_product_tb.sv was successful.
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+# Compile of mac_unit.sv was successful.
+run -continue
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Time: 0, State: IDLE, Classifier: xxxx
+# Time: 10000, State: IDLE, Classifier: xxxx
+# Time: 20000, State: IDLE, Classifier: xxxx
+# Time: 30000, State: START, Classifier: xxxx
+# Time: 40000, State: START, Classifier: xxxx
+# Time: 50000, State: START, Classifier: xxxx
+# Time: 60000, State: START, Classifier: xxxx
+# Time: 70000, State: START, Classifier: xxxx
+# Time: 80000, State: START, Classifier: xxxx
+# Time: 90000, State: START, Classifier: xxxx
+# Time: 100000, State: START, Classifier: xxxx
+# Time: 110000, State: START, Classifier: xxxx
+# Time: 120000, State: START, Classifier: xxxx
+# Time: 130000, State: START, Classifier: xxxx
+# Time: 140000, State: START, Classifier: xxxx
+# Time: 150000, State: START, Classifier: xxxx
+# Time: 160000, State: START, Classifier: xxxx
+# Time: 170000, State: START, Classifier: xxxx
+# Time: 180000, State: START, Classifier: xxxx
+# Time: 190000, State: START, Classifier: xxxx
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv(60)
+#    Time: 200 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv line 60
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of dot_product_16by6.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# Compile of mlp.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# 16 compiles, 0 failed with no errors.
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# Compile of dot_product_tb.sv was successful.
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+# Compile of mac_unit.sv was successful.
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of dot_product_16by6.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# Compile of mlp.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# 16 compiles, 0 failed with no errors.
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# Compile of dot_product_tb.sv was successful.
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+# Compile of mac_unit.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.dot_product
+# Loading work.relu_embed
+# Loading work.attention
+# Loading work.linear
+# Loading work.matrix_multiply_controller
+# Loading work.matrix_multiply
+# Loading work.mac_unit
+# Loading work.mlp
+# Loading work.relu
+# Loading work.dot_product_16by6
+# Loading work.reduce
+# Loading work.lut_module
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Time: 0, State: IDLE, Classifier: xxxx
+# Time: 10000, State: IDLE, Classifier: xxxx
+# Time: 20000, State: IDLE, Classifier: xxxx
+# Time: 30000, State: START, Classifier: xxxx
+# Time: 40000, State: START, Classifier: xxxx
+# Time: 50000, State: START, Classifier: xxxx
+# Time: 60000, State: START, Classifier: xxxx
+# Time: 70000, State: START, Classifier: xxxx
+# Time: 80000, State: START, Classifier: xxxx
+# Time: 90000, State: START, Classifier: xxxx
+# Time: 100000, State: START, Classifier: xxxx
+# Time: 110000, State: START, Classifier: xxxx
+# Time: 120000, State: START, Classifier: xxxx
+# Time: 130000, State: START, Classifier: xxxx
+# Time: 140000, State: START, Classifier: xxxx
+# Time: 150000, State: START, Classifier: xxxx
+# Time: 160000, State: START, Classifier: xxxx
+# Time: 170000, State: START, Classifier: xxxx
+# Time: 180000, State: START, Classifier: xxxx
+# Time: 190000, State: START, Classifier: xxxx
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv(59)
+#    Time: 200 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv line 59
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of dot_product_16by6.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# Compile of mlp.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.relu_embed
+# Loading work.matrix_multiply_controller
+# Loading work.mlp
+# Loading work.relu
+# Loading work.dot_product_16by6
+# Loading work.reduce
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Time: 0, State: IDLE, Classifier: xxxx
+# Time: 10000, State: IDLE, Classifier: xxxx
+# Time: 20000, State: IDLE, Classifier: xxxx
+# Time: 30000, State: START, Classifier: xxxx
+# Time: 40000, State: START, Classifier: xxxx
+# Time: 50000, State: START, Classifier: xxxx
+# Time: 60000, State: START, Classifier: xxxx
+# Time: 70000, State: START, Classifier: xxxx
+# Time: 80000, State: START, Classifier: xxxx
+# Time: 90000, State: START, Classifier: xxxx
+# Time: 100000, State: START, Classifier: xxxx
+# Time: 110000, State: START, Classifier: xxxx
+# Time: 120000, State: START, Classifier: xxxx
+# Time: 130000, State: START, Classifier: xxxx
+# Time: 140000, State: START, Classifier: xxxx
+# Time: 150000, State: START, Classifier: xxxx
+# Time: 160000, State: START, Classifier: xxxx
+# Time: 170000, State: START, Classifier: xxxx
+# Time: 180000, State: START, Classifier: xxxx
+# Time: 190000, State: START, Classifier: xxxx
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv(59)
+#    Time: 200 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv line 59
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# Compile of dot_product_tb.sv was successful.
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+# Compile of mac_unit.sv was successful.
+restart
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of dot_product_16by6.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# Compile of mlp.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.dot_product
+# Loading work.relu_embed
+# Loading work.attention
+# Loading work.linear
+# Loading work.matrix_multiply_controller
+# Loading work.matrix_multiply
+# Loading work.mac_unit
+# Loading work.mlp
+# Loading work.relu
+# Loading work.dot_product_16by6
+# Loading work.reduce
+# Loading work.lut_module
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Time: 0, State: IDLE, Classifier: xxxx
+# Time: 10000, State: IDLE, Classifier: xxxx
+# Time: 20000, State: IDLE, Classifier: xxxx
+# Time: 30000, State: START, Classifier: xxxx
+# Time: 40000, State: START, Classifier: xxxx
+# Time: 50000, State: START, Classifier: xxxx
+# Time: 60000, State: START, Classifier: xxxx
+# Time: 70000, State: START, Classifier: xxxx
+# Time: 80000, State: START, Classifier: xxxx
+# Time: 90000, State: START, Classifier: xxxx
+# Time: 100000, State: START, Classifier: xxxx
+# Time: 110000, State: START, Classifier: xxxx
+# Time: 120000, State: START, Classifier: xxxx
+# Time: 130000, State: START, Classifier: xxxx
+# Time: 140000, State: START, Classifier: xxxx
+# Time: 150000, State: START, Classifier: xxxx
+# Time: 160000, State: START, Classifier: xxxx
+# Time: 170000, State: START, Classifier: xxxx
+# Time: 180000, State: START, Classifier: xxxx
+# Time: 190000, State: START, Classifier: xxxx
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv(59)
+#    Time: 200 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv line 59
+add wave -position insertpoint  \
+sim:/top_tb/dut/cnt_input
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Time: 0, State: IDLE, Classifier: xxxx
+# Time: 10000, State: IDLE, Classifier: xxxx
+# Time: 20000, State: IDLE, Classifier: xxxx
+# Time: 30000, State: START, Classifier: xxxx
+# Time: 40000, State: START, Classifier: xxxx
+# Time: 50000, State: START, Classifier: xxxx
+# Time: 60000, State: START, Classifier: xxxx
+# Time: 70000, State: START, Classifier: xxxx
+# Time: 80000, State: START, Classifier: xxxx
+# Time: 90000, State: START, Classifier: xxxx
+# Time: 100000, State: START, Classifier: xxxx
+# Time: 110000, State: START, Classifier: xxxx
+# Time: 120000, State: START, Classifier: xxxx
+# Time: 130000, State: START, Classifier: xxxx
+# Time: 140000, State: START, Classifier: xxxx
+# Time: 150000, State: START, Classifier: xxxx
+# Time: 160000, State: START, Classifier: xxxx
+# Time: 170000, State: START, Classifier: xxxx
+# Time: 180000, State: START, Classifier: xxxx
+# Time: 190000, State: START, Classifier: xxxx
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv(59)
+#    Time: 200 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv line 59
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# Compile of dot_product_tb.sv was successful.
+restart
+# Loading work.top_tb
+# Loading work.top
+# Loading work.dot_product
+# Loading work.attention
+# Loading work.lut_module
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+# Compile of mac_unit.sv was successful.
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of dot_product_16by6.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# Compile of mlp.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# 16 compiles, 0 failed with no errors.
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# Compile of dot_product_tb.sv was successful.
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+# Compile of mac_unit.sv was successful.
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+# Compile of relu_embed.sv was successful with warnings.
+# Compile of dot_product_16by6.sv was successful.
+# Compile of relu.sv was successful with warnings.
+# Compile of mlp.sv was successful.
+# Compile of reduce.sv was successful with warnings.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.dot_product
+# Loading work.relu_embed
+# Loading work.attention
+# Loading work.linear
+# Loading work.matrix_multiply_controller
+# Loading work.matrix_multiply
+# Loading work.mac_unit
+# Loading work.mlp
+# Loading work.relu
+# Loading work.dot_product_16by6
+# Loading work.reduce
+# Loading work.lut_module
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Time: 0, State: IDLE, Classifier: xxxx
+# Time: 10000, State: IDLE, Classifier: xxxx
+# Time: 20000, State: IDLE, Classifier: xxxx
+# Time: 30000, State: START, Classifier: xxxx
+# Time: 40000, State: START, Classifier: xxxx
+# Time: 50000, State: START, Classifier: xxxx
+# Time: 60000, State: START, Classifier: xxxx
+# Time: 70000, State: START, Classifier: xxxx
+# Time: 80000, State: START, Classifier: xxxx
+# Time: 90000, State: START, Classifier: xxxx
+# Time: 100000, State: START, Classifier: xxxx
+# Time: 110000, State: START, Classifier: xxxx
+# Time: 120000, State: START, Classifier: xxxx
+# Time: 130000, State: START, Classifier: xxxx
+# Time: 140000, State: START, Classifier: xxxx
+# Time: 150000, State: START, Classifier: xxxx
+# Time: 160000, State: START, Classifier: xxxx
+# Time: 170000, State: START, Classifier: xxxx
+# Time: 180000, State: START, Classifier: xxxx
+# Time: 190000, State: EMBED_CAL, Classifier: xxxx
+# ** Note: $finish    : C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv(59)
+#    Time: 200 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv line 59
+run
+# Time: 200000, State: EMBED_CAL, Classifier: xxxx
+# Time: 210000, State: EMBED_CAL, Classifier: xxxx
+# Time: 220000, State: EMBED_CAL, Classifier: xxxx
+# Time: 230000, State: EMBED_CAL, Classifier: xxxx
+# Time: 240000, State: EMBED_CAL, Classifier: xxxx
+# Time: 250000, State: EMBED_CAL, Classifier: xxxx
+# Time: 260000, State: EMBED_CAL, Classifier: xxxx
+# Time: 270000, State: EMBED_CAL, Classifier: xxxx
+# Time: 280000, State: EMBED_CAL, Classifier: xxxx
+# Time: 290000, State: EMBED_CAL, Classifier: xxxx
+# Time: 300000, State: EMBED_CAL, Classifier: xxxx
+# Time: 310000, State: EMBED_CAL, Classifier: xxxx
+# Time: 320000, State: EMBED_CAL, Classifier: xxxx
+# Time: 330000, State: EMBED_CAL, Classifier: xxxx
+# Time: 340000, State: EMBED_CAL, Classifier: xxxx
+# Time: 350000, State: EMBED_CAL, Classifier: xxxx
+# Time: 360000, State: EMBED_CAL, Classifier: xxxx
+# Time: 370000, State: EMBED_CAL, Classifier: xxxx
+# Time: 380000, State: EMBED_CAL, Classifier: xxxx
+# Time: 390000, State: EMBED_CAL, Classifier: xxxx
+# Time: 400000, State: EMBED_CAL, Classifier: xxxx
+# Time: 410000, State: EMBED_CAL, Classifier: xxxx
+# Time: 420000, State: EMBED_CAL, Classifier: xxxx
+# Time: 430000, State: EMBED_CAL, Classifier: xxxx
+# Time: 440000, State: EMBED_CAL, Classifier: xxxx
+# Time: 450000, State: EMBED_CAL, Classifier: xxxx
+# Time: 460000, State: EMBED_CAL, Classifier: xxxx
+# Time: 470000, State: EMBED_CAL, Classifier: xxxx
+# Time: 480000, State: EMBED_CAL, Classifier: xxxx
+# Time: 490000, State: EMBED_CAL, Classifier: xxxx
+# Time: 500000, State: EMBED_CAL, Classifier: xxxx
+# Time: 510000, State: EMBED_CAL, Classifier: xxxx
+# Time: 520000, State: EMBED_CAL, Classifier: xxxx
+# Time: 530000, State: EMBED_CAL, Classifier: xxxx
+# Time: 540000, State: EMBED_CAL, Classifier: xxxx
+# Time: 550000, State: EMBED_CAL, Classifier: xxxx
+# Time: 560000, State: EMBED_CAL, Classifier: xxxx
+# Time: 570000, State: EMBED_CAL, Classifier: xxxx
+# Time: 580000, State: EMBED_CAL, Classifier: xxxx
+# Time: 590000, State: EMBED_CAL, Classifier: xxxx
+# Time: 600000, State: EMBED_CAL, Classifier: xxxx
+# Time: 610000, State: EMBED_CAL, Classifier: xxxx
+# Time: 620000, State: EMBED_CAL, Classifier: xxxx
+# Time: 630000, State: EMBED_CAL, Classifier: xxxx
+# Time: 640000, State: EMBED_CAL, Classifier: xxxx
+# Time: 650000, State: EMBED_CAL, Classifier: xxxx
+# Time: 660000, State: EMBED_CAL, Classifier: xxxx
+# Time: 670000, State: EMBED_CAL, Classifier: xxxx
+# Time: 680000, State: EMBED_CAL, Classifier: xxxx
+# Time: 690000, State: EMBED_CAL, Classifier: xxxx
+# Time: 700000, State: EMBED_CAL, Classifier: xxxx
+# Time: 710000, State: EMBED_CAL, Classifier: xxxx
+# Time: 720000, State: EMBED_CAL, Classifier: xxxx
+# Time: 730000, State: EMBED_CAL, Classifier: xxxx
+# Time: 740000, State: EMBED_CAL, Classifier: xxxx
+# Time: 750000, State: EMBED_CAL, Classifier: xxxx
+# Time: 760000, State: EMBED_CAL, Classifier: xxxx
+# Time: 770000, State: EMBED_CAL, Classifier: xxxx
+# Time: 780000, State: EMBED_CAL, Classifier: xxxx
+# Time: 790000, State: EMBED_CAL, Classifier: xxxx
+# Time: 800000, State: EMBED_CAL, Classifier: xxxx
+# Time: 810000, State: EMBED_CAL, Classifier: xxxx
+# Time: 820000, State: EMBED_CAL, Classifier: xxxx
+# Time: 830000, State: EMBED_CAL, Classifier: xxxx
+# Time: 840000, State: EMBED_CAL, Classifier: xxxx
+# Time: 850000, State: EMBED_CAL, Classifier: xxxx
+# Time: 860000, State: EMBED_CAL, Classifier: xxxx
+# Time: 870000, State: EMBED_CAL, Classifier: xxxx
+# Time: 880000, State: EMBED_CAL, Classifier: xxxx
+# Time: 890000, State: EMBED_CAL, Classifier: xxxx
+# Time: 900000, State: EMBED_CAL, Classifier: xxxx
+# Time: 910000, State: EMBED_CAL, Classifier: xxxx
+# Time: 920000, State: EMBED_CAL, Classifier: xxxx
+# Time: 930000, State: EMBED_CAL, Classifier: xxxx
+# Time: 940000, State: EMBED_CAL, Classifier: xxxx
+# Time: 950000, State: EMBED_CAL, Classifier: xxxx
+# Time: 960000, State: EMBED_CAL, Classifier: xxxx
+# Time: 970000, State: EMBED_CAL, Classifier: xxxx
+# Time: 980000, State: EMBED_CAL, Classifier: xxxx
+# Time: 990000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1000000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1010000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1020000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1030000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1040000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1050000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1060000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1070000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1080000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1090000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1100000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1110000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1120000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1130000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1140000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1150000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1160000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1170000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1180000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1190000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1200000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1210000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1220000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1230000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1240000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1250000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1260000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1270000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1280000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1290000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1300000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1310000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1320000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1330000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1340000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1350000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1360000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1370000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1380000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1390000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1400000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1410000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1420000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1430000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1440000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1450000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1460000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1470000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1480000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1490000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1500000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1510000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1520000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1530000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1540000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1550000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1560000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1570000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1580000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1590000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1600000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1610000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1620000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1630000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1640000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1650000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1660000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1670000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1680000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1690000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1700000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1710000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1720000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1730000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1740000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1750000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1760000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1770000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1780000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1790000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1800000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1810000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1820000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1830000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1840000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1850000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1860000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1870000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1880000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1890000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1900000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1910000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1920000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1930000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1940000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1950000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1960000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1970000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1980000, State: EMBED_CAL, Classifier: xxxx
+# Time: 1990000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2000000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2010000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2020000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2030000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2040000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2050000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2060000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2070000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2080000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2090000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2100000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2110000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2120000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2130000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2140000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2150000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2160000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2170000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2180000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2190000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2200000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2210000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2220000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2230000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2240000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2250000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2260000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2270000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2280000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2290000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2300000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2310000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2320000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2330000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2340000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2350000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2360000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2370000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2380000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2390000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2400000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2410000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2420000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2430000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2440000, State: EMBED_CAL, Classifier: xxxx
+# Time: 2450000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2460000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2470000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2480000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2490000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2500000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2510000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2520000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2530000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2540000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2550000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2560000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2570000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2580000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2590000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2600000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2610000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2620000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2630000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2640000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2650000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2660000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2670000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2680000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2690000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2700000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2710000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2720000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2730000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2740000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2750000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2760000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2770000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2780000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2790000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2800000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2810000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2820000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2830000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2840000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2850000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2860000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2870000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2880000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2890000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2900000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2910000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2920000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2930000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2940000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2950000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2960000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2970000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2980000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 2990000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3000000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3010000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3020000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3030000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3040000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3050000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3060000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3070000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3080000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3090000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3100000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3110000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3120000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3130000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3140000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3150000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3160000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3170000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3180000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3190000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3200000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3210000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3220000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3230000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3240000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3250000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3260000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3270000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3280000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3290000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3300000, State: ATTENTION_CAL, Classifier: xxxx
+run
+# Time: 3310000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3320000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3330000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3340000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3350000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3360000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3370000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3380000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3390000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3400000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3410000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3420000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3430000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3440000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3450000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3460000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3470000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3480000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3490000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3500000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3510000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3520000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3530000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3540000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3550000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3560000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3570000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3580000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3590000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3600000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3610000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3620000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3630000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3640000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3650000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3660000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3670000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3680000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3690000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3700000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3710000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3720000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3730000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3740000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3750000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3760000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3770000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3780000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3790000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3800000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3810000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3820000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3830000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3840000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3850000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3860000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3870000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3880000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3890000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3900000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3910000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3920000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3930000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3940000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3950000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3960000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3970000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3980000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 3990000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4000000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4010000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4020000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4030000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4040000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4050000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4060000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4070000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4080000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4090000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4100000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4110000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4120000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4130000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4140000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4150000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4160000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4170000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4180000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4190000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4200000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4210000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4220000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4230000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4240000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4250000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4260000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4270000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4280000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4290000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4300000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4310000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4320000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4330000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4340000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4350000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4360000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4370000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4380000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4390000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4400000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4410000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4420000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4430000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4440000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4450000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4460000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4470000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4480000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4490000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4500000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4510000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4520000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4530000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4540000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4550000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4560000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4570000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4580000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4590000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4600000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4610000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4620000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4630000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4640000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4650000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4660000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4670000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4680000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4690000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4700000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4710000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4720000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4730000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4740000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4750000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4760000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4770000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4780000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4790000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4800000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4810000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4820000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4830000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4840000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4850000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4860000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4870000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4880000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4890000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4900000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4910000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4920000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4930000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4940000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4950000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4960000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4970000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4980000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 4990000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 5000000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 5010000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 5020000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 5030000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 5040000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 5050000, State: ATTENTION_CAL, Classifier: xxxx
+# Time: 5060000, State: MLP, Classifier: xxxx
+# Time: 5070000, State: MLP, Classifier: xxxx
+# Time: 5080000, State: MLP, Classifier: xxxx
+# Time: 5090000, State: MLP, Classifier: xxxx
+# Time: 5100000, State: MLP, Classifier: xxxx
+# Time: 5110000, State: MLP, Classifier: xxxx
+# Time: 5120000, State: MLP, Classifier: xxxx
+# Time: 5130000, State: MLP, Classifier: xxxx
+# Time: 5140000, State: MLP, Classifier: xxxx
+# Time: 5150000, State: MLP, Classifier: xxxx
+# Time: 5160000, State: MLP, Classifier: xxxx
+# Time: 5170000, State: MLP, Classifier: xxxx
+# Time: 5180000, State: MLP, Classifier: xxxx
+# Time: 5190000, State: MLP, Classifier: xxxx
+# Time: 5200000, State: MLP, Classifier: xxxx
+# Time: 5210000, State: MLP, Classifier: xxxx
+# Time: 5220000, State: MLP, Classifier: xxxx
+# Time: 5230000, State: MLP, Classifier: xxxx
+# Time: 5240000, State: MLP, Classifier: xxxx
+# Time: 5250000, State: MLP, Classifier: xxxx
+# Time: 5260000, State: MLP, Classifier: xxxx
+# Time: 5270000, State: MLP, Classifier: xxxx
+# Time: 5280000, State: MLP, Classifier: xxxx
+# Time: 5290000, State: MLP, Classifier: xxxx
+# Time: 5300000, State: MLP, Classifier: xxxx
+# Time: 5310000, State: MLP, Classifier: xxxx
+# Time: 5320000, State: MLP, Classifier: xxxx
+# Time: 5330000, State: MLP, Classifier: xxxx
+# Time: 5340000, State: MLP, Classifier: xxxx
+# Time: 5350000, State: MLP, Classifier: xxxx
+# Time: 5360000, State: MLP, Classifier: xxxx
+# Time: 5370000, State: MLP, Classifier: xxxx
+# Time: 5380000, State: MLP, Classifier: xxxx
+# Time: 5390000, State: MLP, Classifier: xxxx
+# Time: 5400000, State: MLP, Classifier: xxxx
+# Time: 5410000, State: MLP, Classifier: xxxx
+# Time: 5420000, State: MLP, Classifier: xxxx
+# Time: 5430000, State: MLP, Classifier: xxxx
+# Time: 5440000, State: MLP, Classifier: xxxx
+# Time: 5450000, State: MLP, Classifier: xxxx
+# Time: 5460000, State: MLP, Classifier: xxxx
+# Time: 5470000, State: MLP, Classifier: xxxx
+# Time: 5480000, State: MLP, Classifier: xxxx
+# Time: 5490000, State: MLP, Classifier: xxxx
+# Time: 5500000, State: MLP, Classifier: xxxx
+# Time: 5510000, State: MLP, Classifier: xxxx
+# Time: 5520000, State: MLP, Classifier: xxxx
+# Time: 5530000, State: MLP, Classifier: xxxx
+# Time: 5540000, State: MLP, Classifier: xxxx
+# Time: 5550000, State: MLP, Classifier: xxxx
+# Time: 5560000, State: MLP, Classifier: xxxx
+# Time: 5570000, State: MLP, Classifier: xxxx
+# Time: 5580000, State: MLP, Classifier: xxxx
+# Time: 5590000, State: MLP, Classifier: xxxx
+# Time: 5600000, State: MLP, Classifier: xxxx
+# Time: 5610000, State: MLP, Classifier: xxxx
+# Time: 5620000, State: MLP, Classifier: xxxx
+# Time: 5630000, State: MLP, Classifier: xxxx
+# Time: 5640000, State: MLP, Classifier: xxxx
+# Time: 5650000, State: MLP, Classifier: xxxx
+# Time: 5660000, State: MLP, Classifier: xxxx
+# Time: 5670000, State: MLP, Classifier: xxxx
+# Time: 5680000, State: MLP, Classifier: xxxx
+# Time: 5690000, State: MLP, Classifier: xxxx
+# Time: 5700000, State: MLP, Classifier: xxxx
+# Time: 5710000, State: MLP, Classifier: xxxx
+# Time: 5720000, State: MLP, Classifier: xxxx
+# Time: 5730000, State: MLP, Classifier: xxxx
+# Time: 5740000, State: MLP, Classifier: xxxx
+# Time: 5750000, State: MLP, Classifier: xxxx
+# Time: 5760000, State: MLP, Classifier: xxxx
+# Time: 5770000, State: MLP, Classifier: xxxx
+# Time: 5780000, State: MLP, Classifier: xxxx
+# Time: 5790000, State: MLP, Classifier: xxxx
+# Time: 5800000, State: MLP, Classifier: xxxx
+# Time: 5810000, State: MLP, Classifier: xxxx
+# Time: 5820000, State: MLP, Classifier: xxxx
+# Time: 5830000, State: MLP, Classifier: xxxx
+# Time: 5840000, State: REDUCE, Classifier: xxxx
+# Time: 5850000, State: REDUCE, Classifier: xxxx
+# Time: 5860000, State: REDUCE, Classifier: xxxx
+# Time: 5870000, State: REDUCE, Classifier: xxxx
+# Time: 5880000, State: REDUCE, Classifier: xxxx
+# Time: 5890000, State: REDUCE, Classifier: xxxx
+# Time: 5900000, State: REDUCE, Classifier: xxxx
+# Time: 5910000, State: REDUCE, Classifier: xxxx
+# Time: 5920000, State: REDUCE, Classifier: xxxx
+# Time: 5930000, State: REDUCE, Classifier: xxxx
+# Time: 5940000, State: REDUCE, Classifier: xxxx
+# Time: 5950000, State: REDUCE, Classifier: xxxx
+# Time: 5960000, State: REDUCE, Classifier: xxxx
+# Time: 5970000, State: REDUCE, Classifier: xxxx
+# Time: 5980000, State: REDUCE, Classifier: xxxx
+# Time: 5990000, State: REDUCE, Classifier: xxxx
+# Time: 6000000, State: REDUCE, Classifier: xxxx
+# Time: 6010000, State: REDUCE, Classifier: xxxx
+# Time: 6020000, State: REDUCE, Classifier: xxxx
+# Time: 6030000, State: REDUCE, Classifier: xxxx
+# Time: 6040000, State: REDUCE, Classifier: xxxx
+# Time: 6050000, State: REDUCE, Classifier: xxxx
+# Time: 6060000, State: REDUCE, Classifier: xxxx
+# Time: 6070000, State: REDUCE, Classifier: xxxx
+# Time: 6080000, State: REDUCE, Classifier: xxxx
+# Time: 6090000, State: REDUCE, Classifier: xxxx
+# Time: 6100000, State: REDUCE, Classifier: xxxx
+# Time: 6110000, State: REDUCE, Classifier: xxxx
+# Time: 6120000, State: REDUCE, Classifier: xxxx
+# Time: 6130000, State: REDUCE, Classifier: xxxx
+# Time: 6140000, State: REDUCE, Classifier: xxxx
+# Time: 6150000, State: REDUCE, Classifier: xxxx
+# Time: 6160000, State: REDUCE, Classifier: xxxx
+# Time: 6170000, State: REDUCE, Classifier: xxxx
+# Time: 6180000, State: REDUCE, Classifier: xxxx
+# Time: 6190000, State: REDUCE, Classifier: xxxx
+# Time: 6200000, State: REDUCE, Classifier: xxxx
+# Time: 6210000, State: REDUCE, Classifier: xxxx
+# Time: 6220000, State: REDUCE, Classifier: xxxx
+# Time: 6230000, State: REDUCE, Classifier: xxxx
+# Time: 6240000, State: REDUCE, Classifier: xxxx
+# Time: 6250000, State: REDUCE, Classifier: xxxx
+# Time: 6260000, State: REDUCE, Classifier: xxxx
+# Time: 6270000, State: REDUCE, Classifier: xxxx
+# Time: 6280000, State: REDUCE, Classifier: xxxx
+# Time: 6290000, State: REDUCE, Classifier: xxxx
+# Time: 6300000, State: REDUCE, Classifier: xxxx
+# Time: 6310000, State: REDUCE, Classifier: xxxx
+# Time: 6320000, State: REDUCE, Classifier: xxxx
+# Time: 6330000, State: REDUCE, Classifier: xxxx
+# Time: 6340000, State: REDUCE, Classifier: xxxx
+# Time: 6350000, State: REDUCE, Classifier: xxxx
+# Time: 6360000, State: REDUCE, Classifier: xxxx
+# Time: 6370000, State: REDUCE, Classifier: xxxx
+# Time: 6380000, State: REDUCE, Classifier: xxxx
+# Time: 6390000, State: REDUCE, Classifier: xxxx
+# Time: 6400000, State: REDUCE, Classifier: xxxx
+run
+# Time: 6410000, State: REDUCE, Classifier: xxxx
+# Time: 6420000, State: REDUCE, Classifier: xxxx
+# Time: 6430000, State: REDUCE, Classifier: xxxx
+# Time: 6440000, State: REDUCE, Classifier: xxxx
+# Time: 6450000, State: REDUCE, Classifier: xxxx
+# Time: 6460000, State: REDUCE, Classifier: xxxx
+# Time: 6470000, State: REDUCE, Classifier: xxxx
+# Time: 6480000, State: REDUCE, Classifier: xxxx
+# Time: 6490000, State: REDUCE, Classifier: xxxx
+# Time: 6500000, State: REDUCE, Classifier: xxxx
+# Time: 6510000, State: REDUCE, Classifier: xxxx
+# Time: 6520000, State: REDUCE, Classifier: xxxx
+# Time: 6530000, State: REDUCE, Classifier: xxxx
+# Time: 6540000, State: REDUCE, Classifier: xxxx
+# Time: 6550000, State: REDUCE, Classifier: xxxx
+# Time: 6560000, State: REDUCE, Classifier: xxxx
+# Time: 6570000, State: REDUCE, Classifier: xxxx
+# Time: 6580000, State: REDUCE, Classifier: xxxx
+# Time: 6590000, State: REDUCE, Classifier: xxxx
+# Time: 6600000, State: REDUCE, Classifier: xxxx
+# Time: 6610000, State: REDUCE, Classifier: xxxx
+# Time: 6620000, State: REDUCE, Classifier: xxxx
+# Time: 6630000, State: REDUCE, Classifier: xxxx
+# Time: 6640000, State: REDUCE, Classifier: xxxx
+# Time: 6650000, State: REDUCE, Classifier: xxxx
+# Time: 6660000, State: REDUCE, Classifier: xxxx
+# Time: 6670000, State: REDUCE, Classifier: xxxx
+# Time: 6680000, State: REDUCE, Classifier: xxxx
+# Time: 6690000, State: REDUCE, Classifier: xxxx
+# Time: 6700000, State: REDUCE, Classifier: xxxx
+# Time: 6710000, State: REDUCE, Classifier: xxxx
+# Time: 6720000, State: REDUCE, Classifier: xxxx
+# Time: 6730000, State: REDUCE, Classifier: xxxx
+# Time: 6740000, State: REDUCE, Classifier: xxxx
+# Time: 6750000, State: REDUCE, Classifier: xxxx
+# Time: 6760000, State: REDUCE, Classifier: xxxx
+# Time: 6770000, State: REDUCE, Classifier: xxxx
+# Time: 6780000, State: REDUCE, Classifier: xxxx
+# Time: 6790000, State: REDUCE, Classifier: xxxx
+# Time: 6800000, State: REDUCE, Classifier: xxxx
+# Time: 6810000, State: REDUCE, Classifier: xxxx
+# Time: 6820000, State: REDUCE, Classifier: xxxx
+# Time: 6830000, State: REDUCE, Classifier: xxxx
+# Time: 6840000, State: REDUCE, Classifier: xxxx
+# Time: 6850000, State: REDUCE, Classifier: xxxx
+# Time: 6860000, State: REDUCE, Classifier: xxxx
+# Time: 6870000, State: REDUCE, Classifier: xxxx
+# Time: 6880000, State: REDUCE, Classifier: xxxx
+# Time: 6890000, State: REDUCE, Classifier: xxxx
+# Time: 6900000, State: REDUCE, Classifier: xxxx
+# Time: 6910000, State: REDUCE, Classifier: xxxx
+# Time: 6920000, State: REDUCE, Classifier: xxxx
+# Time: 6930000, State: REDUCE, Classifier: xxxx
+# Time: 6940000, State: REDUCE, Classifier: xxxx
+# Time: 6950000, State: REDUCE, Classifier: xxxx
+# Time: 6960000, State: REDUCE, Classifier: xxxx
+# Time: 6970000, State: REDUCE, Classifier: xxxx
+# Time: 6980000, State: REDUCE, Classifier: xxxx
+# Time: 6990000, State: REDUCE, Classifier: xxxx
+# Time: 7000000, State: REDUCE, Classifier: xxxx
+# Time: 7010000, State: REDUCE, Classifier: xxxx
+# Time: 7020000, State: REDUCE, Classifier: xxxx
+# Time: 7030000, State: REDUCE, Classifier: xxxx
+# Time: 7040000, State: REDUCE, Classifier: xxxx
+# Time: 7050000, State: REDUCE, Classifier: xxxx
+# Time: 7060000, State: REDUCE, Classifier: xxxx
+# Time: 7070000, State: REDUCE, Classifier: xxxx
+# Time: 7080000, State: REDUCE, Classifier: xxxx
+# Time: 7090000, State: REDUCE, Classifier: xxxx
+# Time: 7100000, State: REDUCE, Classifier: xxxx
+# Time: 7110000, State: REDUCE, Classifier: xxxx
+# Time: 7120000, State: REDUCE, Classifier: xxxx
+# Time: 7130000, State: REDUCE, Classifier: xxxx
+# Time: 7140000, State: REDUCE, Classifier: xxxx
+# Time: 7150000, State: REDUCE, Classifier: xxxx
+# Time: 7160000, State: REDUCE, Classifier: xxxx
+# Time: 7170000, State: REDUCE, Classifier: xxxx
+# Time: 7180000, State: REDUCE, Classifier: xxxx
+# Time: 7190000, State: REDUCE, Classifier: xxxx
+# Time: 7200000, State: REDUCE, Classifier: xxxx
+# Time: 7210000, State: REDUCE, Classifier: xxxx
+# Time: 7220000, State: REDUCE, Classifier: xxxx
+# Time: 7230000, State: REDUCE, Classifier: xxxx
+# Time: 7240000, State: REDUCE, Classifier: xxxx
+# Time: 7250000, State: REDUCE, Classifier: xxxx
+# Time: 7260000, State: REDUCE, Classifier: xxxx
+# Time: 7270000, State: REDUCE, Classifier: xxxx
+# Time: 7280000, State: REDUCE, Classifier: xxxx
+# Time: 7290000, State: REDUCE, Classifier: xxxx
+# Time: 7300000, State: REDUCE, Classifier: xxxx
+# Time: 7310000, State: REDUCE, Classifier: xxxx
+# Time: 7320000, State: REDUCE, Classifier: xxxx
+# Time: 7330000, State: REDUCE, Classifier: xxxx
+# Time: 7340000, State: REDUCE, Classifier: xxxx
+# Time: 7350000, State: REDUCE, Classifier: xxxx
+# Time: 7360000, State: REDUCE, Classifier: xxxx
+# Time: 7370000, State: REDUCE, Classifier: xxxx
+# Time: 7380000, State: REDUCE, Classifier: xxxx
+# Time: 7390000, State: REDUCE, Classifier: xxxx
+# Time: 7400000, State: REDUCE, Classifier: xxxx
+# Time: 7410000, State: REDUCE, Classifier: xxxx
+# Time: 7420000, State: REDUCE, Classifier: xxxx
+# Time: 7430000, State: REDUCE, Classifier: xxxx
+# Time: 7440000, State: REDUCE, Classifier: xxxx
+# Time: 7450000, State: REDUCE, Classifier: xxxx
+# Time: 7460000, State: REDUCE, Classifier: xxxx
+# Time: 7470000, State: REDUCE, Classifier: xxxx
+# Time: 7480000, State: REDUCE, Classifier: xxxx
+# Time: 7490000, State: REDUCE, Classifier: xxxx
+# Time: 7500000, State: REDUCE, Classifier: xxxx
+# Time: 7510000, State: REDUCE, Classifier: xxxx
+# Time: 7520000, State: REDUCE, Classifier: xxxx
+# Time: 7530000, State: REDUCE, Classifier: xxxx
+# Time: 7540000, State: REDUCE, Classifier: xxxx
+# Time: 7550000, State: REDUCE, Classifier: xxxx
+# Time: 7560000, State: REDUCE, Classifier: xxxx
+# Time: 7570000, State: REDUCE, Classifier: xxxx
+# Time: 7580000, State: REDUCE, Classifier: xxxx
+# Time: 7590000, State: REDUCE, Classifier: xxxx
+# Time: 7600000, State: REDUCE, Classifier: xxxx
+# Time: 7610000, State: REDUCE, Classifier: xxxx
+# Time: 7620000, State: REDUCE, Classifier: xxxx
+# Time: 7630000, State: REDUCE, Classifier: xxxx
+# Time: 7640000, State: REDUCE, Classifier: xxxx
+# Time: 7650000, State: REDUCE, Classifier: xxxx
+# Time: 7660000, State: REDUCE, Classifier: xxxx
+# Time: 7670000, State: REDUCE, Classifier: xxxx
+# Time: 7680000, State: REDUCE, Classifier: xxxx
+# Time: 7690000, State: REDUCE, Classifier: xxxx
+# Time: 7700000, State: REDUCE, Classifier: xxxx
+# Time: 7710000, State: REDUCE, Classifier: xxxx
+# Time: 7720000, State: REDUCE, Classifier: xxxx
+# Time: 7730000, State: REDUCE, Classifier: xxxx
+# Time: 7740000, State: REDUCE, Classifier: xxxx
+# Time: 7750000, State: REDUCE, Classifier: xxxx
+# Time: 7760000, State: REDUCE, Classifier: xxxx
+# Time: 7770000, State: REDUCE, Classifier: xxxx
+# Time: 7780000, State: REDUCE, Classifier: xxxx
+# Time: 7790000, State: REDUCE, Classifier: xxxx
+# Time: 7800000, State: REDUCE, Classifier: xxxx
+# Time: 7810000, State: REDUCE, Classifier: xxxx
+# Time: 7820000, State: REDUCE, Classifier: xxxx
+# Time: 7830000, State: REDUCE, Classifier: xxxx
+# Time: 7840000, State: REDUCE, Classifier: xxxx
+# Time: 7850000, State: REDUCE, Classifier: xxxx
+# Time: 7860000, State: REDUCE, Classifier: xxxx
+# Time: 7870000, State: REDUCE, Classifier: xxxx
+# Time: 7880000, State: REDUCE, Classifier: xxxx
+# Time: 7890000, State: REDUCE, Classifier: xxxx
+# Time: 7900000, State: REDUCE, Classifier: xxxx
+# Time: 7910000, State: REDUCE, Classifier: xxxx
+# Time: 7920000, State: REDUCE, Classifier: xxxx
+# Time: 7930000, State: REDUCE, Classifier: xxxx
+# Time: 7940000, State: REDUCE, Classifier: xxxx
+# Time: 7950000, State: REDUCE, Classifier: xxxx
+# Time: 7960000, State: REDUCE, Classifier: xxxx
+# Time: 7970000, State: REDUCE, Classifier: xxxx
+# Time: 7980000, State: REDUCE, Classifier: xxxx
+# Time: 7990000, State: REDUCE, Classifier: xxxx
+# Time: 8000000, State: REDUCE, Classifier: xxxx
+# Time: 8010000, State: REDUCE, Classifier: xxxx
+# Time: 8020000, State: REDUCE, Classifier: xxxx
+# Time: 8030000, State: REDUCE, Classifier: xxxx
+# Time: 8040000, State: REDUCE, Classifier: xxxx
+# Time: 8050000, State: REDUCE, Classifier: xxxx
+# Time: 8060000, State: REDUCE, Classifier: xxxx
+# Time: 8070000, State: REDUCE, Classifier: xxxx
+# Time: 8080000, State: REDUCE, Classifier: xxxx
+# Time: 8090000, State: REDUCE, Classifier: xxxx
+# Time: 8100000, State: REDUCE, Classifier: xxxx
+# Time: 8110000, State: REDUCE, Classifier: xxxx
+# Time: 8120000, State: REDUCE, Classifier: xxxx
+# Time: 8130000, State: REDUCE, Classifier: xxxx
+# Time: 8140000, State: REDUCE, Classifier: xxxx
+# Time: 8150000, State: REDUCE, Classifier: xxxx
+# Time: 8160000, State: REDUCE, Classifier: xxxx
+# Time: 8170000, State: REDUCE, Classifier: xxxx
+# Time: 8180000, State: REDUCE, Classifier: xxxx
+# Time: 8190000, State: REDUCE, Classifier: xxxx
+# Time: 8200000, State: REDUCE, Classifier: xxxx
+# Time: 8210000, State: REDUCE, Classifier: xxxx
+# Time: 8220000, State: REDUCE, Classifier: xxxx
+# Time: 8230000, State: REDUCE, Classifier: xxxx
+# Time: 8240000, State: REDUCE, Classifier: xxxx
+# Time: 8250000, State: REDUCE, Classifier: xxxx
+# Time: 8260000, State: REDUCE, Classifier: xxxx
+# Time: 8270000, State: REDUCE, Classifier: xxxx
+# Time: 8280000, State: REDUCE, Classifier: xxxx
+# Time: 8290000, State: REDUCE, Classifier: xxxx
+# Time: 8300000, State: REDUCE, Classifier: xxxx
+# Time: 8310000, State: REDUCE, Classifier: xxxx
+# Time: 8320000, State: REDUCE, Classifier: xxxx
+# Time: 8330000, State: REDUCE, Classifier: xxxx
+# Time: 8340000, State: REDUCE, Classifier: xxxx
+# Time: 8350000, State: REDUCE, Classifier: xxxx
+# Time: 8360000, State: REDUCE, Classifier: xxxx
+# Time: 8370000, State: REDUCE, Classifier: 0000
+# Time: 8380000, State: DONE, Classifier: 0000
+# Time: 8390000, State: IDLE, Classifier: 0000
+# Time: 8400000, State: IDLE, Classifier: 0000
+# Time: 8410000, State: IDLE, Classifier: 0000
+# Time: 8420000, State: IDLE, Classifier: 0000
+# Time: 8430000, State: IDLE, Classifier: 0000
+# Time: 8440000, State: IDLE, Classifier: 0000
+# Time: 8450000, State: IDLE, Classifier: 0000
+# Time: 8460000, State: IDLE, Classifier: 0000
+# Time: 8470000, State: IDLE, Classifier: 0000
+# Time: 8480000, State: IDLE, Classifier: 0000
+# Time: 8490000, State: IDLE, Classifier: 0000
+# Time: 8500000, State: IDLE, Classifier: 0000
+# Time: 8510000, State: IDLE, Classifier: 0000
+# Time: 8520000, State: IDLE, Classifier: 0000
+# Time: 8530000, State: IDLE, Classifier: 0000
+# Time: 8540000, State: IDLE, Classifier: 0000
+# Time: 8550000, State: IDLE, Classifier: 0000
+# Time: 8560000, State: IDLE, Classifier: 0000
+# Time: 8570000, State: IDLE, Classifier: 0000
+# Time: 8580000, State: IDLE, Classifier: 0000
+# Time: 8590000, State: IDLE, Classifier: 0000
+# Time: 8600000, State: IDLE, Classifier: 0000
+# Time: 8610000, State: IDLE, Classifier: 0000
+# Time: 8620000, State: IDLE, Classifier: 0000
+# Time: 8630000, State: IDLE, Classifier: 0000
+# Time: 8640000, State: IDLE, Classifier: 0000
+# Time: 8650000, State: IDLE, Classifier: 0000
+# Time: 8660000, State: IDLE, Classifier: 0000
+# Time: 8670000, State: IDLE, Classifier: 0000
+# Time: 8680000, State: IDLE, Classifier: 0000
+# Time: 8690000, State: IDLE, Classifier: 0000
+# Time: 8700000, State: IDLE, Classifier: 0000
+# Time: 8710000, State: IDLE, Classifier: 0000
+# Time: 8720000, State: IDLE, Classifier: 0000
+# Time: 8730000, State: IDLE, Classifier: 0000
+# Time: 8740000, State: IDLE, Classifier: 0000
+# Time: 8750000, State: IDLE, Classifier: 0000
+# Time: 8760000, State: IDLE, Classifier: 0000
+# Time: 8770000, State: IDLE, Classifier: 0000
+# Time: 8780000, State: IDLE, Classifier: 0000
+# Time: 8790000, State: IDLE, Classifier: 0000
+# Time: 8800000, State: IDLE, Classifier: 0000
+# Time: 8810000, State: IDLE, Classifier: 0000
+# Time: 8820000, State: IDLE, Classifier: 0000
+# Time: 8830000, State: IDLE, Classifier: 0000
+# Time: 8840000, State: IDLE, Classifier: 0000
+# Time: 8850000, State: IDLE, Classifier: 0000
+# Time: 8860000, State: IDLE, Classifier: 0000
+# Time: 8870000, State: IDLE, Classifier: 0000
+# Time: 8880000, State: IDLE, Classifier: 0000
+# Time: 8890000, State: IDLE, Classifier: 0000
+# Time: 8900000, State: IDLE, Classifier: 0000
+# Time: 8910000, State: IDLE, Classifier: 0000
+# Time: 8920000, State: IDLE, Classifier: 0000
+# Time: 8930000, State: IDLE, Classifier: 0000
+# Time: 8940000, State: IDLE, Classifier: 0000
+# Time: 8950000, State: IDLE, Classifier: 0000
+# Time: 8960000, State: IDLE, Classifier: 0000
+# Time: 8970000, State: IDLE, Classifier: 0000
+# Time: 8980000, State: IDLE, Classifier: 0000
+# Time: 8990000, State: IDLE, Classifier: 0000
+# Time: 9000000, State: IDLE, Classifier: 0000
+# Time: 9010000, State: IDLE, Classifier: 0000
+# Time: 9020000, State: IDLE, Classifier: 0000
+# Time: 9030000, State: IDLE, Classifier: 0000
+# Time: 9040000, State: IDLE, Classifier: 0000
+# Time: 9050000, State: IDLE, Classifier: 0000
+# Time: 9060000, State: IDLE, Classifier: 0000
+# Time: 9070000, State: IDLE, Classifier: 0000
+# Time: 9080000, State: IDLE, Classifier: 0000
+# Time: 9090000, State: IDLE, Classifier: 0000
+# Time: 9100000, State: IDLE, Classifier: 0000
+# Time: 9110000, State: IDLE, Classifier: 0000
+# Time: 9120000, State: IDLE, Classifier: 0000
+# Time: 9130000, State: IDLE, Classifier: 0000
+# Time: 9140000, State: IDLE, Classifier: 0000
+# Time: 9150000, State: IDLE, Classifier: 0000
+# Time: 9160000, State: IDLE, Classifier: 0000
+# Time: 9170000, State: IDLE, Classifier: 0000
+# Time: 9180000, State: IDLE, Classifier: 0000
+# Time: 9190000, State: IDLE, Classifier: 0000
+# Time: 9200000, State: IDLE, Classifier: 0000
+# Time: 9210000, State: IDLE, Classifier: 0000
+# Time: 9220000, State: IDLE, Classifier: 0000
+# Time: 9230000, State: IDLE, Classifier: 0000
+# Time: 9240000, State: IDLE, Classifier: 0000
+# Time: 9250000, State: IDLE, Classifier: 0000
+# Time: 9260000, State: IDLE, Classifier: 0000
+# Time: 9270000, State: IDLE, Classifier: 0000
+# Time: 9280000, State: IDLE, Classifier: 0000
+# Time: 9290000, State: IDLE, Classifier: 0000
+# Time: 9300000, State: IDLE, Classifier: 0000
+# Time: 9310000, State: IDLE, Classifier: 0000
+# Time: 9320000, State: IDLE, Classifier: 0000
+# Time: 9330000, State: IDLE, Classifier: 0000
+# Time: 9340000, State: IDLE, Classifier: 0000
+# Time: 9350000, State: IDLE, Classifier: 0000
+# Time: 9360000, State: IDLE, Classifier: 0000
+# Time: 9370000, State: IDLE, Classifier: 0000
+# Time: 9380000, State: IDLE, Classifier: 0000
+# Time: 9390000, State: IDLE, Classifier: 0000
+# Time: 9400000, State: IDLE, Classifier: 0000
+# Time: 9410000, State: IDLE, Classifier: 0000
+# Time: 9420000, State: IDLE, Classifier: 0000
+# Time: 9430000, State: IDLE, Classifier: 0000
+# Time: 9440000, State: IDLE, Classifier: 0000
+# Time: 9450000, State: IDLE, Classifier: 0000
+# Time: 9460000, State: IDLE, Classifier: 0000
+# Time: 9470000, State: IDLE, Classifier: 0000
+# Time: 9480000, State: IDLE, Classifier: 0000
+# Time: 9490000, State: IDLE, Classifier: 0000
+# Time: 9500000, State: IDLE, Classifier: 0000

@@ -20,7 +20,16 @@ module dot_product (
     state_t state, next_state;
     logic [4:0] i, j, i_next, j_next;
     logic signed [15:0] mul_result;
-    logic signed [ 7:0] temp_result;
+    logic signed [7:0] temp_result;
+    logic signed [7:0] result_reg[0:14][0:15];
+    logic signed [7:0] result_relu_in[0:14][0:15];
+    logic signed [7:0] result_relu_out[0:14][0:15];
+
+    assign result_relu_in = result_reg;
+    relu_embed relu_inst (
+        .data_in (result_relu_in),
+        .data_out(result_relu_out)
+    );
 
     // State register
     always_ff @(posedge clk or posedge rst) begin
@@ -75,9 +84,9 @@ module dot_product (
                 j_next = 4'b0;
             end
             CALC: begin
-                mul_result   = $signed(ecg_input[i]) * $signed(wt[j]);  // Q8.8 format
-                temp_result  = mul_result[11:4] + $signed(bias[j]);
-                result[i][j] = temp_result;  // Take the middle 8 bits for Q4.4 format
+                mul_result = $signed(ecg_input[i]) * $signed(wt[j]);  // Q8.8 format
+                temp_result = mul_result[11:4] + $signed(bias[j]);
+                result_reg[i][j] = temp_result;  // Take the middle 8 bits for Q4.4 format
 
                 if (j < 15) begin
                     i_next = i;
@@ -91,7 +100,12 @@ module dot_product (
                 end
             end
             CONCA: begin
-                integer k;
+                integer k, m;
+                for (k = 0; k < 15; k++) begin
+                    for (m = 0; m < 16; m++) begin
+                        result[k][m] = result_relu_out[k][m];
+                    end
+                end
                 for (k = 0; k < 16; k++) result[15][k] = cls_token[k];
             end
             DONE_PULSE: begin

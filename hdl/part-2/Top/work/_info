@@ -11,24 +11,24 @@ cModel Technology
 dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/linear
 vattention
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1715777260
+Z1 !s110 1715853875
 !i10b 1
-!s100 mM@]Y=NI7Y]>mR@KDnA[]0
+!s100 Zz<21DlZ:c41hALXkaNFL1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IX6i8OjkCoVH4W]Mfjah8S2
+IkheffQ;IlcJP6f1o8WgG?0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
 Z4 dC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top
-w1715777236
+w1715782853
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention.sv
-!i122 547
-L0 1 206
+!i122 1027
+L0 1 207
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1715777260.000000
+Z6 !s108 1715853874.000000
 !s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention.sv|
 !i113 1
@@ -40,40 +40,40 @@ R1
 !i10b 1
 !s100 NKPQOVkTP1H;Tnz0A2i4m3
 R2
-IU1[8P>7ljLng74oL]B`SL0
+IWbaQ[bmBYXCLMF>G1iY6a1
 R3
 S1
 R4
 w1715766250
-8C:\Users\Xaio\Documents\GitHub\ecg-classification-asic\hdl\part-2\Top\attention_tb.sv
-FC:\Users\Xaio\Documents\GitHub\ecg-classification-asic\hdl\part-2\Top\attention_tb.sv
-!i122 548
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention_tb.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention_tb.sv
+!i122 1028
 L0 1 88
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:\Users\Xaio\Documents\GitHub\ecg-classification-asic\hdl\part-2\Top\attention_tb.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Xaio\Documents\GitHub\ecg-classification-asic\hdl\part-2\Top\attention_tb.sv|
+Z9 !s108 1715853875.000000
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/attention_tb.sv|
 !i113 1
 R7
 R8
 vdot_product
 R0
-R1
+Z10 !s110 1715853874
 !i10b 1
-!s100 HP15B6V79F[jQBLd4VH9_3
+!s100 8oT9eh^0:GOJ^8C:;WJCf2
 R2
-I=8:R;03fjX]Iec3U=DET[0
+IOKm7Jd<TAe=7U16i]MKe_3
 R3
 S1
 R4
-w1715759337
+w1715838075
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product.sv
-!i122 542
-Z9 L0 1 108
+!i122 1022
+L0 1 122
 R5
 r1
 !s85 0
@@ -84,9 +84,34 @@ R6
 !i113 1
 R7
 R8
+vdot_product_16by6
+R0
+Z11 !s110 1715853878
+!i10b 1
+!s100 iA[^P8Chlm4KI9h1hOcOR2
+R2
+IVk_YaA72l<G?H@=OeoFk50
+R3
+S1
+R4
+w1715846464
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_16by6.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_16by6.sv
+!i122 1034
+L0 1 151
+R5
+r1
+!s85 0
+31
+Z12 !s108 1715853878.000000
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_16by6.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_16by6.sv|
+!i113 1
+R7
+R8
 vdot_product_tb
 R0
-R1
+R10
 !i10b 1
 !s100 c3E[?1YjG?Z=ZY[99^Ske1
 R2
@@ -97,8 +122,8 @@ R4
 w1715759979
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_tb.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/dot_product_tb.sv
-!i122 546
-Z10 L0 3 64
+!i122 1026
+L0 3 64
 R5
 r1
 !s85 0
@@ -122,13 +147,13 @@ R4
 w1715765594
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/linear.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/linear.sv
-!i122 549
+!i122 1029
 L0 1 35
 R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/linear.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/linear.sv|
 !i113 1
@@ -136,7 +161,7 @@ R7
 R8
 vlut_module
 R0
-R1
+R10
 !i10b 1
 !s100 T7:Hbbj9:J`f_=>SPhUi^1
 R2
@@ -147,7 +172,7 @@ R4
 w1715758005
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/lut_module.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/lut_module.sv
-!i122 543
+!i122 1023
 L0 1 2160
 R5
 r1
@@ -161,7 +186,7 @@ R7
 R8
 vmac_unit
 R0
-Z11 !s110 1715777261
+R11
 !i10b 1
 !s100 7VO2>Bi=aC4`m0eP6NmWk0
 R2
@@ -172,13 +197,13 @@ R4
 w1715691785
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mac_unit.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mac_unit.sv
-!i122 550
+!i122 1030
 L0 1 24
 R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mac_unit.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mac_unit.sv|
 !i113 1
@@ -197,13 +222,13 @@ R4
 w1715745143
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_multiply.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_multiply.sv
-!i122 551
-R9
+!i122 1031
+L0 1 108
 R5
 r1
 !s85 0
 31
-Z12 !s108 1715777261.000000
+R12
 !s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_multiply.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_multiply.sv|
 !i113 1
@@ -222,7 +247,7 @@ R4
 w1715745179
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_mutiply_contorller.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/matrix_mutiply_contorller.sv
-!i122 552
+!i122 1032
 L0 1 245
 R5
 r1
@@ -234,21 +259,121 @@ R12
 !i113 1
 R7
 R8
-vtop
+vmlp
 R0
-R1
+Z13 !s110 1715853879
 !i10b 1
-!s100 [J1ibVSbOSGCf@^VbMN9P1
+!s100 MTAmc6k[X;<oaj<TbcTo23
 R2
-In>?YlMHY?XGDYA]AD0JZ`2
+ICahe9UDKXRN6j_LWC_hGC0
 R3
 S1
 R4
-w1715776944
+w1715841611
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mlp.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mlp.sv
+!i122 1036
+L0 1 148
+R5
+r1
+!s85 0
+31
+Z14 !s108 1715853879.000000
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mlp.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/mlp.sv|
+!i113 1
+R7
+R8
+vreduce
+R0
+R13
+!i10b 1
+!s100 bn_kdmJ`CG:DaLH9gX;ok3
+R2
+I2[LAecH7g7kFJ9beVfJ202
+R3
+S1
+R4
+w1715841920
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/reduce.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/reduce.sv
+!i122 1037
+L0 1 84
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/reduce.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/reduce.sv|
+!i113 1
+R7
+R8
+vrelu
+R0
+R13
+!i10b 1
+!s100 6WI>P14PbN:=1EzSkS3NR1
+R2
+INk?GJ[d9hC=QXP7@dRKYN2
+R3
+S1
+R4
+w1715841832
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu.sv
+!i122 1035
+L0 1 21
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu.sv|
+!i113 1
+R7
+R8
+vrelu_embed
+R0
+R11
+!i10b 1
+!s100 N:HQFI5Blj<64CGd<6Ein0
+R2
+ILBm6G3`5R[`4F:fnf3gbc0
+R3
+S1
+R4
+w1715838059
+8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu_embed.sv
+FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu_embed.sv
+!i122 1033
+L0 1 22
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu_embed.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/relu_embed.sv|
+!i113 1
+R7
+R8
+vtop
+R0
+R10
+!i10b 1
+!s100 DBeAi_egUN1QGg9Y2CkZ71
+R2
+IbhIHWoI`E:^5b[9FeCZ4`0
+R3
+S1
+R4
+w1715853836
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top.sv
-!i122 544
-L0 1 261
+!i122 1024
+L0 1 334
 R5
 r1
 !s85 0
@@ -261,19 +386,19 @@ R7
 R8
 vtop_tb
 R0
-R1
+R10
 !i10b 1
-!s100 ii4n@[YjBHSmA;CQFBDU:1
+!s100 UYZoZ9nV@h:>d2Xo:4j4K2
 R2
-I[>3iBzjXM<[ni4EB;d9Y52
+Im_;lRWT@IYem@Ve5InoH]0
 R3
 S1
 R4
-w1715776889
+w1715853872
 8C:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv
 FC:/Users/Xaio/Documents/GitHub/ecg-classification-asic/hdl/part-2/Top/top_tb.sv
-!i122 545
-R10
+!i122 1025
+L0 3 65
 R5
 r1
 !s85 0

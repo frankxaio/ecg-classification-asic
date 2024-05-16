@@ -169,6 +169,7 @@ module attention #(
                 mat_a_reg = mat_a_reg;
                 wt_reg = wt_reg;
                 bias_reg = bias_reg;
+                out_matrix = out_matrix;
             end
         endcase
     end

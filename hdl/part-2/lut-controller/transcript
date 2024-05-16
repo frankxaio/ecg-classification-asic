@@ -31860,3 +31860,16 @@ run
 # Time: 9480000, State: IDLE, Classifier: xxxx
 # Time: 9490000, State: IDLE, Classifier: xxxx
 # Time: 9500000, State: IDLE, Classifier: xxxx
+# Load canceled
+# Compile of dot_product.sv was successful.
+# Compile of lut_module.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# Compile of dot_product_tb.sv was successful.
+# Compile of attention.sv was successful.
+# Compile of attention_tb.sv was successful.
+# Compile of linear.sv was successful.
+# Compile of mac_unit.sv was successful.
+# Compile of matrix_multiply.sv was successful with warnings.
+# Compile of matrix_mutiply_contorller.sv was successful with warnings.
+# 11 compiles, 0 failed with no errors.

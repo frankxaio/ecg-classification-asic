@@ -2,7 +2,7 @@ module top (
     input clk,
     input rst,
     input start,
-    input [7:0] ecg_input[0:14],
+    input signed [7:0] ecg_input,
     output logic [3:0] classifier
 );
 
@@ -30,13 +30,24 @@ module top (
     localparam DATA_WIDTH = 8;
     localparam LUT_DEPTH = 256;
 
-    logic start_lut, done_lut, start_att_reg, start_att;
-    logic embed_done, att_done, mlp_done, reduce_done;
-    logic [DATA_WIDTH-1:0] addr, addr_ns;
-    logic [7:0] fetch_counter;
-    logic signed [7:0] result[0:15][0:15];
-    logic signed [7:0] result_att[0:15][0:15];
+    // staert signal 
+    logic start_lut, start_att_reg, start_att;
+    logic start_mlp_reg, start_mlp;
+    logic start_red_reg, start_red;
 
+    // done siganl 
+    logic embed_done, att_done, mlp_done, reduce_done, done_lut;
+    // addr signal 
+    logic [DATA_WIDTH-1:0] addr, addr_ns;
+
+    // temp reg
+    logic signed [DATA_WIDTH-1:0] result[0:15][0:15];
+    logic signed [DATA_WIDTH-1:0] result_att[0:15][0:15];
+    logic signed [DATA_WIDTH-1:0] mlp_out[0:15][0:15];
+
+    // input storage
+    logic signed [7:0] ecg_mem[0:14];
+    logic [4:0] cnt_input;
 
     // Neural network param
     logic signed [DATA_WIDTH-1:0] classifier_bs[0:CLASSIFIER_BS_CNT-1];
@@ -63,6 +74,7 @@ module top (
 
     typedef enum {
         IDLE,
+        START,
         EMBED_CAL,
         ATTENTION_CAL,
         MLP,
@@ -75,7 +87,7 @@ module top (
     dot_product embed_inst (
         .clk(clk),
         .rst(rst),
-        .ecg_input(ecg_input),
+        .ecg_input(ecg_mem),
         .wt(embedding_wt),
         .bias(embedding_bs),
         .cls_token(cls_token_wt),
@@ -101,10 +113,57 @@ module top (
         .done(att_done)
     );
 
+    assign start_mlp = start_mlp_reg;
+    mlp mlp_inst (
+        .clk(clk),
+        .rst(rst),
+        .start(start_mlp),
+        .mlp0_bs(mlp0_bs),
+        .mlp0_wt(mlp0_wt),
+        .mlp1_bs(mlp1_bs),
+        .mlp1_wt(mlp1_wt),
+        .mat_in(result_att),
+        .done(mlp_done),
+        .mat_out(mlp_out)
+    );
 
+    assign start_red = start_red_reg;
+    dot_product_16by6 reduce_inst (
+        .clk(clk),
+        .rst(rst),
+        .start(start_red),
+        .mat_in(mlp_out),
+        .wt(classifier_wt),
+        .bias(classifier_bs),
+        .max(classifier),
+        .done(reduce_done)
+    );
+
+
+    always_ff @(posedge clk, posedge rst)begin
+        if(rst) cnt_input <= 0;
+        else if (state==START) cnt_input <= cnt_input + 1;
+        else cnt_input <= 0;
+    end
+
+    integer i;
+    always_ff @(posedge clk, posedge rst)begin
+        if(rst) ecg_mem <= '{default:0};
+        else if(state==START)
+            ecg_mem[cnt_input] <= ecg_input;
+        else begin
+            for (i=0;i<16;i++) 
+            ecg_mem[i] <= ecg_mem[i];
+        end 
+    end
+
+
+    assign done = (state == DONE);
+    // state transition
     always_comb begin
         case (state)
-            IDLE: next_state = start ? EMBED_CAL : IDLE;
+            IDLE: next_state = start ? START : IDLE;
+            START: next_state = (cnt_input == 15) ? EMBED_CAL : START;
             EMBED_CAL: next_state = embed_done ? ATTENTION_CAL : EMBED_CAL;
             ATTENTION_CAL: next_state = att_done ? MLP : ATTENTION_CAL;
             MLP: next_state = mlp_done ? REDUCE : MLP;
@@ -112,6 +171,20 @@ module top (
             DONE: next_state = IDLE;
             default: ;
         endcase
+    end
+
+    // start reduce 
+    always_ff @(posedge clk, posedge rst) begin
+        if (next_state == REDUCE) start_red_reg <= 1;
+        else if (next_state != REDUCE) start_red_reg <= 0;
+        else start_red_reg <= 0;
+    end
+
+    // start mlp signal 
+    always_ff @(posedge clk, posedge rst) begin
+        if (next_state == MLP) start_mlp_reg <= 1;
+        else if (next_state != MLP) start_mlp_reg <= 0;
+        else start_mlp_reg <= 0;
     end
 
 
