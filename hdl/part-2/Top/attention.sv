@@ -31,17 +31,27 @@ module attention #(
     typedef logic signed [DATA_WIDTH-1:0] wt_arr[0:MATRIX_SIZE-1][0:MATRIX_SIZE-1];
 
     matrix_arr
-        mat_a, mat_a_reg, out_matrix_temp, q_matrix, k_matrix, v_matrix, qk_matrix, qkv_matrix;
+        mat_a,
+        mat_a_reg,
+        out_matrix_temp,
+        q_matrix,
+        k_matrix,
+        v_matrix,
+        qk_matrix,
+        qkv_matrix,
+        mat_in_mem;
     wt_arr wt, wt_reg;
     bias_arr bias, bias_reg;
 
 
 
-    logic start_controller, start_controller_reg, start_in;
+    logic start_in;
+    // logic start_controller, start_controller_reg, start_in;
     logic done_cal, rst_local;
 
     typedef enum {
         IDLE,
+        INPUT,
         QUE,
         KEY,
         VAL,
@@ -57,7 +67,7 @@ module attention #(
     assign mat_a = mat_a_reg;
     assign wt = wt_reg;
     assign bias = bias_reg;
-    assign start_in = (start_controller == 1);
+    assign start_in = (state != IDLE) ? 1 : 0;
 
     linear linear_inst (
         .clk(clk),
@@ -70,122 +80,209 @@ module attention #(
         .out_matrix(out_matrix_temp)
     );
 
-    always_ff @(posedge clk, posedge rst) begin
-        if (rst) start_controller <= 1'b0;
-        else start_controller <= start_controller_reg;
-    end
-
-    always_ff @(posedge clk, posedge rst) begin
-        if (rst) rst_local <= 1'b0;
-        else if (state != next_state) rst_local <= 1'b1;
-        else rst_local <= 1'b0;
-    end
 
 
+    // mat_in_mem
     always_ff @(posedge clk, posedge rst) begin
-        if (rst) out_matrix_temp <= '{default: 0};
-        else if (done_cal && (next_state == KEY)) q_matrix <= out_matrix_temp;
-        else if (done_cal && (next_state == VAL)) k_matrix <= out_matrix_temp;
-        else if (done_cal && (next_state == QK)) v_matrix <= out_matrix_temp;
-        else if (done_cal && (next_state == QKV)) qk_matrix <= out_matrix_temp;
-        else if (done_cal && (next_state == FIN)) qkv_matrix <= out_matrix_temp;
+        if (rst) mat_in_mem <= '{default: 0};
         else begin
-            out_matrix_temp <= out_matrix_temp;
-            q_matrix <= q_matrix;
-            k_matrix <= k_matrix;
-            v_matrix <= v_matrix;
-            qk_matrix <= qk_matrix;
-            qkv_matrix <= qkv_matrix;
+            case (state)
+                INPUT:   mat_in_mem <= mat_in;
+                default: mat_in_mem <= mat_in_mem;
+            endcase
         end
     end
 
+
+    // rst local logic
+    always_ff @(posedge clk, posedge rst) begin
+        if (rst) rst_local <= 1'b0;
+        else rst_local <= (state != next_state);
+    end
+
+    // always_ff @(posedge clk, posedge rst) begin
+    //     if (rst) out_matrix_temp <= '{default: 0};
+    //     else if (done_cal && (next_state == KEY)) q_matrix <= out_matrix_temp;
+    //     else if (done_cal && (next_state == VAL)) k_matrix <= out_matrix_temp;
+    //     else if (done_cal && (next_state == QK)) v_matrix <= out_matrix_temp;
+    //     else if (done_cal && (next_state == QKV)) qk_matrix <= out_matrix_temp;
+    //     else if (done_cal && (next_state == FIN)) qkv_matrix <= out_matrix_temp;
+    //     else begin
+    //         out_matrix_temp <= out_matrix_temp;
+    //         q_matrix <= q_matrix;
+    //         k_matrix <= k_matrix;
+    //         v_matrix <= v_matrix;
+    //         qk_matrix <= qk_matrix;
+    //         qkv_matrix <= qkv_matrix;
+    //     end
+    // end
+
+    always_ff @(posedge clk, posedge rst) begin
+        if (rst) begin
+            q_matrix <= '{default: 0};
+            k_matrix <= '{default: 0};
+            v_matrix <= '{default: 0};
+            qk_matrix <= '{default: 0};
+            qkv_matrix <= '{default: 0};
+            out_matrix_temp <= '{default: 0};
+        end else begin
+            case (next_state)
+                KEY: q_matrix <= done_cal ? out_matrix_temp : q_matrix;
+                VAL: k_matrix <= done_cal ? out_matrix_temp : k_matrix;
+                QK:  v_matrix <= done_cal ? out_matrix_temp : v_matrix;
+                QKV: qk_matrix <= done_cal ? out_matrix_temp : qk_matrix;
+                FIN: qkv_matrix <= done_cal ? out_matrix_temp : qkv_matrix;
+                default: begin
+                    out_matrix_temp <= '{default: 0};
+                    q_matrix <= q_matrix;
+                    k_matrix <= k_matrix;
+                    v_matrix <= v_matrix;
+                    qk_matrix <= qk_matrix;
+                    qkv_matrix <= qkv_matrix;
+                end
+            endcase
+        end
+    end
+
+
+
+    // mat_a_reg logic
     integer i, j;
-    // wt, bias, out_matrix
     always_comb begin
         case (state)
-            IDLE: begin
-                start_controller_reg = 1'b0;
-            end
             QUE: begin
-                start_controller_reg = 1'b1;
-                mat_a_reg = mat_in;
-                for (i = 0; i < 16; i++) begin
-                    for (j = 0; j < 16; j++) begin
-                        wt_reg[i][j] = queries_wt[i*MATRIX_SIZE+j];
+                for (i = 0; i < MATRIX_SIZE; i++) begin
+                    for (j = 0; j < MATRIX_SIZE; j++) begin
+                        mat_a_reg[i][j] = mat_in_mem[i][j];
                     end
                 end
-                bias_reg = queries_bs;
             end
             KEY: begin
-                mat_a_reg = mat_in;
-                for (i = 0; i < 16; i++) begin
-                    for (j = 0; j < 16; j++) begin
-                        wt_reg[i][j] = keys_wt[i*MATRIX_SIZE+j];
+                for (i = 0; i < MATRIX_SIZE; i++) begin
+                    for (j = 0; j < MATRIX_SIZE; j++) begin
+                        mat_a_reg[i][j] = mat_in_mem[i][j];
                     end
                 end
-                bias_reg = queries_bs;
             end
             VAL: begin
-                mat_a_reg = mat_in;
-                for (i = 0; i < 16; i++) begin
-                    for (j = 0; j < 16; j++) begin
-                        wt_reg[i][j] = values_wt[i*MATRIX_SIZE+j];
+                for (i = 0; i < MATRIX_SIZE; i++) begin
+                    for (j = 0; j < MATRIX_SIZE; j++) begin
+                        mat_a_reg[i][j] = mat_in_mem[i][j];
                     end
                 end
-                bias_reg = values_bs;
             end
             QK: begin
-                mat_a_reg = q_matrix;
-                wt_reg = k_matrix;
-                bias_reg = '{default: 0};
+                for (i = 0; i < MATRIX_SIZE; i++) begin
+                    for (j = 0; j < MATRIX_SIZE; j++) begin
+                        mat_a_reg[i][j] = mat_in_mem[i][j];
+                    end
+                end
             end
+
             QKV: begin
                 for (i = 0; i < MATRIX_SIZE; i++) begin
                     for (j = 0; j < MATRIX_SIZE; j++) begin
-                        mat_a_reg[i][j] = qk_matrix[i][j] / 4;
+                        mat_a_reg[i][j] = (qk_matrix[i][j] / 4);
                     end
                 end
-                wt_reg   = v_matrix;
-                bias_reg = '{default: 0};
             end
             FIN: begin
-                mat_a_reg = qkv_matrix;
-                for (i = 0; i < 16; i++) begin
-                    for (j = 0; j < 16; j++) begin
-                        wt_reg[i][j] = final_wt[i*MATRIX_SIZE+j];
-                    end
-                end
-                bias_reg = final_bs;
-            end
-            DONE: begin
                 for (i = 0; i < MATRIX_SIZE; i++) begin
                     for (j = 0; j < MATRIX_SIZE; j++) begin
-                        out_matrix[i][j] = out_matrix_temp[i][j] + mat_in[i][j];
+                        mat_a_reg[i][j] = qkv_matrix[i][j];
                     end
                 end
             end
-            default: begin
-                start_controller_reg = 1'b0;
-                mat_a_reg = mat_a_reg;
-                wt_reg = wt_reg;
-                bias_reg = bias_reg;
-                out_matrix = out_matrix;
-            end
+            default: mat_a_reg = '{default: 0};
         endcase
     end
 
-
-    // done
-    always_ff @(posedge clk, posedge rst) begin
-        if (next_state == DONE) done <= 1;
-        else done <= 0;
+    // wt_reg logic
+    integer m, k;
+    always_comb begin
+        case (state)
+            QUE: begin
+                for (m = 0; m < 16; m++) begin
+                    for (k = 0; k < 16; k++) begin
+                        wt_reg[m][k] = queries_wt[m*MATRIX_SIZE+k];
+                    end
+                end
+            end
+            KEY: begin
+                for (m = 0; m < 16; m++) begin
+                    for (k = 0; k < 16; k++) begin
+                        wt_reg[m][k] = keys_wt[m*MATRIX_SIZE+k];
+                    end
+                end
+            end
+            VAL: begin
+                for (m = 0; m < 16; m++) begin
+                    for (k = 0; k < 16; k++) begin
+                        wt_reg[m][k] = values_wt[m*MATRIX_SIZE+k];
+                    end
+                end
+            end
+            QK: begin
+                for (m = 0; m < 16; m++) begin
+                    for (k = 0; k < 16; k++) begin
+                        wt_reg[m][k] = k_matrix[m][k];
+                    end
+                end
+            end
+            QKV: begin
+                for (m = 0; m < 16; m++) begin
+                    for (k = 0; k < 16; k++) begin
+                        wt_reg[m][k] = v_matrix[m][k];
+                    end
+                end
+            end
+            FIN: begin
+                for (m = 0; m < 16; m++) begin
+                    for (k = 0; k < 16; k++) begin
+                        wt_reg[m][k] = final_wt[m*MATRIX_SIZE+k];
+                    end
+                end
+            end
+            default: wt_reg = '{default: 0};
+        endcase
     end
 
+    // bias_reg logic
+    always_comb begin
+        case (state)
+            QUE: bias_reg = queries_bs;
+            KEY: bias_reg = keys_bs;
+            VAL: bias_reg = values_bs;
+            QK: bias_reg = '{default: 0};
+            QKV: bias_reg = '{default: 0};
+            FIN: bias_reg = final_bs;
+            default: bias_reg = '{default: 0};
+        endcase
+    end
+
+    // out_matrix logic
+    integer n, v;
+    always_comb begin
+        case (state)
+            DONE: begin
+                for (n = 0; n < MATRIX_SIZE; n++) begin
+                    for (v = 0; v < MATRIX_SIZE; v++) begin
+                        out_matrix[n][v] = out_matrix_temp[n][v] + mat_in_mem[n][v];
+                    end
+                end
+            end
+            default: out_matrix = '{default: 0};
+        endcase
+    end
+
+    // done
+    assign done = (next_state == DONE);
 
     // FSM comb
     always_comb begin
         case (state)
-            IDLE: next_state = start ? QUE : IDLE;
+            IDLE: next_state = start ? INPUT : IDLE;
+            INPUT: next_state = QUE;
             QUE: next_state = done_cal ? KEY : QUE;
             KEY: next_state = done_cal ? VAL : KEY;
             VAL: next_state = done_cal ? QK : VAL;

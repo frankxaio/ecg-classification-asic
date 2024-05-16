@@ -3,18 +3,18 @@ module matrix_multiply #(
     DATA_SIZE = 8,
     AVOID = 20
 ) (
-    input logic [DATA_SIZE-1:0] in_a[MATRIX_SIZE-1:0],
-    input logic [DATA_SIZE-1:0] in_b[MATRIX_SIZE-1:0],
+    input logic signed [DATA_SIZE-1:0] in_a[MATRIX_SIZE-1:0],
+    input logic signed [DATA_SIZE-1:0] in_b[MATRIX_SIZE-1:0],
     input logic reset,
     clk,
-    output logic [DATA_SIZE-1:0] out_matrix[MATRIX_SIZE*MATRIX_SIZE-1:0],
+    output logic signed [DATA_SIZE-1:0] out_matrix[MATRIX_SIZE*MATRIX_SIZE-1:0],
     output logic done
 );
 
     logic [DATA_SIZE-1:0] row_wire[MATRIX_SIZE*MATRIX_SIZE-1+AVOID:0];
     logic [DATA_SIZE-1:0] col_wire[MATRIX_SIZE*MATRIX_SIZE-1+AVOID:0];
-    logic [$clog2(MATRIX_SIZE*MATRIX_SIZE):0] count;
-    logic [5:0] prev_out_matrix_bits;  // Store the last 6 bits of prev_out_matrix
+    logic [$clog2(MATRIX_SIZE*MATRIX_SIZE):0] count, count_ns;
+    logic signed [5:0] prev_out_matrix_bits;  // Store the last 6 bits of prev_out_matrix
 
     // add all the blocks which are not connected directly to the inputs
     genvar i, j;
@@ -88,9 +88,14 @@ module matrix_multiply #(
     endgenerate
 
     // Counter for tracking computation progress
-    always_ff @(posedge clk or posedge reset) begin
+    always_comb begin
+        if (count < MATRIX_SIZE * MATRIX_SIZE) count_ns <= count + 1;
+        else count_ns <= count;
+    end
+
+    always_ff @( posedge clk, posedge reset ) begin
         if (reset) count <= 0;
-        else if (count < MATRIX_SIZE * MATRIX_SIZE) count <= count + 1;
+        else count <= count_ns;
     end
 
     // Store the last 6 bits of prev_out_matrix

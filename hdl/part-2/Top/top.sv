@@ -91,6 +91,7 @@ module top (
         .wt(embedding_wt),
         .bias(embedding_bs),
         .cls_token(cls_token_wt),
+        .ps_wt(ps_wt),
         .result(result),
         .done(embed_done)
     );
@@ -140,21 +141,29 @@ module top (
     );
 
 
-    always_ff @(posedge clk, posedge rst)begin
-        if(rst) cnt_input <= 0;
-        else if (state==START) cnt_input <= cnt_input + 1;
-        else cnt_input <= 0;
+    // cnt_input
+    always_ff @(posedge clk, posedge rst) begin
+        if (rst) cnt_input <= 0;
+        else begin
+            case (state)
+                START:   cnt_input <= cnt_input + 1;
+                default: cnt_input <= 0;
+            endcase
+        end
     end
 
+    // ecg_mem
     integer i;
-    always_ff @(posedge clk, posedge rst)begin
-        if(rst) ecg_mem <= '{default:0};
-        else if(state==START)
-            ecg_mem[cnt_input] <= ecg_input;
+    always_ff @(posedge clk, posedge rst) begin
+        if (rst) ecg_mem <= '{default: 0};
         else begin
-            for (i=0;i<16;i++) 
-            ecg_mem[i] <= ecg_mem[i];
-        end 
+            case (state)
+                START: ecg_mem[cnt_input] <= ecg_input;
+                default: begin
+                    for (i = 0; i < 16; i++) ecg_mem[i] <= ecg_mem[i];
+                end
+            endcase
+        end
     end
 
 
@@ -169,30 +178,41 @@ module top (
             MLP: next_state = mlp_done ? REDUCE : MLP;
             REDUCE: next_state = reduce_done ? DONE : REDUCE;
             DONE: next_state = IDLE;
-            default: ;
+            default:next_state = IDLE;
         endcase
     end
 
-    // start reduce 
+    // start_red_reg
     always_ff @(posedge clk, posedge rst) begin
-        if (next_state == REDUCE) start_red_reg <= 1;
-        else if (next_state != REDUCE) start_red_reg <= 0;
-        else start_red_reg <= 0;
+        if (rst) start_red_reg <= 0;
+        else begin
+            case (next_state)
+                REDUCE:  start_red_reg <= 1;
+                default: start_red_reg <= 0;
+            endcase
+        end
     end
 
-    // start mlp signal 
+    // start_mlp_reg
     always_ff @(posedge clk, posedge rst) begin
-        if (next_state == MLP) start_mlp_reg <= 1;
-        else if (next_state != MLP) start_mlp_reg <= 0;
-        else start_mlp_reg <= 0;
+        if (rst) start_mlp_reg <= 0;
+        else begin
+            case (next_state)
+                MLP: start_mlp_reg <= 1;
+                default: start_mlp_reg <= 0;
+            endcase
+        end
     end
 
-
-    // start_att signal
+    // start_att_reg
     always_ff @(posedge clk, posedge rst) begin
-        if (next_state == ATTENTION_CAL) start_att_reg <= 1;
-        else if (next_state != ATTENTION_CAL) start_att_reg <= 0;
-        else start_att_reg <= 0;
+        if (rst) start_att_reg <= 0;
+        else begin
+            case (next_state)
+                ATTENTION_CAL: start_att_reg <= 1;
+                default: start_att_reg <= 0;
+            endcase
+        end
     end
 
 
@@ -206,128 +226,92 @@ module top (
     end
 
     /*==================================LOAD WEIGHT, BIAS=====================================*/
-    lut_module #(
-        .DATA_LEN(CLASSIFIER_BS_CNT)
-    ) lut_inst_clas_bs (
+    lut_clas_bs lut_inst_clas_bs (
         .addr  (8'h01),
         .data_o(classifier_bs)
     );
 
-    lut_module #(
-        .DATA_LEN(CLASSIFIER_WT_CNT)
-    ) lut_inst_clas_wt (
+    lut_clas_wt lut_inst_clas_wt (
         .addr  (8'h02),
         .data_o(classifier_wt)
     );
 
-    lut_module #(
-        .DATA_LEN(EMBEDDING_BS_CNT)
-    ) lut_inst_embed_bs (
+    lut_half_wd lut_inst_embed_bs (
         .addr  (8'h03),
         .data_o(embedding_bs)
     );
 
-    lut_module #(
-        .DATA_LEN(EMBEDDING_WT_CNT)
-    ) lut_inst_embed_wt (
+    lut_half_wd lut_inst_embed_wt (
         .addr  (8'h04),
         .data_o(embedding_wt)
     );
 
-    lut_module #(
-        .DATA_LEN(CLS_TOKEN_WT_CNT)
-    ) lut_inst_cls (
+    lut_half_wd lut_inst_cls (
         .addr  (8'h05),
         .data_o(cls_token_wt)
     );
 
-    lut_module #(
-        .DATA_LEN(FINAL_BS_CNT)
-    ) lut_inst_fina_bs (
+    lut_half_wd lut_inst_fina_bs (
         .addr  (8'h06),
         .data_o(final_bs)
     );
 
-    lut_module #(
-        .DATA_LEN(FINAL_WT_CNT)
-    ) lut_inst_fina_wt (
+    lut_wd lut_inst_fina_wt (
         .addr  (8'h07),
         .data_o(final_wt)
     );
 
-    lut_module #(
-        .DATA_LEN(KEYS_BS_CNT)
-    ) lut_inst_keys_bs (
+    lut_half_wd lut_inst_keys_bs (
         .addr  (8'h08),
         .data_o(keys_bs)
     );
 
-    lut_module #(
-        .DATA_LEN(KEYS_WT_CNT)
-    ) lut_inst_keys_wt (
+    lut_wd lut_inst_keys_wt (
         .addr  (8'h09),
         .data_o(keys_wt)
     );
 
-    lut_module #(
-        .DATA_LEN(QUERIES_BS_CNT)
-    ) lut_inst_quer_bs (
+    lut_half_wd lut_inst_quer_bs (
         .addr  (8'h0A),
         .data_o(queries_bs)
     );
 
-    lut_module #(
-        .DATA_LEN(QUERIES_WT_CNT)
-    ) lut_inst_quer_wt (
+    lut_wd lut_inst_quer_wt (
         .addr  (8'h0B),
         .data_o(queries_wt)
     );
 
-    lut_module #(
-        .DATA_LEN(VALUES_BS_CNT)
-    ) lut_inst_valu_bs (
+    lut_half_wd lut_inst_valu_bs (
         .addr  (8'h0C),
         .data_o(values_bs)
     );
 
-    lut_module #(
-        .DATA_LEN(VALUES_WT_CNT)
-    ) lut_inst_valu_wt (
+    lut_wd lut_inst_valu_wt (
         .addr  (8'h0D),
         .data_o(values_wt)
     );
 
-    lut_module #(
-        .DATA_LEN(MLP0_BS_CNT)
-    ) lut_inst_mlp0_bs (
+    lut_half_wd lut_inst_mlp0_bs (
         .addr  (8'h0E),
         .data_o(mlp0_bs)
     );
 
-    lut_module #(
-        .DATA_LEN(MLP0_WT_CNT)
-    ) lut_inst_mlp0_wt (
+    lut_wd lut_inst_mlp0_wt (
         .addr  (8'h0F),
         .data_o(mlp0_wt)
     );
 
-    lut_module #(
-        .DATA_LEN(MLP1_BS_CNT)
-    ) lut_inst_mlp1_bs (
+    lut_half_wd lut_inst_mlp1_bs (
         .addr  (8'h10),
         .data_o(mlp1_bs)
     );
 
-    lut_module #(
-        .DATA_LEN(MLP1_WT_CNT)
-    ) lut_inst_mlp1_wt (
+    lut_wd lut_inst_mlp1_wt (
         .addr  (8'h11),
         .data_o(mlp1_wt)
     );
 
-    lut_module #(
-        .DATA_LEN(PS_WT_CNT)
-    ) lut_inst_ps_wt (
+    lut_wd lut_inst_ps_wt (
         .addr  (8'h12),
         .data_o(ps_wt)
     );

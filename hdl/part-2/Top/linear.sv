@@ -10,9 +10,10 @@ module linear #(
     input signed [DATA_SIZE-1:0] wt[0:MATRIX_SIZE-1][0:MATRIX_SIZE-1],
     input signed [DATA_SIZE-1:0] bias[0:MATRIX_SIZE-1],
     output logic signed [DATA_SIZE-1:0] out_matrix[0:MATRIX_SIZE-1][0:MATRIX_SIZE-1]
+    // output logic signed [DATA_SIZE-1:0] out_matrix[MATRIX_SIZE-1:0][MATRIX_SIZE-1:0]
 );
 
-    logic [DATA_SIZE-1:0] temp_out_matrix[0:MATRIX_SIZE*MATRIX_SIZE-1];
+    logic signed [DATA_SIZE-1:0] temp_out_matrix[MATRIX_SIZE*MATRIX_SIZE-1:0];
 
     matrix_multiply_controller mmu_inst (
         .clk(clk),
@@ -24,10 +25,11 @@ module linear #(
         .out_matrix(temp_out_matrix)
     );
 
+    integer i, j;
     always_comb begin
-        for (int i = 0; i < MATRIX_SIZE; i++) begin
-            for (int j = 0; j < MATRIX_SIZE; j++) begin
-                out_matrix[i][j] = temp_out_matrix[i*MATRIX_SIZE+j] + bias[j];
+    for (i = 0; i < MATRIX_SIZE; i++) begin
+            for (j = 0; j < MATRIX_SIZE; j++) begin
+                out_matrix[15-i][15-j] = temp_out_matrix[i*MATRIX_SIZE+j] + bias[j];
             end
         end
     end

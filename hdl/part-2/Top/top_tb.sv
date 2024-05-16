@@ -55,7 +55,7 @@ module top_tb;
 
     // Simulate for a certain duration
     initial begin
-        #200;
+        #20000;
         $finish;
     end
 

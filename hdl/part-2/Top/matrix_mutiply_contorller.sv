@@ -6,19 +6,19 @@ module matrix_multiply_controller #(
     input logic reset,
     input logic start,
     output logic done,
-    input logic [DATA_SIZE-1:0] in_store_a[MATRIX_SIZE-1:0][MATRIX_SIZE-1:0],
-    input logic [DATA_SIZE-1:0] in_store_b[MATRIX_SIZE-1:0][MATRIX_SIZE-1:0],
-    output logic [DATA_SIZE-1:0] out_matrix[MATRIX_SIZE*MATRIX_SIZE-1:0]
+    input logic signed [DATA_SIZE-1:0] in_store_a[MATRIX_SIZE-1:0][MATRIX_SIZE-1:0],
+    input logic signed [DATA_SIZE-1:0] in_store_b[MATRIX_SIZE-1:0][MATRIX_SIZE-1:0],
+    output logic signed [DATA_SIZE-1:0] out_matrix[MATRIX_SIZE*MATRIX_SIZE-1:0]
 );
     localparam INPUT_COUNT = MATRIX_SIZE * 2;
 
-    logic [DATA_SIZE-1:0] in_a[MATRIX_SIZE-1:0];
-    logic [DATA_SIZE-1:0] in_b[MATRIX_SIZE-1:0];
-    logic [DATA_SIZE-1:0] in_a_reg[MATRIX_SIZE-1:0];
-    logic [DATA_SIZE-1:0] in_b_reg[MATRIX_SIZE-1:0];
+    logic signed [DATA_SIZE-1:0] in_a[MATRIX_SIZE-1:0];
+    logic signed [DATA_SIZE-1:0] in_b[MATRIX_SIZE-1:0];
+    logic signed [DATA_SIZE-1:0] in_a_reg[MATRIX_SIZE-1:0];
+    logic signed [DATA_SIZE-1:0] in_b_reg[MATRIX_SIZE-1:0];
     logic [6:0] input_count;
     logic computation_done;
-    logic [DATA_SIZE-1:0] out_matrix_reversed[MATRIX_SIZE*MATRIX_SIZE-1:0];
+    logic signed [DATA_SIZE-1:0] out_matrix_reversed[MATRIX_SIZE*MATRIX_SIZE-1:0];
 
     // Instantiate the matrix multiply module
     matrix_multiply #(
