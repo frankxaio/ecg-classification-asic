@@ -14,7 +14,7 @@ module matrix_multiply #(
     logic [DATA_SIZE-1:0] row_wire[MATRIX_SIZE*MATRIX_SIZE-1+AVOID:0];
     logic [DATA_SIZE-1:0] col_wire[MATRIX_SIZE*MATRIX_SIZE-1+AVOID:0];
     logic [$clog2(MATRIX_SIZE*MATRIX_SIZE):0] count, count_ns;
-    logic signed [5:0] prev_out_matrix_bits;  // Store the last 6 bits of prev_out_matrix
+    logic signed [1:0] prev_out_matrix_bits;  // Store the last 6 bits of prev_out_matrix
 
     // add all the blocks which are not connected directly to the inputs
     genvar i, j;
@@ -100,14 +100,14 @@ module matrix_multiply #(
 
     // Store the last 6 bits of prev_out_matrix
     always_ff @(posedge clk or posedge reset) begin
-        if (reset) prev_out_matrix_bits <= 6'b0;
-        else prev_out_matrix_bits <= out_matrix[MATRIX_SIZE*MATRIX_SIZE-1][5:0];
+        if (reset) prev_out_matrix_bits <= 2'b0;
+        else prev_out_matrix_bits <= out_matrix[MATRIX_SIZE*MATRIX_SIZE-1][1:0];
     end
 
     // Assert done signal when the last 6 bits of out_matrix doesn't change
     always_ff @(posedge clk or posedge reset) begin
         if (reset) done <= 0;
-        else done <= (out_matrix[MATRIX_SIZE*MATRIX_SIZE-1][5:0] == prev_out_matrix_bits);
+        else done <= (out_matrix[MATRIX_SIZE*MATRIX_SIZE-1][1:0] == prev_out_matrix_bits);
     end
 
 endmodule

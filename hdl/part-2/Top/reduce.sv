@@ -37,10 +37,7 @@ module reduce (
     end
 
     // 輸出邏輯
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) done <= 0;
-        else done <= (state == DONE);
-    end
+    assign done = (state == DONE);
 
     // 計數器邏輯
     always_ff @(posedge clk or posedge rst) begin

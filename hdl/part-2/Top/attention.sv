@@ -182,7 +182,7 @@ module attention #(
             QKV: begin
                 for (i = 0; i < MATRIX_SIZE; i++) begin
                     for (j = 0; j < MATRIX_SIZE; j++) begin
-                        mat_a_reg[i][j] = (qk_matrix[i][j] / 4);
+                        mat_a_reg[i][j] = (qk_matrix[i][j] << 2);
                     end
                 end
             end

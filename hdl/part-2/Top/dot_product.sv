@@ -53,10 +53,7 @@ module dot_product (
     end
 
     // Output logic
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) done <= 1'b0;
-        else done <= (state == DONE_PULSE);
-    end
+    assign done = (state == DONE_PULSE);
 
     // Counters
     always_ff @(posedge clk or posedge rst) begin
