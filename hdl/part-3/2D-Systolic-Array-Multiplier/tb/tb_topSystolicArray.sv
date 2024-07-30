@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module tb_topSystolicArray ();
     // Parameters
     parameter int unsigned N = 4;
@@ -18,9 +20,7 @@ module tb_topSystolicArray ();
     logic [N-1:0][N-1:0][7:0] expected_c;
 
     // Instantiate the Unit Under Test (UUT)
-    topSystolicArray #(
-        .N(N)
-    ) uut (
+    topSystolicArray uut (
         .i_clk(clk),
         .i_arst(arst),
         .i_a(a),
@@ -37,16 +37,23 @@ module tb_topSystolicArray ();
 
     // FSDB dumping
     initial begin
+        // RTL 
+        // $fsdbDumpfile("tb_topSystolicArray.fsdb");
+        // $fsdbDumpvars(0, tb_topSystolicArray);
+        // $fsdbDumpMDA();
+
+        // Gate-level 
+        $sdf_annotate("topSystolicArray.sdf", uut);
         $fsdbDumpfile("tb_topSystolicArray.fsdb");
-        $fsdbDumpvars(0, tb_topSystolicArray);
+        $fsdbDumpvars();
         $fsdbDumpMDA();
     end
 
     // VCD dumping
-    initial begin
-        $dumpfile("tb_topSystolicArray.vcd");
-        $dumpvars(0, tb_topSystolicArray);
-    end
+    // initial begin
+    //     $dumpfile("tb_topSystolicArray.vcd");
+    //     $dumpvars(0, tb_topSystolicArray);
+    // end
 
     // Test stimulus
     initial begin

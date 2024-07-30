@@ -2,10 +2,16 @@
 
 run:
 	ncverilog \
-	-sv  \
 	+ncaccess+rwc \
 	+notimingcheck \
-	tb_topSystolicArray.sv topSystolicArray.sv systolicArray.sv pe.sv
+	-sv tb_topSystolicArray.sv topSystolicArray.sv systolicArray.sv pe.sv
+
+gate:
+	ncverilog \
+	+ncaccess+rwc \
+	+notimingcheck \
+	-sv tb_topSystolicArray.sv \
+	-v topSystolicArray.vg tsmc090.v
 
 wv:
 	nWave tb_topSystolicArray.fsdb &

@@ -16,7 +16,7 @@ module topSystolicArray #(
 
     // {{{ Check matrix dimension size is valid
 
-    localparam bit N_VALID = &{N > 2, N < 257};
+    // localparam bit N_VALID = &{N > 2, N < 257};
     var logic [N-1:0][N-1:0][31:0] o_c_internal;
 
     always_comb begin
